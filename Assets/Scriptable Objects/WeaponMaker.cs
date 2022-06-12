@@ -7,8 +7,9 @@ public class WeaponMaker : ScriptableObject
 {
     public string weaponName;
     public Sprite weaponImage;
+    public int weaponSlot;
     
-    [Header("True if weapon can be held out"), Space(5)]
+    [Header("TRUE if weapon can be held out"), Space(5)]
     public bool activeWeapon;
     
     [Header("Size of ammo capacities"), Space(5)]
@@ -79,7 +80,7 @@ public class WeaponMaker : ScriptableObject
     public int selfDamageMax4;
     public int enemyDamageMax4;
 
-    /* // This is for the actuall weapon script
+    /* // This is for the actual weapon script
     public void UseSkill(int skillNum)
     {
         if (activeWeapon)

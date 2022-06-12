@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 735d17946064b924fab4cb55dfb3df12, type: 3}
+  m_Name: Half-Zatoichi
+  m_EditorClassIdentifier: 
+  weaponName: Half-Zatoichi
+  weaponImage: {fileID: 0}
+  weaponSlot: 3
+  activeWeapon: 1
+  clipSize: 0
+  reserveSize: 0
+  skillName1: 
+  skillDesc1: 
+  ammoCost1: 0
+  accuracy1: 0
+  skillRange1: 0
+  selfDamageMin1: 0
+  enemyDamageMin1: 0
+  selfDamageMax1: 0
+  enemyDamageMax1: 0
+  skillName2: 
+  skillDesc2: 
+  ammoCost2: 0
+  accuracy2: 0
+  skillRange2: 0
+  selfDamageMin2: 0
+  enemyDamageMin2: 0
+  selfDamageMax2: 0
+  enemyDamageMax2: 0
+  skillName3: 
+  skillDesc3: 
+  ammoCost3: 0
+  accuracy3: 0
+  skillRange3: 0
+  selfDamageMin3: 0
+  enemyDamageMin3: 0
+  selfDamageMax3: 0
+  enemyDamageMax3: 0
+  skillName4: 
+  skillDesc4: 
+  ammoCost4: 0
+  accuracy4: 0
+  skillRange4: 0
+  selfDamageMin4: 0
+  enemyDamageMin4: 0
+  selfDamageMax4: 0
+  enemyDamageMax4: 0
