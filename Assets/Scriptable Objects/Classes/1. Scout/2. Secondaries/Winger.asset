@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Winger
   m_EditorClassIdentifier: 
   weaponName: Winger
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 0f0c6508b37b3ea4c9ad21140504eefc, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 5

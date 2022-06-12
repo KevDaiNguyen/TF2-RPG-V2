@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Persian Persuader
   m_EditorClassIdentifier: 
   weaponName: Persian Persuader
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 43f6766da718aa64dafc5d43455164da, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

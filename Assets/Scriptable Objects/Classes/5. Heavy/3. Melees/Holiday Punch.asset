@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Holiday Punch
   m_EditorClassIdentifier: 
   weaponName: Holiday Punch
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 7b1a833277f6c8042ab665b8ae554235, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

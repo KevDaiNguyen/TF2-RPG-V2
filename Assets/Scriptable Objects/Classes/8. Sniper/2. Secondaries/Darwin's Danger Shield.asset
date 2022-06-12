@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Darwin's Danger Shield
   m_EditorClassIdentifier: 
   weaponName: Darwin's Danger Shield
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 7dd1ffb973b07b949bf1c8c2a6472ced, type: 3}
   weaponSlot: 2
   activeWeapon: 0
   clipSize: 0

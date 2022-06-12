@@ -16,6 +16,7 @@ MonoBehaviour:
   defaultHealth: 300
   defaultSpeed: 77
   slotSpace: 1
+  equipNum: 1
   primarySlot: {fileID: 0}
   secondarySlot: {fileID: 0}
   meleeSlot: {fileID: 0}

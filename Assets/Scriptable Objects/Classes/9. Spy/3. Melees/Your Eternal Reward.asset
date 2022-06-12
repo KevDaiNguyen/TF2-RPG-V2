@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Your Eternal Reward
   m_EditorClassIdentifier: 
   weaponName: Your Eternal Reward
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: a1bf6a7e201b45c48b50182a7179f671, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

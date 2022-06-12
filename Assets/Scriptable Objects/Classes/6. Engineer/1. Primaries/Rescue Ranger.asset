@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rescue Ranger
   m_EditorClassIdentifier: 
   weaponName: Rescue Ranger
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 19d71b342d89275498549db27454a1e9, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 4

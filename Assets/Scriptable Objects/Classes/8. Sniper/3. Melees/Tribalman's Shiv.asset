@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tribalman's Shiv
   m_EditorClassIdentifier: 
   weaponName: Tribalman's Shiv
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: a4710abea1a036c4ca85de9239418c4e, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

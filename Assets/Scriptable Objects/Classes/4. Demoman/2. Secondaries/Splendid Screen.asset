@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Splendid Screen
   m_EditorClassIdentifier: 
   weaponName: Splendid Screen
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 4bc7eb99369855741b4dc348d341bde2, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 1

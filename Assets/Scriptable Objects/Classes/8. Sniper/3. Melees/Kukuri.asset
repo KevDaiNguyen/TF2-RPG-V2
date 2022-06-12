@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Kukuri
   m_EditorClassIdentifier: 
   weaponName: Kukuri
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 7a522b8519b7dd14794ab7f2caf8ee80, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

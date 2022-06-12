@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SMG
   m_EditorClassIdentifier: 
   weaponName: SMG
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 05a96576f59c7bc49ad411d92f8b37a9, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 25

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shotgun
   m_EditorClassIdentifier: 
   weaponName: Shotgun
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: ab74bf38bf2521b4ca5da226edb3e55f, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 6

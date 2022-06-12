@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Soda Popper
   m_EditorClassIdentifier: 
   weaponName: Soda Popper
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: d6b273b986fa7f94cb93871691fcc62c, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 2

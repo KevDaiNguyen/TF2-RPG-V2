@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cleaner's Carbine
   m_EditorClassIdentifier: 
   weaponName: Cleaner's Carbine
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: dc3f31ee554b2f14bb1c51eefca02436, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 20

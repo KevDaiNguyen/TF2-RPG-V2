@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pomson 6000
   m_EditorClassIdentifier: 
   weaponName: Pomson 6000
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 38ba32d2bccfc8d4d8ba0623d7bd6a16, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 4

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Syringe Gun
   m_EditorClassIdentifier: 
   weaponName: Syringe Gun
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 1016dcb44426649488da10737a10bc33, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 40

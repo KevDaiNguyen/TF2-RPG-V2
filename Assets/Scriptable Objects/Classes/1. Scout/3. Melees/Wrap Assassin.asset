@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wrap Assassin
   m_EditorClassIdentifier: 
   weaponName: Wrap Assassin
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 4a3fc4587fe54eb488a4b94e4de21bd7, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 1

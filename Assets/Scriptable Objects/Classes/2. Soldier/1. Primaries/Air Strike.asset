@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Air Strike
   m_EditorClassIdentifier: 
   weaponName: Air Strike
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: eaef1cdb29d819946bae382e5f231dcc, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 4

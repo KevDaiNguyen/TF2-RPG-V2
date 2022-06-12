@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Machina
   m_EditorClassIdentifier: 
   weaponName: Machina
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 55c82823205ff0642a1a382c1ba10f4e, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 25

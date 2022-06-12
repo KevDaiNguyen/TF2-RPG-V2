@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Loch-n-Load
   m_EditorClassIdentifier: 
   weaponName: Loch-n-Load
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 93d71c7e0782f3e4c9f2239dee4a2386, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 3

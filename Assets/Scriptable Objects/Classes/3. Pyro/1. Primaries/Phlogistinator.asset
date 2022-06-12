@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Phlogistinator
   m_EditorClassIdentifier: 
   weaponName: Phlogistinator
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 1c0acdc591612d149aa26b1808974a9d, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 200

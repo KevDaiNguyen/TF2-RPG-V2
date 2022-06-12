@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Scotsman's Skullcutter
   m_EditorClassIdentifier: 
   weaponName: Scotsman's Skullcutter
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 63ed4690045a45b439f6df3eb9a600b9, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

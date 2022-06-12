@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Crusader's Crossbow
   m_EditorClassIdentifier: 
   weaponName: Crusader's Crossbow
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 6efd8f7da7715a84f856cc68dca05e92, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 1

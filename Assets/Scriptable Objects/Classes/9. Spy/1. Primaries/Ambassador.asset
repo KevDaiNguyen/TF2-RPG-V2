@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ambassador
   m_EditorClassIdentifier: 
   weaponName: Ambassador
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 28d5095a3c025164d92ddc91b12d22c1, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 6

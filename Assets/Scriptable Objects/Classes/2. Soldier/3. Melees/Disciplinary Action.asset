@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Disciplinary Action
   m_EditorClassIdentifier: 
   weaponName: Disciplinary Action
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 1d4b4d546174c1e4a88aa4078c573103, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

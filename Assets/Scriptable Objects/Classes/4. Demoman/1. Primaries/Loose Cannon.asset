@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Loose Cannon
   m_EditorClassIdentifier: 
   weaponName: Loose Cannon
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: a17e0223a68a94f4d90f6796caa1f091, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 4

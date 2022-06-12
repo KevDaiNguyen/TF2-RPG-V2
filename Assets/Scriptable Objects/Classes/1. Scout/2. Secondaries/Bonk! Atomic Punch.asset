@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bonk! Atomic Punch
   m_EditorClassIdentifier: 
   weaponName: Bonk! Atomic Punch
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 9eb8a36ff5e1f9247a3d75c837a3bdc7, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 1

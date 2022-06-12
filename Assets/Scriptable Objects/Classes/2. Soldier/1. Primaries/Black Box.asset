@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Black Box
   m_EditorClassIdentifier: 
   weaponName: Black Box
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: d7f2f967c31359341834a2e4c12ff4e3, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 3

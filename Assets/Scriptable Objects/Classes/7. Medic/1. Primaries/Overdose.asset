@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Overdose
   m_EditorClassIdentifier: 
   weaponName: Overdose
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: b2ffc9ae7d68024428a204f82e621789, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 40

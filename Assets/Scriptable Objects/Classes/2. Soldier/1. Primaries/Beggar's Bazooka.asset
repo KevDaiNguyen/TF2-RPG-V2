@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Beggar's Bazooka
   m_EditorClassIdentifier: 
   weaponName: Beggar's Bazooka
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 76e261ec8aac18641bebb5c2d55017e6, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 3

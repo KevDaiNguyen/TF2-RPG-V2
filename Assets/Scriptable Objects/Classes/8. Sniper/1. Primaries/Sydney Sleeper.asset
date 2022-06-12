@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sydney Sleeper
   m_EditorClassIdentifier: 
   weaponName: Sydney Sleeper
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: b44be06fcf716fd439de9b7063242adc, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 25

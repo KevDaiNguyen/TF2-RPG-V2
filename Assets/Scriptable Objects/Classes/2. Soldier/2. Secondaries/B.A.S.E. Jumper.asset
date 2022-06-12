@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: B.A.S.E. Jumper
   m_EditorClassIdentifier: 
   weaponName: B.A.S.E. Jumper
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 0b74cb76950ebd548a4bbfbc9627bfb7, type: 3}
   weaponSlot: 2
   activeWeapon: 0
   clipSize: 0

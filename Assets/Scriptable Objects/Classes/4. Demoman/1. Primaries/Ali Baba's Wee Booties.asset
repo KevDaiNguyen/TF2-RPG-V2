@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ali Baba's Wee Booties
   m_EditorClassIdentifier: 
   weaponName: Ali Baba's Wee Booties
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: bf079d74ad2c5fe4b836d1d14a5262b1, type: 3}
   weaponSlot: 1
   activeWeapon: 0
   clipSize: 0

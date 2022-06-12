@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Red-Tape Recorder
   m_EditorClassIdentifier: 
   weaponName: Red-Tape Recorder
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: f07d78313d1a7834b89271f4d22c948b, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 0

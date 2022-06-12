@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Enforcer
   m_EditorClassIdentifier: 
   weaponName: Enforcer
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 6056e701149d20d49a57d591782c95da, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 6

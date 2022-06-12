@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Market Gardener
   m_EditorClassIdentifier: 
   weaponName: Market Gardener
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: cfc7a8ca45aaf0b49940de59912e32aa, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

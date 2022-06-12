@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Hot Hand
   m_EditorClassIdentifier: 
   weaponName: Hot Hand
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: a233dc3ad20af6645b77000277cb55d5, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

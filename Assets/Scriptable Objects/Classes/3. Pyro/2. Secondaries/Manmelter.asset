@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Manmelter
   m_EditorClassIdentifier: 
   weaponName: Manmelter
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: ac5ef21979d7b0a4a9a407c2c31a147a, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 1

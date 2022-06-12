@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Back Scatter
   m_EditorClassIdentifier: 
   weaponName: Back Scatter
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 1bc2b7a71521b064bbcbd13c1300397f, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 4

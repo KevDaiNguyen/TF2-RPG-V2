@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Candy Cane
   m_EditorClassIdentifier: 
   weaponName: Candy Came
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 752e1b3af42af3948b7d98f64f4a19cd, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

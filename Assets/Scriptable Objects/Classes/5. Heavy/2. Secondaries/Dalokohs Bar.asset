@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dalokohs Bar
   m_EditorClassIdentifier: 
   weaponName: Dalokohs Bar
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 74b724a3b7ccf4e4799dabac2aa618f3, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 1

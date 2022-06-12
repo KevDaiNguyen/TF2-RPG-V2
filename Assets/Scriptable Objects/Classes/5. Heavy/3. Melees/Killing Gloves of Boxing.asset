@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Killing Gloves of Boxing
   m_EditorClassIdentifier: 
   weaponName: Killing Gloves of Boxing
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: d0cb9b27a6054034d9abcf01e78c698d, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

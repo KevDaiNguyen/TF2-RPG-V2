@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gloves of Running Urgently
   m_EditorClassIdentifier: 
   weaponName: Gloves of Running Urgently
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 6e076a411644a294e81c3f7a6987c884, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

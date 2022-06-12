@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Force-A-Nature
   m_EditorClassIdentifier: 
   weaponName: Force-A-Nature
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 20af0d7a2a1292c448c44a87affd9d65, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 2

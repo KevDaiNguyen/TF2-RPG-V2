@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Warrior's Spirit
   m_EditorClassIdentifier: 
   weaponName: Warrior's Spirit
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 473aac360603d0c4fbb10ddc4f5bed63, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

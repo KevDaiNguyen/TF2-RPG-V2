@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Big Earner
   m_EditorClassIdentifier: 
   weaponName: Big Earner
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 225b0019ce9f29746b57b51ac2314a2b, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Battalion's Backup
   m_EditorClassIdentifier: 
   weaponName: Battalion's Backup
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: aa484cf4315b58440a1a6e363fe17e42, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 600

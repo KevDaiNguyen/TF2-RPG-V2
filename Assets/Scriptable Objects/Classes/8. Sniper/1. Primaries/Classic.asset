@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Classic
   m_EditorClassIdentifier: 
   weaponName: Classic
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: ffd01e4ca1490ac43b518aceffb14a6b, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 25

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Baby Face's Blaster
   m_EditorClassIdentifier: 
   weaponName: Baby Face's Blaster
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 55d449074fc77434696bd324e8032972, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 4

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sticky Jumper
   m_EditorClassIdentifier: 
   weaponName: Sticky Jumper
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: e2f1ba3d969c33445828c34bf9faf972, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 8

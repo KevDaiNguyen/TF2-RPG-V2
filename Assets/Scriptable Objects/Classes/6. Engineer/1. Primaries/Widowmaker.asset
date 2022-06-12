@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Widowmaker
   m_EditorClassIdentifier: 
   weaponName: Widowmaker
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: f338d971970c7dc49ac070b50035a12f, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 200

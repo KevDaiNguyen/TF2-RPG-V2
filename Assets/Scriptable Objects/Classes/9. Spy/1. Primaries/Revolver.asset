@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Revolver
   m_EditorClassIdentifier: 
   weaponName: Revolver
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 051b420db61b35146adfa415fef1a3c3, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 6

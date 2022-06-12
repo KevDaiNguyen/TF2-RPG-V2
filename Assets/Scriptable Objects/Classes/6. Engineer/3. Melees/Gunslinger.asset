@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gunslinger
   m_EditorClassIdentifier: 
   weaponName: Gunslinger
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 2f5d6919c11b81a4c9cd1f12032fb76d, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

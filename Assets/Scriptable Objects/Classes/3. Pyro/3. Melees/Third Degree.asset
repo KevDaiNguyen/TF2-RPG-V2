@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Third Degree
   m_EditorClassIdentifier: 
   weaponName: Third Degree
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: a6243890399ac40468bccd2fcd1ef5ae, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

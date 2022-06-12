@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Blutsauger
   m_EditorClassIdentifier: 
   weaponName: Blutsauger
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 98a32b4704559d44ba5837e00357be34, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 40

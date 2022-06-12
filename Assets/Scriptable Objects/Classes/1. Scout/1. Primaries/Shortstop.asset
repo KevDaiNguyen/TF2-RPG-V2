@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shortstop
   m_EditorClassIdentifier: 
   weaponName: Shortstop
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 25f6c365c6e50de4da8720fbe2e584fb, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 4

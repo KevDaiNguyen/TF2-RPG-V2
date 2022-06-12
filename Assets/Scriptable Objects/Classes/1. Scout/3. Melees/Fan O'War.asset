@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fan O'War
   m_EditorClassIdentifier: 
   weaponName: Fan O'War
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: d931fb170e4e44344a86962ddd133cd9, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

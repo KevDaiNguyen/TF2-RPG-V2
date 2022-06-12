@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Panic Attack
   m_EditorClassIdentifier: 
   weaponName: Panic Attack
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 29dd56397a9a4ee40b79b4a7bdf39f0c, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 6

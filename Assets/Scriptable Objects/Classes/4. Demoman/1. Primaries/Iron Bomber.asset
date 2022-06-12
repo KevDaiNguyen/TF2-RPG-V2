@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Iron Bomber
   m_EditorClassIdentifier: 
   weaponName: Iron Bomber
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 0b8bbda8d1a45d14380f5c9b9f230a62, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 4

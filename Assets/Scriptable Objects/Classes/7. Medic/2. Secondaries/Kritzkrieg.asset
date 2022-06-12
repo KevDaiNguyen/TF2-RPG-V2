@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Kritzkrieg
   m_EditorClassIdentifier: 
   weaponName: Kritzkrieg
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: d4612daca82890049a16f4ac271fc035, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 100

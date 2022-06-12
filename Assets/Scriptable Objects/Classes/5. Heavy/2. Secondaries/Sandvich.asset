@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sandvich
   m_EditorClassIdentifier: 
   weaponName: Sandvich
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: ca24add6049b0e84ba1a3bb543206c46, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 1

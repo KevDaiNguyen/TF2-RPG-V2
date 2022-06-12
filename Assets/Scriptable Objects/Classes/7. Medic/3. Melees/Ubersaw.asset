@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ubersaw
   m_EditorClassIdentifier: 
   weaponName: Ubersaw
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: b0867377df58089419a787efbba4b3ca, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Scorch Shot
   m_EditorClassIdentifier: 
   weaponName: Scorch Shot
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 941f33ce03f3d124cb84c7ec7498003f, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 1

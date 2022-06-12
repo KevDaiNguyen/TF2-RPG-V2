@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sandman
   m_EditorClassIdentifier: 
   weaponName: Sandman
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 666d9dc2d5f61b34ab8fb388271ae86f, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 1

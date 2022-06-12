@@ -14,6 +14,9 @@ public class ClassMaker : ScriptableObject
     [Header("How many Slots this class takes up"), Space(5)]
     public int slotSpace;
 
+    [Header("Current weapon slot number equipped"), Space(5)]
+    public int equipNum;
+
     [Header("Current loadout of Weapons"), Space(5)]
     public WeaponMaker primarySlot;
     public WeaponMaker secondarySlot;

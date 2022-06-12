@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mantreads
   m_EditorClassIdentifier: 
   weaponName: Mantreads
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 7e7eb61fcba77b44295e8896f65333e3, type: 3}
   weaponSlot: 2
   activeWeapon: 0
   clipSize: 0

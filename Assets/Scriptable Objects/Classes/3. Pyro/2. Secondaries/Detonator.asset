@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Detonator
   m_EditorClassIdentifier: 
   weaponName: Detonator
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 5ade5c8a6c3266e4fb72e1c2d375a8a7, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 1

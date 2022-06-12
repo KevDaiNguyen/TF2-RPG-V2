@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Concheror
   m_EditorClassIdentifier: 
   weaponName: Concheror
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: eabad47b74fe3b042a2ea04375628bb0, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 480

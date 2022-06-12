@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Buff Banner
   m_EditorClassIdentifier: 
   weaponName: Buff Banner
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: bc6115aa282d9e14aa1f7d7a2af6296d, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 600

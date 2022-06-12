@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Direct Hit
   m_EditorClassIdentifier: 
   weaponName: Direct Hit
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 8d2da5905b1ae3f4e8b1c7c7338e3ade, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 4

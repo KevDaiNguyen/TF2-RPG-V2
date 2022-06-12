@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Axtinguisher
   m_EditorClassIdentifier: 
   weaponName: Axtinguisher
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 7d009c439d8f85a4c9d98d33e9ea9e33, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

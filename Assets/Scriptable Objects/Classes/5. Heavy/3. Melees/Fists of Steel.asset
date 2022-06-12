@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fists of Steel
   m_EditorClassIdentifier: 
   weaponName: Fists of Steel
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: cd4522d2eb6b13545b512a263b92fb40, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

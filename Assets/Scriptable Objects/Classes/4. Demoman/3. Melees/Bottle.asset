@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bottle
   m_EditorClassIdentifier: 
   weaponName: Bottle
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: ba7ccdcf6be69d04f9728f7def6dc2c7, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0

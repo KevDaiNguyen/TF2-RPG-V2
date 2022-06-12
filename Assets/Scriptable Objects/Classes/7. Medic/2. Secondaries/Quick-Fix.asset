@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quick-Fix
   m_EditorClassIdentifier: 
   weaponName: Quick-Fix
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 1e689a54d2c3ad344a72d96d45ffd6af, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 100

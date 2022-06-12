@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Family Business
   m_EditorClassIdentifier: 
   weaponName: Family Business
-  weaponImage: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: 1c39054c3d7fa20438eb403dd9d3beb9, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 8
