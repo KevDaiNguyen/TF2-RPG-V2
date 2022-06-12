@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Backburner
   m_EditorClassIdentifier: 
   weaponName: Backburner
+  weaponDescription: Deal critcal damage on enemy backs.
   weaponImage: {fileID: 21300000, guid: f1b3700dec7118745965ced1f7ba4dfa, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 200
   reserveSize: 0
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

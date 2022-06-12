@@ -13,11 +13,16 @@ MonoBehaviour:
   m_Name: Back Scatter
   m_EditorClassIdentifier: 
   weaponName: Back Scatter
+  weaponDescription: 'Deal extra damage from behind.
+
+'
   weaponImage: {fileID: 21300000, guid: 1bc2b7a71521b064bbcbd13c1300397f, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 4
   reserveSize: 32
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

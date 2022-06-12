@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Family Business
   m_EditorClassIdentifier: 
   weaponName: Family Business
+  weaponDescription: High clip shotgun.
   weaponImage: {fileID: 21300000, guid: 1c39054c3d7fa20438eb403dd9d3beb9, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 8
   reserveSize: 32
+  minCritChance: 2
+  maxCritChance: 12
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

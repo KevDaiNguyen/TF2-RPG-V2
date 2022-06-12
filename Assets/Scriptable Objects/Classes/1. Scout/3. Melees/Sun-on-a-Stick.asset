@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Sun-on-a-Stick
   m_EditorClassIdentifier: 
   weaponName: Sun-on-a-Stick
+  weaponDescription: Deal critical hits on burning enemies.
   weaponImage: {fileID: 21300000, guid: 552c36111f9e1674abdcca3749e93c99, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0
   reserveSize: 0
+  minCritChance: 15
+  maxCritChance: 60
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

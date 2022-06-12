@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Eyelander
   m_EditorClassIdentifier: 
   weaponName: Eyelander
+  weaponDescription: Longer melee reach and gains health and speed for each kill
+    up to a maximum of 4.
   weaponImage: {fileID: 21300000, guid: 78141f139c07a9940b330ea6b883b391, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0
   reserveSize: 0
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

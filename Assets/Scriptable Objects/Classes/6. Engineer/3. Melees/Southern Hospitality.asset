@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Southern Hospitality
   m_EditorClassIdentifier: 
   weaponName: Southern Hospitality
+  weaponDescription: Causes enemy hit to bleed.
   weaponImage: {fileID: 21300000, guid: 1a0130ba1c1c3f942b11240a23808338, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0
   reserveSize: 0
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Persian Persuader
   m_EditorClassIdentifier: 
   weaponName: Persian Persuader
+  weaponDescription: Longer melee reach, ammo is converted to charge, and melee hits
+    restore some charge.
   weaponImage: {fileID: 21300000, guid: 43f6766da718aa64dafc5d43455164da, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0
   reserveSize: 0
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

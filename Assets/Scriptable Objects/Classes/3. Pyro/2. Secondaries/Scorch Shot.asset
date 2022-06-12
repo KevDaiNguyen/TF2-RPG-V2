@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Scorch Shot
   m_EditorClassIdentifier: 
   weaponName: Scorch Shot
+  weaponDescription: Deal Mini-crit damage to enemies on fire and also knocks them
+    back.
   weaponImage: {fileID: 21300000, guid: 941f33ce03f3d124cb84c7ec7498003f, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 1
   reserveSize: 16
+  minCritChance: 2
+  maxCritChance: 12
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

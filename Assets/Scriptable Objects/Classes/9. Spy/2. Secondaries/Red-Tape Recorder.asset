@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Red-Tape Recorder
   m_EditorClassIdentifier: 
   weaponName: Red-Tape Recorder
+  weaponDescription: Reverses building levels until death.
   weaponImage: {fileID: 21300000, guid: f07d78313d1a7834b89271f4d22c948b, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 0
   reserveSize: 0
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

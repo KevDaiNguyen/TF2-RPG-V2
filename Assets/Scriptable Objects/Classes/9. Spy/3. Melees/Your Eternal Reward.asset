@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Your Eternal Reward
   m_EditorClassIdentifier: 
   weaponName: Your Eternal Reward
+  weaponDescription: Directly disguise as the enemy on a successful backstab.
   weaponImage: {fileID: 21300000, guid: a1bf6a7e201b45c48b50182a7179f671, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0
   reserveSize: 0
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

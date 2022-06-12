@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Cow Mangler 5000
   m_EditorClassIdentifier: 
   weaponName: Cow Mangler 5000
+  weaponDescription: Has infinite ammo and can shoot a charged up shot if fully loaded.
   weaponImage: {fileID: 21300000, guid: 179a5e6d60a47b94d857c64df70f000a, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 4
   reserveSize: 9999
+  minCritChance: 2
+  maxCritChance: 12
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

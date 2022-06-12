@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Pistol
   m_EditorClassIdentifier: 
   weaponName: Pistol
+  weaponDescription: Stock Weapon
   weaponImage: {fileID: 21300000, guid: d7c4005bd34bcb74180fbbb7143c78c2, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 12
   reserveSize: 200
+  minCritChance: 2
+  maxCritChance: 12
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

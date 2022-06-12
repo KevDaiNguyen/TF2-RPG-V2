@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Rocket Jumper
   m_EditorClassIdentifier: 
   weaponName: Rocket Jumper
+  weaponDescription: Deals no damage to self or enemies.
   weaponImage: {fileID: 21300000, guid: 6b5de4e4942aa7c4a9f192d1f7bcdcd7, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 4
   reserveSize: 60
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

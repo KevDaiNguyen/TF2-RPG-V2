@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Claidheamh Mor
   m_EditorClassIdentifier: 
   weaponName: Claidheamh Mor
+  weaponDescription: Longer melee reach, slightly recharges charge on kill, and reaches
+    one more slot on charge.
   weaponImage: {fileID: 21300000, guid: f0f2c6ef82887a041bea8b60d92c0cde, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0
   reserveSize: 0
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

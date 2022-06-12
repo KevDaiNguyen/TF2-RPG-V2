@@ -13,11 +13,16 @@ MonoBehaviour:
   m_Name: Splendid Screen
   m_EditorClassIdentifier: 
   weaponName: Splendid Screen
+  weaponDescription: Gain medium explosive and fire resistance and can charge from
+    afar to deal a melee critical hit if timed correctly. Can shield bash for moderate
+    damage.
   weaponImage: {fileID: 21300000, guid: 4bc7eb99369855741b4dc348d341bde2, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 1
   reserveSize: 9999
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

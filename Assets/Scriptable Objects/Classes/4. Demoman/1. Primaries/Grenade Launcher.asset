@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Grenade Launcher
   m_EditorClassIdentifier: 
   weaponName: Grenade Launcher
+  weaponDescription: Stock Weapon
   weaponImage: {fileID: 21300000, guid: dfb5e91484ddc3546afe8273c477c789, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 4
   reserveSize: 16
+  minCritChance: 2
+  maxCritChance: 12
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

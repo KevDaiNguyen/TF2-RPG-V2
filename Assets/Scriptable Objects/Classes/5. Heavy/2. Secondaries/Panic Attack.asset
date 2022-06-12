@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Panic Attack
   m_EditorClassIdentifier: 
   weaponName: Panic Attack
+  weaponDescription: Weapon accuracy decreases if fired continuously.
   weaponImage: {fileID: 21300000, guid: 1984ca13f0c485744a0dd7759f3b5d00, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 6
   reserveSize: 32
+  minCritChance: 2
+  maxCritChance: 12
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

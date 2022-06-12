@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Thermal Thruster
   m_EditorClassIdentifier: 
   weaponName: Thermal Thruster
+  weaponDescription: Launch yourself into the air with 2 charges.
   weaponImage: {fileID: 21300000, guid: 454a0fffa355e3d4b895a7bfc300f123, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 2
   reserveSize: 9999
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

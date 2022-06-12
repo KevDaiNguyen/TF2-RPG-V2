@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Manmelter
   m_EditorClassIdentifier: 
   weaponName: Manmelter
+  weaponDescription: Infinite ammo and gains critical shots for every teammate extinguished
+    with this weapon.
   weaponImage: {fileID: 21300000, guid: ac5ef21979d7b0a4a9a407c2c31a147a, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 1
   reserveSize: 9999
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

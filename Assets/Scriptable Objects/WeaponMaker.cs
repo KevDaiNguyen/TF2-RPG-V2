@@ -6,6 +6,8 @@ using UnityEngine;
 public class WeaponMaker : ScriptableObject
 {
     public string weaponName;
+    [TextArea(2, 5)]
+    public string weaponDescription;
     public Sprite weaponImage;
     public int weaponSlot;
     
@@ -15,6 +17,10 @@ public class WeaponMaker : ScriptableObject
     [Header("Size of ammo capacities"), Space(5)]
     public int clipSize;
     public int reserveSize;
+
+    [Header("Random Crit chance percent"), Space(5)]
+    public float minCritChance;
+    public float maxCritChance;
    
     [Header("Skillslot #1"), Space(5)]
     public string skillName1;

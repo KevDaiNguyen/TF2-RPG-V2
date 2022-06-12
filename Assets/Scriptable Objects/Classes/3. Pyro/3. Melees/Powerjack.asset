@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Powerjack
   m_EditorClassIdentifier: 
   weaponName: Powerjack
+  weaponDescription: Hold out to gain speed boost, gain health on kill.
   weaponImage: {fileID: 21300000, guid: 875a0560a6c290b40ae06b57cc435bc4, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0
   reserveSize: 0
+  minCritChance: 15
+  maxCritChance: 60
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

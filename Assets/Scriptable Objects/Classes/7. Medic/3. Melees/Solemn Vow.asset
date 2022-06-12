@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Solemn Vow
   m_EditorClassIdentifier: 
   weaponName: Solemn Vow
+  weaponDescription: '[Passive] Enemy health values are displayed numerically.'
   weaponImage: {fileID: 21300000, guid: b4ac800441a2d5146aa4cd12ccba0568, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0
   reserveSize: 0
+  minCritChance: 15
+  maxCritChance: 60
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

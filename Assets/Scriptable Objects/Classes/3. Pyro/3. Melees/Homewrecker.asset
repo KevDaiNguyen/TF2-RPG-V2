@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Homewrecker
   m_EditorClassIdentifier: 
   weaponName: Homewrecker
+  weaponDescription: Deal double damage to enemy buildings.
   weaponImage: {fileID: 21300000, guid: d5bef8d401f20324980eafcb082baafd, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0
   reserveSize: 0
+  minCritChance: 15
+  maxCritChance: 60
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

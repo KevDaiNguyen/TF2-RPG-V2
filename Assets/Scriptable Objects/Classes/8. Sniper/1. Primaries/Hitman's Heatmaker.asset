@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Hitman's Heatmaker
   m_EditorClassIdentifier: 
   weaponName: Hitman's Heatmaker
+  weaponDescription: After dealing enough damage, temporarily decrease charge time.
   weaponImage: {fileID: 21300000, guid: 80550c71f60ae1c46b2931c57119bb83, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 25
   reserveSize: 0
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Phlogistinator
   m_EditorClassIdentifier: 
   weaponName: Phlogistinator
+  weaponDescription: Temporarily gain critical damage after dealing enough fire damage.
   weaponImage: {fileID: 21300000, guid: 1c0acdc591612d149aa26b1808974a9d, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 200
   reserveSize: 0
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

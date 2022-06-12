@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Huo-Long Heater
   m_EditorClassIdentifier: 
   weaponName: Huo-Long Heater
+  weaponDescription: Surrounding enemy slots will be set on fire at the cost of higher
+    ammo consumption.
   weaponImage: {fileID: 21300000, guid: aac6bb31df28e3f478e1100a718b4bbc, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 200
   reserveSize: 0
+  minCritChance: 2
+  maxCritChance: 12
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

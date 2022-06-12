@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Brass Beast
   m_EditorClassIdentifier: 
   weaponName: Brass Beast
+  weaponDescription: Higher damage but takes an extra turn to wind up.
   weaponImage: {fileID: 21300000, guid: 59d8b847f7703264f8140e96e2a34100, type: 3}
   weaponSlot: 1
   activeWeapon: 1
   clipSize: 200
   reserveSize: 0
+  minCritChance: 2
+  maxCritChance: 12
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

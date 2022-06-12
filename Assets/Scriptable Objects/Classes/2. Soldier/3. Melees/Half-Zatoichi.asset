@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Half-Zatoichi
   m_EditorClassIdentifier: 
   weaponName: Half-Zatoichi
+  weaponDescription: Longer melee reach and heals self of 50% base health on kill.
   weaponImage: {fileID: 21300000, guid: ef88312f15bd4434eab3cc06692dea2b, type: 3}
   weaponSlot: 3
   activeWeapon: 1
   clipSize: 0
   reserveSize: 0
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

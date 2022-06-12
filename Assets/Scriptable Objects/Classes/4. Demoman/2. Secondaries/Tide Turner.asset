@@ -13,11 +13,16 @@ MonoBehaviour:
   m_Name: Tide Turner
   m_EditorClassIdentifier: 
   weaponName: Tide Turner
+  weaponDescription: Gain low explosive and fire resistance and can charge from afar
+    to deal a melee Mini-crit hit if timed correctly. Can freely choose which enemy
+    slot to charge at.
   weaponImage: {fileID: 21300000, guid: 76716c4834e130f4c8510bafbf546271, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 1
   reserveSize: 9999
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

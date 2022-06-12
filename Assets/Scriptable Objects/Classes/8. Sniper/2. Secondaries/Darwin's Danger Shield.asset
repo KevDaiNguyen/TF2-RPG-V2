@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Darwin's Danger Shield
   m_EditorClassIdentifier: 
   weaponName: Darwin's Danger Shield
+  weaponDescription: Become immune to afterburn damage and have high resistance to
+    fire damage.
   weaponImage: {fileID: 21300000, guid: 7dd1ffb973b07b949bf1c8c2a6472ced, type: 3}
   weaponSlot: 2
   activeWeapon: 0
   clipSize: 0
   reserveSize: 0
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0

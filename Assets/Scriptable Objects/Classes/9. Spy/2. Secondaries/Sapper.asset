@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Sapper
   m_EditorClassIdentifier: 
   weaponName: Sapper
+  weaponDescription: Stock weapon
   weaponImage: {fileID: 21300000, guid: 6edc58d0f0d098a4c9429692880fee1c, type: 3}
   weaponSlot: 2
   activeWeapon: 1
   clipSize: 0
   reserveSize: 0
+  minCritChance: 0
+  maxCritChance: 0
   skillName1: 
   skillDesc1: 
   ammoCost1: 0
