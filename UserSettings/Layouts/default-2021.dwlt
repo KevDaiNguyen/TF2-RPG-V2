@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 21
+  controlID: 93
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 83
+  controlID: 99
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 84
+  controlID: 100
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -270,12 +270,12 @@ MonoBehaviour:
     height: 574
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 15}
   - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,22 +317,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scenes/Main Menu
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scenes/Main Menu
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Kevin\Documents\GitHub\TF2-RPG-V2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ba5d0000
-    m_LastClickedID: 23994
-    m_ExpandedIDs: 00000000b65d0000b85d0000ba5d0000bc5d0000c05d000000ca9a3b
+    m_SelectedIDs: c25e0000
+    m_LastClickedID: 24258
+    m_ExpandedIDs: 00000000b25e0000b45e0000b65e0000b85e0000ba5e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b65d0000b85d0000ba5d0000bc5d0000be5d0000c05d0000
+    m_ExpandedIDs: 00000000b25e0000b45e0000b65e0000b85e0000ba5e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -490,7 +490,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 50bffffface1fffff6e4ffff96f7fffff2f9ffff36fbffff
+      m_ExpandedIDs: f487ffffd89cffff24d3fffff2dcffff14dfffff9ce2ffff7ce6ffffe2e7fffff4eaffffc8ebffff0cecffff88ecffffe0ecffff36f4ffffbaf7ffff38fbfffff25f0000fa5f0000386200004062000024630000386300007c650000f4650000fc65000044660000ea670000f4670000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -739,9 +739,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 351.59164, y: 431.59265, z: -520.64777}
+    m_Target: {x: 86.92397, y: 138.46948, z: -83.97634}
     speed: 2
-    m_Value: {x: 351.59164, y: 431.59265, z: -520.64777}
+    m_Value: {x: 86.92397, y: 138.46948, z: -83.97634}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -788,13 +788,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.1584286, y: -0.23395155, z: 0.03867149, w: -0.95848566}
+    m_Target: {x: -0.41403902, y: -0.058107696, z: 0.02649266, w: -0.90803444}
     speed: 2
-    m_Value: {x: -0.1584846, y: -0.23251088, z: 0.03843336, w: -0.95882446}
+    m_Value: {x: -0.41947278, y: -0.057946723, z: 0.026840406, w: -0.9055189}
   m_Size:
     m_Target: 42.38959
     speed: 2
-    m_Value: 42.389587
+    m_Value: 42.38959
   m_Ortho:
     m_Target: 0
     speed: 2
