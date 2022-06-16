@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f390e1aba33d39144bd5a1b972f40953, type: 3}
+  m_Name: Class Sprites
+  m_EditorClassIdentifier: 
+  redScouts:
+  - {fileID: 21300000, guid: f2320795c1c8d05459b448a177d9b563, type: 3}
+  blueScouts:
+  - {fileID: 21300000, guid: d5053b3f5de0e1f498f21c127f964394, type: 3}
+  redSoldier:
+  - {fileID: 21300000, guid: 7ae5cc5ea0b18694c9555833e24faf59, type: 3}
+  blueSoldier:
+  - {fileID: 21300000, guid: 2eb7ed5727a820e449f9ce80f85d04e1, type: 3}
+  redPyro:
+  - {fileID: 21300000, guid: e2774a177884ee647b3dd5e742085d7e, type: 3}
+  bluePyro:
+  - {fileID: 21300000, guid: d4d196cdfd02e2249a8d9596a52e7e28, type: 3}
+  redDemo:
+  - {fileID: 21300000, guid: bd3570919dab32e49b4154ac9342a49c, type: 3}
+  blueDemo:
+  - {fileID: 21300000, guid: 1fa9330c79e5a59469a5f1967de35242, type: 3}
+  redHeavy:
+  - {fileID: 21300000, guid: b4410aa4857a1774f9860cdf2a71532c, type: 3}
+  blueHeavy:
+  - {fileID: 21300000, guid: 09f10e47f5a6bff4a85a4ff191200d30, type: 3}
+  redEngi:
+  - {fileID: 21300000, guid: 43c6ecc65e5d4eb4e9923bdc2b08d7fc, type: 3}
+  blueEngi:
+  - {fileID: 21300000, guid: 5c2616edb501fe3428d322788b3496dd, type: 3}
+  redMedic:
+  - {fileID: 21300000, guid: 09852ddd426155c42af81412a35d8ef4, type: 3}
+  blueMedic:
+  - {fileID: 21300000, guid: 2a5f6b68594532846880d19ff611525b, type: 3}
+  redSniper:
+  - {fileID: 21300000, guid: 54cd1c09a3acca34293b3f9b57891602, type: 3}
+  blueSniper:
+  - {fileID: 21300000, guid: 86cbc9cdc0ee0b0458c90e094e6b62ce, type: 3}
+  redSpy:
+  - {fileID: 21300000, guid: 703a6feabf399c746a19777e13fcad80, type: 3}
+  blueSpy:
+  - {fileID: 21300000, guid: 0e9cd317b9700d24ea1b7ddf08ea4b1d, type: 3}

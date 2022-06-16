@@ -32,7 +32,7 @@ public class WeaponMaker : ScriptableObject
     public int accuracy1;
     public int skillRange1;
     
-    [Space(3)]
+    [Space(4)]
     public int selfDamageMin1;
     public int enemyDamageMin1;
     public int selfDamageMax1;
@@ -48,7 +48,7 @@ public class WeaponMaker : ScriptableObject
     public int accuracy2;
     public int skillRange2;
 
-    [Space(3)]
+    [Space(4)]
     public int selfDamageMin2;
     public int enemyDamageMin2;
     public int selfDamageMax2;
@@ -64,7 +64,7 @@ public class WeaponMaker : ScriptableObject
     public int accuracy3;
     public int skillRange3;
 
-    [Space(3)]
+    [Space(4)]
     public int selfDamageMin3;
     public int enemyDamageMin3;
     public int selfDamageMax3;
@@ -80,7 +80,7 @@ public class WeaponMaker : ScriptableObject
     public int accuracy4;
     public int skillRange4;
 
-    [Space(3)]
+    [Space(4)]
     public int selfDamageMin4;
     public int enemyDamageMin4;
     public int selfDamageMax4;
