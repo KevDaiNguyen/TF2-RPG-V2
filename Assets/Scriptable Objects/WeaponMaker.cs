@@ -26,7 +26,9 @@ public class WeaponMaker : ScriptableObject
     public string skillName1;
     [TextArea(5,10)]
     public string skillDesc1;
-    
+    [Space(5)]
+    public Sprite skillLogo1;
+
     [Space(3)]
     public int ammoCost1;
     public int accuracy1;
@@ -42,6 +44,8 @@ public class WeaponMaker : ScriptableObject
     public string skillName2;
     [TextArea(5, 10)]
     public string skillDesc2;
+    [Space(5)]
+    public Sprite skillLogo2;
 
     [Space(3)]
     public int ammoCost2;
@@ -58,6 +62,8 @@ public class WeaponMaker : ScriptableObject
     public string skillName3;
     [TextArea(5, 10)]
     public string skillDesc3;
+    [Space(5)]
+    public Sprite skillLogo3;
 
     [Space(3)]
     public int ammoCost3;
@@ -74,6 +80,8 @@ public class WeaponMaker : ScriptableObject
     public string skillName4;
     [TextArea(5, 10)]
     public string skillDesc4;
+    [Space(5)]
+    public Sprite skillLogo4;
 
     [Space(3)]
     public int ammoCost4;
