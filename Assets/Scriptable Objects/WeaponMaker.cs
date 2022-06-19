@@ -10,7 +10,10 @@ public class WeaponMaker : ScriptableObject
     public string weaponDescription;
     public Sprite weaponImage;
     public int weaponSlot;
-    
+
+    [Header("If weapon has cooldowns/stored damage"), Space(5)]
+    public bool hasMeterBar;
+
     [Header("TRUE if weapon can be held out"), Space(5)]
     public bool activeWeapon;
     

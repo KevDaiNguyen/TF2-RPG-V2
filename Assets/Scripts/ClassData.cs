@@ -146,16 +146,9 @@ public class ClassData : MonoBehaviour
         }
     }
 
-    public void ChangeSpeed(int speedChangeNum)
+    public void SetSpeed(int speedChangeNum)
     {
-        if (currentSpeed + speedChangeNum <= 0)
-        {
-            currentSpeed = 0;
-        }
-        else
-        {
-            currentSpeed += speedChangeNum;
-        }
+        currentSpeed = speedChangeNum;
     }
 
     public void TakeHealing(int healthChangeNum, bool fromMedigun, bool isQuickFix)
