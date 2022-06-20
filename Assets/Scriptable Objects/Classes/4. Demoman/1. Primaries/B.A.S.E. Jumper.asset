@@ -17,7 +17,17 @@ MonoBehaviour:
   weaponImage: {fileID: 21300000, guid: d95f83942c0627c469cc7c9fc6996537, type: 3}
   weaponSlot: 1
   hasMeterBar: 1
+  maxMeterNum: 1
+  meterText: Available Air Stall
   activeWeapon: 0
+  bulletResist: 0
+  explosiveResist: 0
+  fireResist: 0
+  meleeResist: 0
+  bulletVulnerability: 0
+  explosiveVulnerability: 0
+  fireVulnerability: 0
+  meleeVulnerability: 0
   clipSize: 0
   reserveSize: 0
   minCritChance: 0
