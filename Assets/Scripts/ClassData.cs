@@ -6,6 +6,8 @@ public class ClassData : MonoBehaviour
 {
     [Header("---Class Identifier---")]
     public string className;
+    [Header("---Team Decider---")]
+    public bool isBlu;
     [Header("---Variable Health---")]
     private int defaultHealth;
     public int currentHealth;
@@ -26,35 +28,254 @@ public class ClassData : MonoBehaviour
     [Header("---Basic Class Sprite---")]
     public Sprite classSprite;
     [Header("---Active when changing classes---")]
-    public bool switchedClass = false;
+    public bool switchedClass;
     [Header("---Only active on death---")]
     public bool classDead;
+    [Header("---What is currently held---")]
+    public int equippedSlotNum;
+    [Header("---Holds all weapons in slots---")]
+    public int skillChoice1;
+    public int skillChoice2;
+    [Header("---Current Skill and Logo of equipped Weapon---")]
+    public Sprite equippedLogo1;
+    public string equippedSkill1;
+    public Sprite equippedLogo2;
+    public string equippedSkill2;
+    [Header("---If extra slot is needed---")]
+    public bool showExtraSlot;
     [Header("---Holds all weapons in slots---")]
     public WeaponMaker primarySlot;
     public WeaponMaker secondarySlot;
     public WeaponMaker meleeSlot;
     public WeaponMaker extraSlot;
+    [Header("---Class Sprites---")]
+    public ClassSprites spriteDatabase;
 
     // Start is called before the first frame update
     void Start()
     {
-        className = "Spy";
+        className = "Scout";
+        isBlu = false;
         slotSpace = 1;
+
         bulletResist = 0;
         explosiveResist = 0;
         fireResist = 0;
         meleeResist = 0;
-        primarySlot = WeaponDatabase.spyPrimaries[0];
-        secondarySlot = WeaponDatabase.spySecondaries[0];
-        meleeSlot = WeaponDatabase.spyMelees[0];
-        extraSlot = WeaponDatabase.spyWatches[0];
+
+        bulletVulnerability = 0;
+        explosiveVulnerability = 0;
+        fireVulnerability = 0;
+        meleeVulnerability = 0;
+
+        equippedSlotNum = 1;
+
+        skillChoice1 = 1;
+        skillChoice2 = 2;
+
+        showExtraSlot = false;
+
         classDead = false;
+
+        switchedClass = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         ClassCheck();
+        switch (equippedSlotNum)
+        {
+            case 1:
+                SkillCheck("Primary");
+                break;
+            case 2:
+                SkillCheck("Secondary");
+                break;
+            case 3:
+                SkillCheck("Melee");
+                break;
+            case 4:
+                SkillCheck("Extra");
+                break;
+        }
+    }
+
+    public void SkillCheck(string equippedWeapon)
+    {
+        if (skillChoice1 == skillChoice2)
+        {
+            skillChoice1 = 1;
+            skillChoice2 = 2;
+        }
+
+        switch (equippedWeapon)
+        {
+            case "Primary":
+                switch (skillChoice1)
+                {
+                    case 1:
+                        equippedLogo1 = primarySlot.skillLogo1;
+                        equippedSkill1 = primarySlot.skillDesc1;
+                        break;
+                    case 2:
+                        equippedLogo1 = primarySlot.skillLogo2;
+                        equippedSkill1 = primarySlot.skillDesc2;
+                        break;
+                    case 3:
+                        equippedLogo1 = primarySlot.skillLogo3;
+                        equippedSkill1 = primarySlot.skillDesc3;
+                        break;
+                    case 4:
+                        equippedLogo1 = primarySlot.skillLogo4;
+                        equippedSkill1 = primarySlot.skillDesc4;
+                        break;
+                }
+
+                switch (skillChoice2)
+                {
+                    case 1:
+                        equippedLogo2 = primarySlot.skillLogo1;
+                        equippedSkill2 = primarySlot.skillDesc1;
+                        break;
+                    case 2:
+                        equippedLogo2 = primarySlot.skillLogo2;
+                        equippedSkill2 = primarySlot.skillDesc2;
+                        break;
+                    case 3:
+                        equippedLogo2 = primarySlot.skillLogo3;
+                        equippedSkill2 = primarySlot.skillDesc3;
+                        break;
+                    case 4:
+                        equippedLogo2 = primarySlot.skillLogo4;
+                        equippedSkill2 = primarySlot.skillDesc4;
+                        break;
+                }
+                break;
+            case "Secondary":
+                switch (skillChoice1)
+                {
+                    case 1:
+                        equippedLogo1 = secondarySlot.skillLogo1;
+                        equippedSkill1 = secondarySlot.skillDesc1;
+                        break;
+                    case 2:
+                        equippedLogo1 = secondarySlot.skillLogo2;
+                        equippedSkill1 = secondarySlot.skillDesc2;
+                        break;
+                    case 3:
+                        equippedLogo1 = secondarySlot.skillLogo3;
+                        equippedSkill1 = secondarySlot.skillDesc3;
+                        break;
+                    case 4:
+                        equippedLogo1 = secondarySlot.skillLogo4;
+                        equippedSkill1 = secondarySlot.skillDesc4;
+                        break;
+                }
+
+                switch (skillChoice2)
+                {
+                    case 1:
+                        equippedLogo2 = secondarySlot.skillLogo1;
+                        equippedSkill2 = secondarySlot.skillDesc1;
+                        break;
+                    case 2:
+                        equippedLogo2 = secondarySlot.skillLogo2;
+                        equippedSkill2 = secondarySlot.skillDesc2;
+                        break;
+                    case 3:
+                        equippedLogo2 = secondarySlot.skillLogo3;
+                        equippedSkill2 = secondarySlot.skillDesc3;
+                        break;
+                    case 4:
+                        equippedLogo2 = secondarySlot.skillLogo4;
+                        equippedSkill2 = secondarySlot.skillDesc4;
+                        break;
+                }
+                break;
+            case "Melee":
+                switch (skillChoice1)
+                {
+                    case 1:
+                        equippedLogo1 = meleeSlot.skillLogo1;
+                        equippedSkill1 = meleeSlot.skillDesc1;
+                        break;
+                    case 2:
+                        equippedLogo1 = meleeSlot.skillLogo2;
+                        equippedSkill1 = meleeSlot.skillDesc2;
+                        break;
+                    case 3:
+                        equippedLogo1 = meleeSlot.skillLogo3;
+                        equippedSkill1 = meleeSlot.skillDesc3;
+                        break;
+                    case 4:
+                        equippedLogo1 = meleeSlot.skillLogo4;
+                        equippedSkill1 = meleeSlot.skillDesc4;
+                        break;
+                }
+
+                switch (skillChoice2)
+                {
+                    case 1:
+                        equippedLogo2 = meleeSlot.skillLogo1;
+                        equippedSkill2 = meleeSlot.skillDesc1;
+                        break;
+                    case 2:
+                        equippedLogo2 = meleeSlot.skillLogo2;
+                        equippedSkill2 = meleeSlot.skillDesc2;
+                        break;
+                    case 3:
+                        equippedLogo2 = meleeSlot.skillLogo3;
+                        equippedSkill2 = meleeSlot.skillDesc3;
+                        break;
+                    case 4:
+                        equippedLogo2 = meleeSlot.skillLogo4;
+                        equippedSkill2 = meleeSlot.skillDesc4;
+                        break;
+                }
+                break;
+            case "Extra":
+                switch (skillChoice1)
+                {
+                    case 1:
+                        equippedLogo1 = extraSlot.skillLogo1;
+                        equippedSkill1 = extraSlot.skillDesc1;
+                        break;
+                    case 2:
+                        equippedLogo1 = extraSlot.skillLogo2;
+                        equippedSkill1 = extraSlot.skillDesc2;
+                        break;
+                    case 3:
+                        equippedLogo1 = extraSlot.skillLogo3;
+                        equippedSkill1 = extraSlot.skillDesc3;
+                        break;
+                    case 4:
+                        equippedLogo1 = extraSlot.skillLogo4;
+                        equippedSkill1 = extraSlot.skillDesc4;
+                        break;
+                }
+
+                switch (skillChoice2)
+                {
+                    case 1:
+                        equippedLogo2 = extraSlot.skillLogo1;
+                        equippedSkill2 = extraSlot.skillDesc1;
+                        break;
+                    case 2:
+                        equippedLogo2 = extraSlot.skillLogo2;
+                        equippedSkill2 = extraSlot.skillDesc2;
+                        break;
+                    case 3:
+                        equippedLogo2 = extraSlot.skillLogo3;
+                        equippedSkill2 = extraSlot.skillDesc3;
+                        break;
+                    case 4:
+                        equippedLogo2 = extraSlot.skillLogo4;
+                        equippedSkill2 = extraSlot.skillDesc4;
+                        break;
+                }
+                break;
+        }
     }
 
     public void ClassCheck()
@@ -67,6 +288,15 @@ public class ClassData : MonoBehaviour
                     defaultHealth = 125;
                     defaultSpeed = 133;
 
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redScouts[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.blueScouts[0];
+                    }
+
                     primarySlot = WeaponDatabase.scoutPrimaries[Random.Range(0, WeaponDatabase.scoutPrimaries.Length)];
                     secondarySlot = WeaponDatabase.scoutSecondaries[Random.Range(0, WeaponDatabase.scoutSecondaries.Length)];
                     meleeSlot = WeaponDatabase.scoutMelees[Random.Range(0, WeaponDatabase.scoutMelees.Length)];
@@ -74,6 +304,15 @@ public class ClassData : MonoBehaviour
                 case "Soldier":
                     defaultHealth = 200;
                     defaultSpeed = 80;
+
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redSoldier[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.blueSoldier[0];
+                    }
 
                     primarySlot = WeaponDatabase.soldierPrimaries[Random.Range(0, WeaponDatabase.soldierPrimaries.Length)];
                     secondarySlot = WeaponDatabase.soldierSecondaries[Random.Range(0, WeaponDatabase.soldierSecondaries.Length)];
@@ -83,6 +322,15 @@ public class ClassData : MonoBehaviour
                     defaultHealth = 175;
                     defaultSpeed = 100;
 
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redPyro[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.bluePyro[0];
+                    }
+
                     primarySlot = WeaponDatabase.pyroPrimaries[Random.Range(0, WeaponDatabase.pyroPrimaries.Length)];
                     secondarySlot = WeaponDatabase.pyroSecondaries[Random.Range(0, WeaponDatabase.pyroSecondaries.Length)];
                     meleeSlot = WeaponDatabase.pyroMelees[Random.Range(0, WeaponDatabase.pyroMelees.Length)];
@@ -91,6 +339,15 @@ public class ClassData : MonoBehaviour
                     defaultHealth = 175;
                     defaultSpeed = 93;
 
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redDemo[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.blueDemo[0];
+                    }
+
                     primarySlot = WeaponDatabase.demomanPrimaries[Random.Range(0, WeaponDatabase.demomanPrimaries.Length)];
                     secondarySlot = WeaponDatabase.demomanSecondaries[Random.Range(0, WeaponDatabase.demomanSecondaries.Length)];
                     meleeSlot = WeaponDatabase.demomanMelees[Random.Range(0, WeaponDatabase.demomanMelees.Length)];
@@ -98,6 +355,15 @@ public class ClassData : MonoBehaviour
                 case "Heavy":
                     defaultHealth = 300;
                     defaultSpeed = 77;
+
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redHeavy[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.blueHeavy[0];
+                    }
 
                     primarySlot = WeaponDatabase.heavyPrimaries[Random.Range(0, WeaponDatabase.heavyPrimaries.Length)];
                     secondarySlot = WeaponDatabase.heavySecondaries[Random.Range(0, WeaponDatabase.heavySecondaries.Length)];
@@ -108,6 +374,15 @@ public class ClassData : MonoBehaviour
                     defaultSpeed = 100;
                     slotSpace = 2;
 
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redEngi[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.blueEngi[0];
+                    }
+
                     primarySlot = WeaponDatabase.engineerPrimaries[Random.Range(0, WeaponDatabase.engineerPrimaries.Length)];
                     secondarySlot = WeaponDatabase.engineerSecondaries[Random.Range(0, WeaponDatabase.engineerSecondaries.Length)];
                     meleeSlot = WeaponDatabase.engineerMelees[Random.Range(0, WeaponDatabase.engineerMelees.Length)];
@@ -115,6 +390,15 @@ public class ClassData : MonoBehaviour
                 case "Medic":
                     defaultHealth = 150;
                     defaultSpeed = 107;
+
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redMedic[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.blueMedic[0];
+                    }
 
                     primarySlot = WeaponDatabase.medicPrimaries[Random.Range(0, WeaponDatabase.medicPrimaries.Length)];
                     secondarySlot = WeaponDatabase.medicSecondaries[Random.Range(0, WeaponDatabase.medicSecondaries.Length)];
@@ -124,6 +408,15 @@ public class ClassData : MonoBehaviour
                     defaultHealth = 125;
                     defaultSpeed = 100;
 
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redSniper[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.blueSniper[0];
+                    }
+
                     primarySlot = WeaponDatabase.sniperPrimaries[Random.Range(0, WeaponDatabase.sniperPrimaries.Length)];
                     secondarySlot = WeaponDatabase.sniperSecondaries[Random.Range(0, WeaponDatabase.sniperSecondaries.Length)];
                     meleeSlot = WeaponDatabase.sniperMelees[Random.Range(0, WeaponDatabase.sniperMelees.Length)];
@@ -131,6 +424,17 @@ public class ClassData : MonoBehaviour
                 case "Spy":
                     defaultHealth = 125;
                     defaultSpeed = 107;
+
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redSpy[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.blueSpy[0];
+                    }
+
+                    showExtraSlot = true;
 
                     primarySlot = WeaponDatabase.spyPrimaries[Random.Range(0, WeaponDatabase.spyPrimaries.Length)];
                     secondarySlot = WeaponDatabase.spySecondaries[Random.Range(0, WeaponDatabase.spySecondaries.Length)];

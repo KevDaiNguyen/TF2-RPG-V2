@@ -16,7 +16,7 @@ MonoBehaviour:
   weaponDescription: Can charge sniper without zooming in.
   weaponImage: {fileID: 21300000, guid: ffd01e4ca1490ac43b518aceffb14a6b, type: 3}
   weaponSlot: 1
-  hasMeterBar: 1
+  hasMeterBar: 0
   activeWeapon: 1
   clipSize: 25
   reserveSize: 0

@@ -16,7 +16,7 @@ MonoBehaviour:
   weaponDescription: Stock Weapon
   weaponImage: {fileID: 21300000, guid: 5479b931a3696974b84d288179316d42, type: 3}
   weaponSlot: 1
-  hasMeterBar: 1
+  hasMeterBar: 0
   activeWeapon: 1
   clipSize: 25
   reserveSize: 0

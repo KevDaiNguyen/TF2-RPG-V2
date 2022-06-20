@@ -16,7 +16,7 @@ MonoBehaviour:
   weaponDescription: On scoped hit, enemy receive temporary Mini-crit damage.
   weaponImage: {fileID: 21300000, guid: b44be06fcf716fd439de9b7063242adc, type: 3}
   weaponSlot: 1
-  hasMeterBar: 1
+  hasMeterBar: 0
   activeWeapon: 1
   clipSize: 25
   reserveSize: 0

@@ -16,7 +16,17 @@ public class WeaponMaker : ScriptableObject
 
     [Header("TRUE if weapon can be held out"), Space(5)]
     public bool activeWeapon;
-    
+
+    [Header("Resist/Vulnerabilities when equipped"), Space(5)]
+    public float bulletResist;
+    public float explosiveResist;
+    public float fireResist;
+    public float meleeResist;
+    public float bulletVulnerability;
+    public float explosiveVulnerability;
+    public float fireVulnerability;
+    public float meleeVulnerability;
+
     [Header("Size of ammo capacities"), Space(5)]
     public int clipSize;
     public int reserveSize;

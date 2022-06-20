@@ -16,7 +16,7 @@ MonoBehaviour:
   weaponDescription: Cannot scope in, but has lower charge time.
   weaponImage: {fileID: 21300000, guid: 249fb7e834674a84291184f0f2210349, type: 3}
   weaponSlot: 1
-  hasMeterBar: 1
+  hasMeterBar: 0
   activeWeapon: 1
   clipSize: 1
   reserveSize: 12
