@@ -89,7 +89,8 @@ public class DisplayBattleUI : MonoBehaviour
                     if (dataInstance.primarySlot.hasMeterBar)
                     {
                         chargeBarObject.SetActive(true);
-                        //chargeBar.fillAmount = 
+                        chargeBarText.text = dataInstance.primarySlot.meterText;
+                        chargeBar.fillAmount = (dataInstance.primaryMeterNum / dataInstance.primarySlot.maxMeterNum);
                     }
                     else
                     {
@@ -132,7 +133,8 @@ public class DisplayBattleUI : MonoBehaviour
                     if (dataInstance.secondarySlot.hasMeterBar)
                     {
                         chargeBarObject.SetActive(true);
-                        //chargeBar.fillAmount = 
+                        chargeBarText.text = dataInstance.secondarySlot.meterText;
+                        chargeBar.fillAmount = (dataInstance.secondaryMeterNum / dataInstance.secondarySlot.maxMeterNum);
                     }
                     else
                     {
@@ -173,7 +175,8 @@ public class DisplayBattleUI : MonoBehaviour
                     if (dataInstance.meleeSlot.hasMeterBar)
                     {
                         chargeBarObject.SetActive(true);
-                        //chargeBar.fillAmount = 
+                        chargeBarText.text = dataInstance.meleeSlot.meterText;
+                        chargeBar.fillAmount = (dataInstance.meleeMeterNum / dataInstance.meleeSlot.maxMeterNum);
                     }
                     else
                     {
@@ -216,7 +219,8 @@ public class DisplayBattleUI : MonoBehaviour
                         if (dataInstance.extraSlot.hasMeterBar)
                         {
                             chargeBarObject.SetActive(true);
-                            //chargeBar.fillAmount = 
+                            chargeBarText.text = dataInstance.extraSlot.meterText;
+                            chargeBar.fillAmount = (dataInstance.extraMeterNum / dataInstance.extraSlot.maxMeterNum);
                         }
                         else
                         {

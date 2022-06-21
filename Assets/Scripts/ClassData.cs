@@ -33,7 +33,7 @@ public class ClassData : MonoBehaviour
     public bool classDead;
     [Header("---What is currently held---")]
     public int equippedSlotNum;
-    [Header("---Holds all weapons in slots---")]
+    [Header("---Which Skill Nums out of 1-4---")]
     public int skillChoice1;
     public int skillChoice2;
     [Header("---Current Skill and Logo of equipped Weapon---")]
@@ -41,6 +41,11 @@ public class ClassData : MonoBehaviour
     public string equippedSkill1;
     public Sprite equippedLogo2;
     public string equippedSkill2;
+    [Header("---Current Values of Meterbar---")]
+    public int primaryMeterNum;
+    public int secondaryMeterNum;
+    public int meleeMeterNum;
+    public int extraMeterNum;
     [Header("---If extra slot is needed---")]
     public bool showExtraSlot;
     [Header("---Holds all weapons in slots---")]
@@ -72,6 +77,11 @@ public class ClassData : MonoBehaviour
 
         skillChoice1 = 1;
         skillChoice2 = 2;
+
+        primaryMeterNum = 0;
+        secondaryMeterNum = 0;
+        meleeMeterNum = 0;
+        extraMeterNum = 0;
 
         showExtraSlot = false;
 
@@ -447,6 +457,53 @@ public class ClassData : MonoBehaviour
             currentSpeed = defaultSpeed;
 
             switchedClass = true;
+        }
+    }
+
+    public void IncreaseMeterBar(int increaseAmount)
+    {
+        switch (equippedSlotNum)
+        {
+            case 1:
+                if (primaryMeterNum + increaseAmount >= primarySlot.maxMeterNum)
+                {
+                    primaryMeterNum = primarySlot.maxMeterNum;
+                }
+                else if (primaryMeterNum + increaseAmount > 0)
+                {
+                    primaryMeterNum += increaseAmount;
+                }
+                break;
+            case 2:
+                if (secondaryMeterNum + increaseAmount >= secondarySlot.maxMeterNum)
+                {
+                    secondaryMeterNum = secondarySlot.maxMeterNum;
+                }
+                else if (secondaryMeterNum + increaseAmount > 0)
+                {
+                    secondaryMeterNum += increaseAmount;
+                }
+                break;
+            case 3:
+                if (meleeMeterNum + increaseAmount >= meleeSlot.maxMeterNum)
+                {
+                    meleeMeterNum = meleeSlot.maxMeterNum;
+                }
+                else if (meleeMeterNum + increaseAmount > 0)
+                {
+                    meleeMeterNum += increaseAmount;
+                }
+                break;
+            case 4:
+                if (extraMeterNum + increaseAmount >= extraSlot.maxMeterNum)
+                {
+                    extraMeterNum = extraSlot.maxMeterNum;
+                }
+                else if (extraMeterNum + increaseAmount > 0)
+                {
+                    extraMeterNum += increaseAmount;
+                }
+                break;
         }
     }
 

@@ -1165,6 +1165,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 227667251}
+  - component: {fileID: 227667253}
+  - component: {fileID: 227667252}
+  - component: {fileID: 227667254}
   m_Layer: 5
   m_Name: Red Slot 2
   m_TagString: Untagged
@@ -1194,6 +1197,233 @@ RectTransform:
   m_AnchoredPosition: {x: -430, y: -80}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &227667252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227667250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880d882d09287094bbec38b1ab0ac419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  className: Scout
+  isBlu: 0
+  currentHealth: 0
+  currentSpeed: 0
+  slotSpace: 0
+  bulletResist: 0
+  explosiveResist: 0
+  fireResist: 0
+  meleeResist: 0
+  bulletVulnerability: 0
+  explosiveVulnerability: 0
+  fireVulnerability: 0
+  meleeVulnerability: 0
+  classSprite: {fileID: 0}
+  switchedClass: 0
+  classDead: 0
+  equippedSlotNum: 0
+  skillChoice1: 0
+  skillChoice2: 0
+  equippedLogo1: {fileID: 0}
+  equippedSkill1: 
+  equippedLogo2: {fileID: 0}
+  equippedSkill2: 
+  primaryMeterNum: 0
+  secondaryMeterNum: 0
+  meleeMeterNum: 0
+  extraMeterNum: 0
+  showExtraSlot: 0
+  primarySlot: {fileID: 0}
+  secondarySlot: {fileID: 0}
+  meleeSlot: {fileID: 0}
+  extraSlot: {fileID: 0}
+  spriteDatabase: {fileID: 0}
+--- !u!114 &227667253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227667250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efa9d4dbd9ed2549a4f8b85f74853b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataInstance: {fileID: 227667252}
+  classBody: {fileID: 1183884443}
+  healthbarFill: {fileID: 1251632939}
+  className: {fileID: 1141984801}
+  classHealthNum: {fileID: 1327661811}
+  bulletResist: {fileID: 1058131482}
+  explosiveResist: {fileID: 2111405410}
+  fireResist: {fileID: 2070043355}
+  meleeResist: {fileID: 1816363029}
+  speedNum: {fileID: 1078646691}
+  dodgeChance: {fileID: 230687804}
+  ammoCount: {fileID: 1384219648}
+  chargeBarObject: {fileID: 977222993}
+  chargeBar: {fileID: 1770908555}
+  chargeBarText: {fileID: 902652180}
+  weaponTabs:
+  - {fileID: 632333574}
+  - {fileID: 1280263960}
+  - {fileID: 1042111155}
+  - {fileID: 407323016}
+  activeSkillChoices:
+  - {fileID: 421007109}
+  - {fileID: 2006304149}
+  - {fileID: 2093231588}
+  - {fileID: 936800004}
+  skillLogo1: {fileID: 601907612}
+  skillDescription1: {fileID: 1093873654}
+  skillLogo2: {fileID: 1857449835}
+  skillDescription2: {fileID: 1758325452}
+  currentlySelected: 0
+--- !u!114 &227667254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227667250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 227667253}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: SelectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2025763705}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 970881211}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508319805}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 903963025}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2089755606}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 756530506}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1459799161}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &230687802
 GameObject:
   m_ObjectHideFlags: 0
@@ -2300,8 +2530,9 @@ GameObject:
   - component: {fileID: 407323017}
   - component: {fileID: 407323019}
   - component: {fileID: 407323018}
+  - component: {fileID: 407323020}
   m_Layer: 5
-  m_Name: Extra Slot
+  m_Name: Extra Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2365,6 +2596,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407323016}
   m_CullTransparentMesh: 1
+--- !u!114 &407323020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407323016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 407323018}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &421007107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2377,7 +2652,7 @@ GameObject:
   - component: {fileID: 421007110}
   - component: {fileID: 421007109}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Skill 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2737,6 +3012,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 508319803}
+  - component: {fileID: 508319805}
+  - component: {fileID: 508319804}
+  - component: {fileID: 508319806}
   m_Layer: 5
   m_Name: Blu Slot 1
   m_TagString: Untagged
@@ -2766,6 +3044,233 @@ RectTransform:
   m_AnchoredPosition: {x: 220, y: -80}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &508319804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508319802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880d882d09287094bbec38b1ab0ac419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  className: Scout
+  isBlu: 0
+  currentHealth: 0
+  currentSpeed: 0
+  slotSpace: 0
+  bulletResist: 0
+  explosiveResist: 0
+  fireResist: 0
+  meleeResist: 0
+  bulletVulnerability: 0
+  explosiveVulnerability: 0
+  fireVulnerability: 0
+  meleeVulnerability: 0
+  classSprite: {fileID: 0}
+  switchedClass: 0
+  classDead: 0
+  equippedSlotNum: 0
+  skillChoice1: 0
+  skillChoice2: 0
+  equippedLogo1: {fileID: 0}
+  equippedSkill1: 
+  equippedLogo2: {fileID: 0}
+  equippedSkill2: 
+  primaryMeterNum: 0
+  secondaryMeterNum: 0
+  meleeMeterNum: 0
+  extraMeterNum: 0
+  showExtraSlot: 0
+  primarySlot: {fileID: 0}
+  secondarySlot: {fileID: 0}
+  meleeSlot: {fileID: 0}
+  extraSlot: {fileID: 0}
+  spriteDatabase: {fileID: 0}
+--- !u!114 &508319805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508319802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efa9d4dbd9ed2549a4f8b85f74853b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataInstance: {fileID: 508319804}
+  classBody: {fileID: 575965032}
+  healthbarFill: {fileID: 1728408212}
+  className: {fileID: 1141984801}
+  classHealthNum: {fileID: 1327661811}
+  bulletResist: {fileID: 1058131482}
+  explosiveResist: {fileID: 2111405410}
+  fireResist: {fileID: 2070043355}
+  meleeResist: {fileID: 1816363029}
+  speedNum: {fileID: 1078646691}
+  dodgeChance: {fileID: 230687804}
+  ammoCount: {fileID: 1384219648}
+  chargeBarObject: {fileID: 977222993}
+  chargeBar: {fileID: 1770908555}
+  chargeBarText: {fileID: 902652180}
+  weaponTabs:
+  - {fileID: 632333574}
+  - {fileID: 1280263960}
+  - {fileID: 1042111155}
+  - {fileID: 407323016}
+  activeSkillChoices:
+  - {fileID: 421007109}
+  - {fileID: 2006304149}
+  - {fileID: 2093231588}
+  - {fileID: 936800004}
+  skillLogo1: {fileID: 601907612}
+  skillDescription1: {fileID: 1093873654}
+  skillLogo2: {fileID: 1857449835}
+  skillDescription2: {fileID: 1758325452}
+  currentlySelected: 0
+--- !u!114 &508319806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508319802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 508319805}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: SelectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 903963025}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2089755606}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 756530506}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1459799161}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 227667253}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2025763705}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 970881211}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &554399504
 GameObject:
   m_ObjectHideFlags: 0
@@ -3552,7 +4057,7 @@ GameObject:
   - component: {fileID: 601907613}
   - component: {fileID: 601907612}
   m_Layer: 5
-  m_Name: Skill Logo
+  m_Name: Skill Logo 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3795,8 +4300,9 @@ GameObject:
   - component: {fileID: 632333575}
   - component: {fileID: 632333577}
   - component: {fileID: 632333576}
+  - component: {fileID: 632333578}
   m_Layer: 5
-  m_Name: Primary Slot
+  m_Name: Primary Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3860,6 +4366,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632333574}
   m_CullTransparentMesh: 1
+--- !u!114 &632333578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632333574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 632333576}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &633360114
 GameObject:
   m_ObjectHideFlags: 0
@@ -4735,6 +5285,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 756530504}
+  - component: {fileID: 756530506}
+  - component: {fileID: 756530505}
+  - component: {fileID: 756530507}
   m_Layer: 5
   m_Name: Blu Slot 4
   m_TagString: Untagged
@@ -4764,6 +5317,233 @@ RectTransform:
   m_AnchoredPosition: {x: 850, y: -80}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &756530505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756530503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880d882d09287094bbec38b1ab0ac419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  className: Scout
+  isBlu: 0
+  currentHealth: 0
+  currentSpeed: 0
+  slotSpace: 0
+  bulletResist: 0
+  explosiveResist: 0
+  fireResist: 0
+  meleeResist: 0
+  bulletVulnerability: 0
+  explosiveVulnerability: 0
+  fireVulnerability: 0
+  meleeVulnerability: 0
+  classSprite: {fileID: 0}
+  switchedClass: 0
+  classDead: 0
+  equippedSlotNum: 0
+  skillChoice1: 0
+  skillChoice2: 0
+  equippedLogo1: {fileID: 0}
+  equippedSkill1: 
+  equippedLogo2: {fileID: 0}
+  equippedSkill2: 
+  primaryMeterNum: 0
+  secondaryMeterNum: 0
+  meleeMeterNum: 0
+  extraMeterNum: 0
+  showExtraSlot: 0
+  primarySlot: {fileID: 0}
+  secondarySlot: {fileID: 0}
+  meleeSlot: {fileID: 0}
+  extraSlot: {fileID: 0}
+  spriteDatabase: {fileID: 0}
+--- !u!114 &756530506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756530503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efa9d4dbd9ed2549a4f8b85f74853b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataInstance: {fileID: 756530505}
+  classBody: {fileID: 1127615970}
+  healthbarFill: {fileID: 576420998}
+  className: {fileID: 1141984801}
+  classHealthNum: {fileID: 1327661811}
+  bulletResist: {fileID: 1058131482}
+  explosiveResist: {fileID: 2111405410}
+  fireResist: {fileID: 2070043355}
+  meleeResist: {fileID: 1816363029}
+  speedNum: {fileID: 1078646691}
+  dodgeChance: {fileID: 230687804}
+  ammoCount: {fileID: 1384219648}
+  chargeBarObject: {fileID: 977222993}
+  chargeBar: {fileID: 1770908555}
+  chargeBarText: {fileID: 902652180}
+  weaponTabs:
+  - {fileID: 632333574}
+  - {fileID: 1280263960}
+  - {fileID: 1042111155}
+  - {fileID: 407323016}
+  activeSkillChoices:
+  - {fileID: 421007109}
+  - {fileID: 2006304149}
+  - {fileID: 2093231588}
+  - {fileID: 936800004}
+  skillLogo1: {fileID: 601907612}
+  skillDescription1: {fileID: 1093873654}
+  skillLogo2: {fileID: 1857449835}
+  skillDescription2: {fileID: 1758325452}
+  currentlySelected: 0
+--- !u!114 &756530507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756530503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 756530506}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: SelectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1459799161}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 227667253}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2025763705}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 970881211}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508319805}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 903963025}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2089755606}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &760790015
 GameObject:
   m_ObjectHideFlags: 0
@@ -5288,6 +6068,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 903963023}
+  - component: {fileID: 903963025}
+  - component: {fileID: 903963024}
+  - component: {fileID: 903963026}
   m_Layer: 5
   m_Name: Blu Slot 2
   m_TagString: Untagged
@@ -5317,6 +6100,233 @@ RectTransform:
   m_AnchoredPosition: {x: 430, y: -80}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &903963024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903963022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880d882d09287094bbec38b1ab0ac419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  className: Scout
+  isBlu: 0
+  currentHealth: 0
+  currentSpeed: 0
+  slotSpace: 0
+  bulletResist: 0
+  explosiveResist: 0
+  fireResist: 0
+  meleeResist: 0
+  bulletVulnerability: 0
+  explosiveVulnerability: 0
+  fireVulnerability: 0
+  meleeVulnerability: 0
+  classSprite: {fileID: 0}
+  switchedClass: 0
+  classDead: 0
+  equippedSlotNum: 0
+  skillChoice1: 0
+  skillChoice2: 0
+  equippedLogo1: {fileID: 0}
+  equippedSkill1: 
+  equippedLogo2: {fileID: 0}
+  equippedSkill2: 
+  primaryMeterNum: 0
+  secondaryMeterNum: 0
+  meleeMeterNum: 0
+  extraMeterNum: 0
+  showExtraSlot: 0
+  primarySlot: {fileID: 0}
+  secondarySlot: {fileID: 0}
+  meleeSlot: {fileID: 0}
+  extraSlot: {fileID: 0}
+  spriteDatabase: {fileID: 0}
+--- !u!114 &903963025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903963022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efa9d4dbd9ed2549a4f8b85f74853b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataInstance: {fileID: 903963024}
+  classBody: {fileID: 392537459}
+  healthbarFill: {fileID: 1838050061}
+  className: {fileID: 1141984801}
+  classHealthNum: {fileID: 1327661811}
+  bulletResist: {fileID: 1058131482}
+  explosiveResist: {fileID: 2111405410}
+  fireResist: {fileID: 2070043355}
+  meleeResist: {fileID: 1816363029}
+  speedNum: {fileID: 1078646691}
+  dodgeChance: {fileID: 230687804}
+  ammoCount: {fileID: 1384219648}
+  chargeBarObject: {fileID: 977222993}
+  chargeBar: {fileID: 1770908555}
+  chargeBarText: {fileID: 902652180}
+  weaponTabs:
+  - {fileID: 632333574}
+  - {fileID: 1280263960}
+  - {fileID: 1042111155}
+  - {fileID: 407323016}
+  activeSkillChoices:
+  - {fileID: 421007109}
+  - {fileID: 2006304149}
+  - {fileID: 2093231588}
+  - {fileID: 936800004}
+  skillLogo1: {fileID: 601907612}
+  skillDescription1: {fileID: 1093873654}
+  skillLogo2: {fileID: 1857449835}
+  skillDescription2: {fileID: 1758325452}
+  currentlySelected: 0
+--- !u!114 &903963026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903963022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 903963025}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: SelectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2089755606}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 756530506}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1459799161}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 227667253}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2025763705}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 970881211}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508319805}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &911095759
 GameObject:
   m_ObjectHideFlags: 0
@@ -5481,7 +6491,7 @@ GameObject:
   - component: {fileID: 936800005}
   - component: {fileID: 936800004}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Skill 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5690,6 +6700,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 970881209}
+  - component: {fileID: 970881211}
+  - component: {fileID: 970881210}
+  - component: {fileID: 970881212}
   m_Layer: 5
   m_Name: Red Slot 4
   m_TagString: Untagged
@@ -5719,6 +6732,233 @@ RectTransform:
   m_AnchoredPosition: {x: -850, y: -80}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &970881210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970881208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880d882d09287094bbec38b1ab0ac419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  className: Scout
+  isBlu: 0
+  currentHealth: 0
+  currentSpeed: 0
+  slotSpace: 0
+  bulletResist: 0
+  explosiveResist: 0
+  fireResist: 0
+  meleeResist: 0
+  bulletVulnerability: 0
+  explosiveVulnerability: 0
+  fireVulnerability: 0
+  meleeVulnerability: 0
+  classSprite: {fileID: 0}
+  switchedClass: 0
+  classDead: 0
+  equippedSlotNum: 0
+  skillChoice1: 0
+  skillChoice2: 0
+  equippedLogo1: {fileID: 0}
+  equippedSkill1: 
+  equippedLogo2: {fileID: 0}
+  equippedSkill2: 
+  primaryMeterNum: 0
+  secondaryMeterNum: 0
+  meleeMeterNum: 0
+  extraMeterNum: 0
+  showExtraSlot: 0
+  primarySlot: {fileID: 0}
+  secondarySlot: {fileID: 0}
+  meleeSlot: {fileID: 0}
+  extraSlot: {fileID: 0}
+  spriteDatabase: {fileID: 0}
+--- !u!114 &970881211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970881208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efa9d4dbd9ed2549a4f8b85f74853b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataInstance: {fileID: 970881210}
+  classBody: {fileID: 1367267267}
+  healthbarFill: {fileID: 1909309224}
+  className: {fileID: 1141984801}
+  classHealthNum: {fileID: 1327661811}
+  bulletResist: {fileID: 1058131482}
+  explosiveResist: {fileID: 2111405410}
+  fireResist: {fileID: 2070043355}
+  meleeResist: {fileID: 1816363029}
+  speedNum: {fileID: 1078646691}
+  dodgeChance: {fileID: 230687804}
+  ammoCount: {fileID: 1384219648}
+  chargeBarObject: {fileID: 977222993}
+  chargeBar: {fileID: 1770908555}
+  chargeBarText: {fileID: 902652180}
+  weaponTabs:
+  - {fileID: 632333574}
+  - {fileID: 1280263960}
+  - {fileID: 1042111155}
+  - {fileID: 407323016}
+  activeSkillChoices:
+  - {fileID: 421007109}
+  - {fileID: 2006304149}
+  - {fileID: 2093231588}
+  - {fileID: 936800004}
+  skillLogo1: {fileID: 601907612}
+  skillDescription1: {fileID: 1093873654}
+  skillLogo2: {fileID: 1857449835}
+  skillDescription2: {fileID: 1758325452}
+  currentlySelected: 0
+--- !u!114 &970881212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970881208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 970881211}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: SelectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508319805}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 903963025}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2089755606}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 756530506}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1459799161}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 227667253}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2025763705}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &977222993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5992,8 +7232,9 @@ GameObject:
   - component: {fileID: 1042111156}
   - component: {fileID: 1042111158}
   - component: {fileID: 1042111157}
+  - component: {fileID: 1042111159}
   m_Layer: 5
-  m_Name: Melee Slot
+  m_Name: Melee Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6057,6 +7298,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042111155}
   m_CullTransparentMesh: 1
+--- !u!114 &1042111159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042111155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1042111157}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1045955194
 GameObject:
   m_ObjectHideFlags: 0
@@ -6510,7 +7795,7 @@ GameObject:
   - component: {fileID: 1078646692}
   - component: {fileID: 1078646691}
   m_Layer: 5
-  m_Name: Turn Number
+  m_Name: Class Speed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6723,7 +8008,7 @@ GameObject:
   - component: {fileID: 1093873655}
   - component: {fileID: 1093873654}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Skill Desc 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8122,8 +9407,9 @@ GameObject:
   - component: {fileID: 1280263961}
   - component: {fileID: 1280263963}
   - component: {fileID: 1280263962}
+  - component: {fileID: 1280263964}
   m_Layer: 5
-  m_Name: Secondary Slot
+  m_Name: Secondary Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8187,6 +9473,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280263960}
   m_CullTransparentMesh: 1
+--- !u!114 &1280263964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280263960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1280263962}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1289254814
 GameObject:
   m_ObjectHideFlags: 0
@@ -8775,7 +10105,7 @@ GameObject:
   - component: {fileID: 1384219649}
   - component: {fileID: 1384219648}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Ammo Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9183,6 +10513,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1459799159}
+  - component: {fileID: 1459799161}
+  - component: {fileID: 1459799160}
+  - component: {fileID: 1459799162}
   m_Layer: 5
   m_Name: Red Slot 1
   m_TagString: Untagged
@@ -9212,6 +10545,233 @@ RectTransform:
   m_AnchoredPosition: {x: -220, y: -80}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1459799160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459799158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880d882d09287094bbec38b1ab0ac419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  className: Scout
+  isBlu: 0
+  currentHealth: 0
+  currentSpeed: 0
+  slotSpace: 0
+  bulletResist: 0
+  explosiveResist: 0
+  fireResist: 0
+  meleeResist: 0
+  bulletVulnerability: 0
+  explosiveVulnerability: 0
+  fireVulnerability: 0
+  meleeVulnerability: 0
+  classSprite: {fileID: 0}
+  switchedClass: 0
+  classDead: 0
+  equippedSlotNum: 0
+  skillChoice1: 0
+  skillChoice2: 0
+  equippedLogo1: {fileID: 0}
+  equippedSkill1: 
+  equippedLogo2: {fileID: 0}
+  equippedSkill2: 
+  primaryMeterNum: 0
+  secondaryMeterNum: 0
+  meleeMeterNum: 0
+  extraMeterNum: 0
+  showExtraSlot: 0
+  primarySlot: {fileID: 0}
+  secondarySlot: {fileID: 0}
+  meleeSlot: {fileID: 0}
+  extraSlot: {fileID: 0}
+  spriteDatabase: {fileID: 0}
+--- !u!114 &1459799161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459799158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efa9d4dbd9ed2549a4f8b85f74853b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataInstance: {fileID: 1459799160}
+  classBody: {fileID: 1081701532}
+  healthbarFill: {fileID: 1488367335}
+  className: {fileID: 1141984801}
+  classHealthNum: {fileID: 1327661811}
+  bulletResist: {fileID: 1058131482}
+  explosiveResist: {fileID: 2111405410}
+  fireResist: {fileID: 2070043355}
+  meleeResist: {fileID: 1816363029}
+  speedNum: {fileID: 1078646691}
+  dodgeChance: {fileID: 230687804}
+  ammoCount: {fileID: 1384219648}
+  chargeBarObject: {fileID: 977222993}
+  chargeBar: {fileID: 1770908555}
+  chargeBarText: {fileID: 902652180}
+  weaponTabs:
+  - {fileID: 632333574}
+  - {fileID: 1280263960}
+  - {fileID: 1042111155}
+  - {fileID: 407323016}
+  activeSkillChoices:
+  - {fileID: 421007109}
+  - {fileID: 2006304149}
+  - {fileID: 2093231588}
+  - {fileID: 936800004}
+  skillLogo1: {fileID: 601907612}
+  skillDescription1: {fileID: 1093873654}
+  skillLogo2: {fileID: 1857449835}
+  skillDescription2: {fileID: 1758325452}
+  currentlySelected: 1
+--- !u!114 &1459799162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459799158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1459799161}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: SelectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 227667253}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2025763705}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 970881211}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508319805}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 903963025}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2089755606}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 756530506}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1470251795
 GameObject:
   m_ObjectHideFlags: 0
@@ -9783,7 +11343,7 @@ GameObject:
   - component: {fileID: 1579910504}
   - component: {fileID: 1579910503}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Turn Num
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10809,7 +12369,7 @@ GameObject:
   - component: {fileID: 1758325453}
   - component: {fileID: 1758325452}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Skill Desc 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11021,7 +12581,7 @@ GameObject:
   - component: {fileID: 1770908556}
   - component: {fileID: 1770908555}
   m_Layer: 5
-  m_Name: Info Bar (Medigun/Cooldowns) Background (1)
+  m_Name: Info Bar Color
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11823,7 +13383,7 @@ GameObject:
   - component: {fileID: 1857449836}
   - component: {fileID: 1857449835}
   m_Layer: 5
-  m_Name: Skill Logo
+  m_Name: Skill Logo 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12736,7 +14296,7 @@ GameObject:
   - component: {fileID: 2006304150}
   - component: {fileID: 2006304149}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Skill 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13096,6 +14656,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2025763703}
+  - component: {fileID: 2025763705}
+  - component: {fileID: 2025763704}
+  - component: {fileID: 2025763706}
   m_Layer: 5
   m_Name: Red Slot 3
   m_TagString: Untagged
@@ -13125,6 +14688,233 @@ RectTransform:
   m_AnchoredPosition: {x: -640, y: -80}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2025763704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025763702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880d882d09287094bbec38b1ab0ac419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  className: Scout
+  isBlu: 0
+  currentHealth: 0
+  currentSpeed: 0
+  slotSpace: 0
+  bulletResist: 0
+  explosiveResist: 0
+  fireResist: 0
+  meleeResist: 0
+  bulletVulnerability: 0
+  explosiveVulnerability: 0
+  fireVulnerability: 0
+  meleeVulnerability: 0
+  classSprite: {fileID: 0}
+  switchedClass: 0
+  classDead: 0
+  equippedSlotNum: 0
+  skillChoice1: 0
+  skillChoice2: 0
+  equippedLogo1: {fileID: 0}
+  equippedSkill1: 
+  equippedLogo2: {fileID: 0}
+  equippedSkill2: 
+  primaryMeterNum: 0
+  secondaryMeterNum: 0
+  meleeMeterNum: 0
+  extraMeterNum: 0
+  showExtraSlot: 0
+  primarySlot: {fileID: 0}
+  secondarySlot: {fileID: 0}
+  meleeSlot: {fileID: 0}
+  extraSlot: {fileID: 0}
+  spriteDatabase: {fileID: 0}
+--- !u!114 &2025763705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025763702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efa9d4dbd9ed2549a4f8b85f74853b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataInstance: {fileID: 2025763704}
+  classBody: {fileID: 2086983755}
+  healthbarFill: {fileID: 174143657}
+  className: {fileID: 1141984801}
+  classHealthNum: {fileID: 1327661811}
+  bulletResist: {fileID: 1058131482}
+  explosiveResist: {fileID: 2111405410}
+  fireResist: {fileID: 2070043355}
+  meleeResist: {fileID: 1816363029}
+  speedNum: {fileID: 1078646691}
+  dodgeChance: {fileID: 230687804}
+  ammoCount: {fileID: 1384219648}
+  chargeBarObject: {fileID: 977222993}
+  chargeBar: {fileID: 1770908555}
+  chargeBarText: {fileID: 902652180}
+  weaponTabs:
+  - {fileID: 632333574}
+  - {fileID: 1280263960}
+  - {fileID: 1042111155}
+  - {fileID: 407323016}
+  activeSkillChoices:
+  - {fileID: 421007109}
+  - {fileID: 2006304149}
+  - {fileID: 2093231588}
+  - {fileID: 936800004}
+  skillLogo1: {fileID: 601907612}
+  skillDescription1: {fileID: 1093873654}
+  skillLogo2: {fileID: 1857449835}
+  skillDescription2: {fileID: 1758325452}
+  currentlySelected: 0
+--- !u!114 &2025763706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025763702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2025763705}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: SelectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 970881211}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508319805}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 903963025}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2089755606}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 756530506}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1459799161}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 227667253}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2051383371
 GameObject:
   m_ObjectHideFlags: 0
@@ -13936,6 +15726,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2089755604}
+  - component: {fileID: 2089755606}
+  - component: {fileID: 2089755605}
+  - component: {fileID: 2089755607}
   m_Layer: 5
   m_Name: Blu Slot 3
   m_TagString: Untagged
@@ -13965,6 +15758,233 @@ RectTransform:
   m_AnchoredPosition: {x: 640, y: -80}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2089755605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089755603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880d882d09287094bbec38b1ab0ac419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  className: Scout
+  isBlu: 0
+  currentHealth: 0
+  currentSpeed: 0
+  slotSpace: 0
+  bulletResist: 0
+  explosiveResist: 0
+  fireResist: 0
+  meleeResist: 0
+  bulletVulnerability: 0
+  explosiveVulnerability: 0
+  fireVulnerability: 0
+  meleeVulnerability: 0
+  classSprite: {fileID: 0}
+  switchedClass: 0
+  classDead: 0
+  equippedSlotNum: 0
+  skillChoice1: 0
+  skillChoice2: 0
+  equippedLogo1: {fileID: 0}
+  equippedSkill1: 
+  equippedLogo2: {fileID: 0}
+  equippedSkill2: 
+  primaryMeterNum: 0
+  secondaryMeterNum: 0
+  meleeMeterNum: 0
+  extraMeterNum: 0
+  showExtraSlot: 0
+  primarySlot: {fileID: 0}
+  secondarySlot: {fileID: 0}
+  meleeSlot: {fileID: 0}
+  extraSlot: {fileID: 0}
+  spriteDatabase: {fileID: 0}
+--- !u!114 &2089755606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089755603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efa9d4dbd9ed2549a4f8b85f74853b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataInstance: {fileID: 2089755605}
+  classBody: {fileID: 359078423}
+  healthbarFill: {fileID: 1364303072}
+  className: {fileID: 1141984801}
+  classHealthNum: {fileID: 1327661811}
+  bulletResist: {fileID: 1058131482}
+  explosiveResist: {fileID: 2111405410}
+  fireResist: {fileID: 2070043355}
+  meleeResist: {fileID: 1816363029}
+  speedNum: {fileID: 1078646691}
+  dodgeChance: {fileID: 230687804}
+  ammoCount: {fileID: 1384219648}
+  chargeBarObject: {fileID: 977222993}
+  chargeBar: {fileID: 1770908555}
+  chargeBarText: {fileID: 902652180}
+  weaponTabs:
+  - {fileID: 632333574}
+  - {fileID: 1280263960}
+  - {fileID: 1042111155}
+  - {fileID: 407323016}
+  activeSkillChoices:
+  - {fileID: 421007109}
+  - {fileID: 2006304149}
+  - {fileID: 2093231588}
+  - {fileID: 936800004}
+  skillLogo1: {fileID: 601907612}
+  skillDescription1: {fileID: 1093873654}
+  skillLogo2: {fileID: 1857449835}
+  skillDescription2: {fileID: 1758325452}
+  currentlySelected: 0
+--- !u!114 &2089755607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089755603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2089755606}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: SelectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 756530506}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1459799161}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 227667253}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2025763705}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 970881211}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508319805}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 903963025}
+        m_TargetAssemblyTypeName: DisplayBattleUI, Assembly-CSharp
+        m_MethodName: DeselectClass
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2093231586
 GameObject:
   m_ObjectHideFlags: 0
@@ -13977,7 +15997,7 @@ GameObject:
   - component: {fileID: 2093231589}
   - component: {fileID: 2093231588}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Skill 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
