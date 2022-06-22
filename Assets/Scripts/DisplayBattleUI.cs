@@ -43,9 +43,11 @@ public class DisplayBattleUI : MonoBehaviour
     [Header("---Active Skills---")]
     public Image skillLogo1;
     public TextMeshProUGUI skillDescription1;
+    public TextMeshProUGUI skillAccuracy1;
 
     public Image skillLogo2;
     public TextMeshProUGUI skillDescription2;
+    public TextMeshProUGUI skillAccuracy2;
 
     [Header("---Active when clicked on---")]
     public bool currentlySelected;

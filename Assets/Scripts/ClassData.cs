@@ -39,8 +39,10 @@ public class ClassData : MonoBehaviour
     [Header("---Current Skill and Logo of equipped Weapon---")]
     public Sprite equippedLogo1;
     public string equippedSkill1;
+    public string equippedSkillAcc1;
     public Sprite equippedLogo2;
     public string equippedSkill2;
+    public string equippedSkillAcc2;
     [Header("---Current Values of Meterbar---")]
     public int primaryMeterNum;
     public int secondaryMeterNum;
@@ -127,18 +129,22 @@ public class ClassData : MonoBehaviour
                     case 1:
                         equippedLogo1 = primarySlot.skillLogo1;
                         equippedSkill1 = primarySlot.skillDesc1;
+                        equippedSkillAcc1 = "Accuracy /n" + primarySlot.accuracy1.ToString() + "%";
                         break;
                     case 2:
                         equippedLogo1 = primarySlot.skillLogo2;
                         equippedSkill1 = primarySlot.skillDesc2;
+                        equippedSkillAcc1 = "Accuracy /n" + primarySlot.accuracy2.ToString() + "%";
                         break;
                     case 3:
                         equippedLogo1 = primarySlot.skillLogo3;
                         equippedSkill1 = primarySlot.skillDesc3;
+                        equippedSkillAcc1 = "Accuracy /n" + primarySlot.accuracy3.ToString() + "%";
                         break;
                     case 4:
                         equippedLogo1 = primarySlot.skillLogo4;
                         equippedSkill1 = primarySlot.skillDesc4;
+                        equippedSkillAcc1 = "Accuracy /n" + primarySlot.accuracy4.ToString() + "%";
                         break;
                 }
 
@@ -147,18 +153,22 @@ public class ClassData : MonoBehaviour
                     case 1:
                         equippedLogo2 = primarySlot.skillLogo1;
                         equippedSkill2 = primarySlot.skillDesc1;
+                        equippedSkillAcc2 = "Accuracy /n" + primarySlot.accuracy1.ToString() + "%";
                         break;
                     case 2:
                         equippedLogo2 = primarySlot.skillLogo2;
                         equippedSkill2 = primarySlot.skillDesc2;
+                        equippedSkillAcc2 = "Accuracy /n" + primarySlot.accuracy2.ToString() + "%";
                         break;
                     case 3:
                         equippedLogo2 = primarySlot.skillLogo3;
                         equippedSkill2 = primarySlot.skillDesc3;
+                        equippedSkillAcc2 = "Accuracy /n" + primarySlot.accuracy3.ToString() + "%";
                         break;
                     case 4:
                         equippedLogo2 = primarySlot.skillLogo4;
                         equippedSkill2 = primarySlot.skillDesc4;
+                        equippedSkillAcc2 = "Accuracy /n" + primarySlot.accuracy4.ToString() + "%";
                         break;
                 }
                 break;
@@ -168,18 +178,22 @@ public class ClassData : MonoBehaviour
                     case 1:
                         equippedLogo1 = secondarySlot.skillLogo1;
                         equippedSkill1 = secondarySlot.skillDesc1;
+                        equippedSkillAcc1 = "Accuracy /n" + secondarySlot.accuracy1.ToString() + "%";
                         break;
                     case 2:
                         equippedLogo1 = secondarySlot.skillLogo2;
                         equippedSkill1 = secondarySlot.skillDesc2;
+                        equippedSkillAcc1 = "Accuracy /n" + secondarySlot.accuracy2.ToString() + "%";
                         break;
                     case 3:
                         equippedLogo1 = secondarySlot.skillLogo3;
                         equippedSkill1 = secondarySlot.skillDesc3;
+                        equippedSkillAcc1 = "Accuracy /n" + secondarySlot.accuracy3.ToString() + "%";
                         break;
                     case 4:
                         equippedLogo1 = secondarySlot.skillLogo4;
                         equippedSkill1 = secondarySlot.skillDesc4;
+                        equippedSkillAcc1 = "Accuracy /n" + secondarySlot.accuracy4.ToString() + "%";
                         break;
                 }
 
@@ -188,18 +202,22 @@ public class ClassData : MonoBehaviour
                     case 1:
                         equippedLogo2 = secondarySlot.skillLogo1;
                         equippedSkill2 = secondarySlot.skillDesc1;
+                        equippedSkillAcc2 = "Accuracy /n" + secondarySlot.accuracy1.ToString() + "%";
                         break;
                     case 2:
                         equippedLogo2 = secondarySlot.skillLogo2;
                         equippedSkill2 = secondarySlot.skillDesc2;
+                        equippedSkillAcc2 = "Accuracy /n" + secondarySlot.accuracy2.ToString() + "%";
                         break;
                     case 3:
                         equippedLogo2 = secondarySlot.skillLogo3;
                         equippedSkill2 = secondarySlot.skillDesc3;
+                        equippedSkillAcc2 = "Accuracy /n" + secondarySlot.accuracy3.ToString() + "%";
                         break;
                     case 4:
                         equippedLogo2 = secondarySlot.skillLogo4;
                         equippedSkill2 = secondarySlot.skillDesc4;
+                        equippedSkillAcc2 = "Accuracy /n" + secondarySlot.accuracy4.ToString() + "%";
                         break;
                 }
                 break;
@@ -209,18 +227,22 @@ public class ClassData : MonoBehaviour
                     case 1:
                         equippedLogo1 = meleeSlot.skillLogo1;
                         equippedSkill1 = meleeSlot.skillDesc1;
+                        equippedSkillAcc1 = "Accuracy /n" + meleeSlot.accuracy1.ToString() + "%";
                         break;
                     case 2:
                         equippedLogo1 = meleeSlot.skillLogo2;
                         equippedSkill1 = meleeSlot.skillDesc2;
+                        equippedSkillAcc1 = "Accuracy /n" + meleeSlot.accuracy2.ToString() + "%";
                         break;
                     case 3:
                         equippedLogo1 = meleeSlot.skillLogo3;
                         equippedSkill1 = meleeSlot.skillDesc3;
+                        equippedSkillAcc1 = "Accuracy /n" + meleeSlot.accuracy3.ToString() + "%";
                         break;
                     case 4:
                         equippedLogo1 = meleeSlot.skillLogo4;
                         equippedSkill1 = meleeSlot.skillDesc4;
+                        equippedSkillAcc1 = "Accuracy /n" + meleeSlot.accuracy4.ToString() + "%";
                         break;
                 }
 
@@ -229,18 +251,22 @@ public class ClassData : MonoBehaviour
                     case 1:
                         equippedLogo2 = meleeSlot.skillLogo1;
                         equippedSkill2 = meleeSlot.skillDesc1;
+                        equippedSkillAcc2 = "Accuracy /n" + meleeSlot.accuracy1.ToString() + "%";
                         break;
                     case 2:
                         equippedLogo2 = meleeSlot.skillLogo2;
                         equippedSkill2 = meleeSlot.skillDesc2;
+                        equippedSkillAcc2 = "Accuracy /n" + meleeSlot.accuracy2.ToString() + "%";
                         break;
                     case 3:
                         equippedLogo2 = meleeSlot.skillLogo3;
                         equippedSkill2 = meleeSlot.skillDesc3;
+                        equippedSkillAcc2 = "Accuracy /n" + meleeSlot.accuracy3.ToString() + "%";
                         break;
                     case 4:
                         equippedLogo2 = meleeSlot.skillLogo4;
                         equippedSkill2 = meleeSlot.skillDesc4;
+                        equippedSkillAcc2 = "Accuracy /n" + meleeSlot.accuracy4.ToString() + "%";
                         break;
                 }
                 break;
@@ -250,18 +276,22 @@ public class ClassData : MonoBehaviour
                     case 1:
                         equippedLogo1 = extraSlot.skillLogo1;
                         equippedSkill1 = extraSlot.skillDesc1;
+                        equippedSkillAcc1 = "Accuracy /n" + extraSlot.accuracy1.ToString() + "%";
                         break;
                     case 2:
                         equippedLogo1 = extraSlot.skillLogo2;
                         equippedSkill1 = extraSlot.skillDesc2;
+                        equippedSkillAcc1 = "Accuracy /n" + extraSlot.accuracy2.ToString() + "%";
                         break;
                     case 3:
                         equippedLogo1 = extraSlot.skillLogo3;
                         equippedSkill1 = extraSlot.skillDesc3;
+                        equippedSkillAcc1 = "Accuracy /n" + extraSlot.accuracy3.ToString() + "%";
                         break;
                     case 4:
                         equippedLogo1 = extraSlot.skillLogo4;
                         equippedSkill1 = extraSlot.skillDesc4;
+                        equippedSkillAcc1 = "Accuracy /n" + extraSlot.accuracy4.ToString() + "%";
                         break;
                 }
 
@@ -270,18 +300,22 @@ public class ClassData : MonoBehaviour
                     case 1:
                         equippedLogo2 = extraSlot.skillLogo1;
                         equippedSkill2 = extraSlot.skillDesc1;
+                        equippedSkillAcc2 = "Accuracy /n" + extraSlot.accuracy1.ToString() + "%";
                         break;
                     case 2:
                         equippedLogo2 = extraSlot.skillLogo2;
                         equippedSkill2 = extraSlot.skillDesc2;
+                        equippedSkillAcc2 = "Accuracy /n" + extraSlot.accuracy2.ToString() + "%";
                         break;
                     case 3:
                         equippedLogo2 = extraSlot.skillLogo3;
                         equippedSkill2 = extraSlot.skillDesc3;
+                        equippedSkillAcc2 = "Accuracy /n" + extraSlot.accuracy3.ToString() + "%";
                         break;
                     case 4:
                         equippedLogo2 = extraSlot.skillLogo4;
                         equippedSkill2 = extraSlot.skillDesc4;
+                        equippedSkillAcc2 = "Accuracy /n" + extraSlot.accuracy4.ToString() + "%";
                         break;
                 }
                 break;
