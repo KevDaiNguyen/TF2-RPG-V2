@@ -24,6 +24,11 @@ public class DisplayBattleUI : MonoBehaviour
     public TextMeshProUGUI fireResist;
     public TextMeshProUGUI meleeResist;
 
+    public TextMeshProUGUI bulletVulnerability;
+    public TextMeshProUGUI explosiveVulnerability;
+    public TextMeshProUGUI fireVulnerability;
+    public TextMeshProUGUI meleeVulnerability;
+
     public TextMeshProUGUI speedNum;
     public TextMeshProUGUI dodgeChance;
 
@@ -56,6 +61,8 @@ public class DisplayBattleUI : MonoBehaviour
     [Header("---Active when clicked on---")]
     public bool currentlySelected;
 
+    private bool equipedPassives = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +75,12 @@ public class DisplayBattleUI : MonoBehaviour
         classBody.sprite = dataInstance.classSprite;
         healthbarFill.fillAmount = (dataInstance.currentHealth / originalHealth);
 
+        if (!equipedPassives)
+        {
+            PassiveEquip();
+            equipedPassives = true;
+        }
+
         if (currentlySelected)
         {
             //classBody.sprite = dataInstance.classSprite;
@@ -75,10 +88,7 @@ public class DisplayBattleUI : MonoBehaviour
             className.text = dataInstance.className;
             classHealthNum.text = dataInstance.currentHealth.ToString();
 
-            bulletResist.text = dataInstance.bulletResist.ToString() + "%";
-            explosiveResist.text = dataInstance.explosiveResist.ToString() + "%";
-            fireResist.text = dataInstance.fireResist.ToString() + "%";
-            meleeResist.text = dataInstance.meleeResist.ToString() + "%";
+            ResistDisplay();
 
             speedNum.text = "Speed \n" + dataInstance.currentSpeed.ToString();
             dodgeChance.text = "Dodge Chance \n" + (dataInstance.currentSpeed - 75).ToString() + "%";
@@ -322,6 +332,82 @@ public class DisplayBattleUI : MonoBehaviour
         }
     }
 
+    public void ResistDisplay()
+    {
+        if (dataInstance.bulletResist == 0)
+        {
+            bulletResist.text = "+0%";
+        }
+        else
+        {
+            bulletResist.text = "+" + ((1 - dataInstance.bulletResist) * 100).ToString() + "%";
+        }
+
+        if (dataInstance.explosiveResist == 0)
+        {
+            explosiveResist.text = "+0%";
+        }
+        else
+        {
+            explosiveResist.text = "+" + ((1 - dataInstance.explosiveResist) * 100).ToString() + "%";
+        }
+
+        if (dataInstance.fireResist == 0)
+        {
+            fireResist.text = "+0%";
+        }
+        else
+        {
+            fireResist.text = "+" + ((1 - dataInstance.fireResist) * 100).ToString() + "%";
+        }
+
+        if (dataInstance.meleeResist == 0)
+        {
+            meleeResist.text = "+0%";
+        }
+        else
+        {
+            meleeResist.text = "+" + ((1 - dataInstance.meleeResist) * 100).ToString() + "%";
+        }
+        // ----------------------------------------------------------------------------------------------
+        if (dataInstance.bulletVulnerability == 0)
+        {
+            bulletVulnerability.text = "-0%";
+        }
+        else
+        {
+            bulletVulnerability.text = "-" + ((dataInstance.bulletVulnerability - 1) * 100).ToString() + "%";
+        }
+
+        if (dataInstance.explosiveVulnerability == 0)
+        {
+            explosiveVulnerability.text = "-0%";
+        }
+        else
+        {
+            explosiveVulnerability.text = "-" + ((dataInstance.explosiveVulnerability - 1) * 100).ToString() + "%";
+        }
+
+        if (dataInstance.fireVulnerability == 0)
+        {
+            fireVulnerability.text = "-0%";
+        }
+        else
+        {
+            fireVulnerability.text = "-" + ((dataInstance.fireVulnerability - 1) * 100).ToString() + "%";
+        }
+
+        if (dataInstance.meleeVulnerability == 0)
+        {
+            meleeVulnerability.text = "-0%";
+        }
+        else
+        {
+            meleeVulnerability.text = "-" + ((dataInstance.meleeVulnerability - 1) * 100).ToString() + "%";
+        }
+
+    }
+
     public void SelectClass()
     {
         currentlySelected = true;
@@ -378,8 +464,55 @@ public class DisplayBattleUI : MonoBehaviour
          
     }
 
-    public void PassiveEquip() //idk how to do yet
+    public void PassiveEquip()
     {
+        if (dataInstance.primarySlot.passiveStats)
+        {
+            dataInstance.ChangeResist(dataInstance.primarySlot.bulletResist, "Bullet", true);
+            dataInstance.ChangeResist(dataInstance.primarySlot.fireResist, "Fire", true);
+            dataInstance.ChangeResist(dataInstance.primarySlot.explosiveResist, "Explosive", true);
+            dataInstance.ChangeResist(dataInstance.primarySlot.meleeResist, "Melee", true);
 
+            dataInstance.ChangeVulnerability(dataInstance.primarySlot.bulletVulnerability, "Bullet", true);
+            dataInstance.ChangeVulnerability(dataInstance.primarySlot.fireVulnerability, "Fire", true);
+            dataInstance.ChangeVulnerability(dataInstance.primarySlot.explosiveVulnerability, "Explosive", true);
+            dataInstance.ChangeVulnerability(dataInstance.primarySlot.meleeVulnerability, "Melee", true);
+        }
+        if (dataInstance.secondarySlot.passiveStats)
+        {
+            dataInstance.ChangeResist(dataInstance.secondarySlot.bulletResist, "Bullet", true);
+            dataInstance.ChangeResist(dataInstance.secondarySlot.fireResist, "Fire", true);
+            dataInstance.ChangeResist(dataInstance.secondarySlot.explosiveResist, "Explosive", true);
+            dataInstance.ChangeResist(dataInstance.secondarySlot.meleeResist, "Melee", true);
+
+            dataInstance.ChangeVulnerability(dataInstance.secondarySlot.bulletVulnerability, "Bullet", true);
+            dataInstance.ChangeVulnerability(dataInstance.secondarySlot.fireVulnerability, "Fire", true);
+            dataInstance.ChangeVulnerability(dataInstance.secondarySlot.explosiveVulnerability, "Explosive", true);
+            dataInstance.ChangeVulnerability(dataInstance.secondarySlot.meleeVulnerability, "Melee", true);
+        }
+        if (dataInstance.meleeSlot.passiveStats)
+        {
+            dataInstance.ChangeResist(dataInstance.meleeSlot.bulletResist, "Bullet", true);
+            dataInstance.ChangeResist(dataInstance.meleeSlot.fireResist, "Fire", true);
+            dataInstance.ChangeResist(dataInstance.meleeSlot.explosiveResist, "Explosive", true);
+            dataInstance.ChangeResist(dataInstance.meleeSlot.meleeResist, "Melee", true);
+
+            dataInstance.ChangeVulnerability(dataInstance.meleeSlot.bulletVulnerability, "Bullet", true);
+            dataInstance.ChangeVulnerability(dataInstance.meleeSlot.fireVulnerability, "Fire", true);
+            dataInstance.ChangeVulnerability(dataInstance.meleeSlot.explosiveVulnerability, "Explosive", true);
+            dataInstance.ChangeVulnerability(dataInstance.meleeSlot.meleeVulnerability, "Melee", true);
+        }
+        if (dataInstance.extraSlot.passiveStats)
+        {
+            dataInstance.ChangeResist(dataInstance.extraSlot.bulletResist, "Bullet", true);
+            dataInstance.ChangeResist(dataInstance.extraSlot.fireResist, "Fire", true);
+            dataInstance.ChangeResist(dataInstance.extraSlot.explosiveResist, "Explosive", true);
+            dataInstance.ChangeResist(dataInstance.extraSlot.meleeResist, "Melee", true);
+
+            dataInstance.ChangeVulnerability(dataInstance.extraSlot.bulletVulnerability, "Bullet", true);
+            dataInstance.ChangeVulnerability(dataInstance.extraSlot.fireVulnerability, "Fire", true);
+            dataInstance.ChangeVulnerability(dataInstance.extraSlot.explosiveVulnerability, "Explosive", true);
+            dataInstance.ChangeVulnerability(dataInstance.extraSlot.meleeVulnerability, "Melee", true);
+        }
     }
 }

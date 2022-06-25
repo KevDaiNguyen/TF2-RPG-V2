@@ -691,7 +691,7 @@ public class ClassData : MonoBehaviour
                 }
                 else if (bulletResist == 0 && shouldIncrease)
                 {
-                    bulletResist += (1 - resistIncrease);
+                    bulletResist = (1 - resistIncrease);
                 }
                 else if (bulletResist != 0 && !shouldIncrease)
                 {
@@ -709,7 +709,7 @@ public class ClassData : MonoBehaviour
                 }
                 else if (explosiveResist == 0 && shouldIncrease) 
                 {
-                    explosiveResist += (1 - resistIncrease);
+                    explosiveResist = (1 - resistIncrease);
                 }
                 else if (explosiveResist != 0 && !shouldIncrease)
                 {
@@ -727,7 +727,7 @@ public class ClassData : MonoBehaviour
                 }
                 else if (fireResist == 0 && shouldIncrease)
                 {
-                    fireResist += (1 - resistIncrease);
+                    fireResist = (1 - resistIncrease);
                 }
                 else if (fireResist != 0 && !shouldIncrease)
                 {
@@ -745,7 +745,7 @@ public class ClassData : MonoBehaviour
                 }
                 else if (meleeResist == 0 && shouldIncrease)
                 {
-                    meleeResist += (1 - resistIncrease);
+                    meleeResist = (1 - resistIncrease);
                 }
                 else if (meleeResist != 0 && !shouldIncrease)
                 {
@@ -770,7 +770,7 @@ public class ClassData : MonoBehaviour
                 }
                 else if (bulletVulnerability == 0 && shouldIncrease)
                 {
-                    bulletVulnerability += (1 + vulerabilityIncrease);
+                    bulletVulnerability = (1 + vulerabilityIncrease);
                 }
                 else if (bulletVulnerability != 0 && !shouldIncrease)
                 {
@@ -788,7 +788,7 @@ public class ClassData : MonoBehaviour
                 }
                 else if (explosiveVulnerability == 0 && shouldIncrease)
                 {
-                    explosiveVulnerability += (1 + vulerabilityIncrease);
+                    explosiveVulnerability = (1 + vulerabilityIncrease);
                 }
                 else if (explosiveVulnerability != 0 && !shouldIncrease)
                 {
@@ -806,7 +806,7 @@ public class ClassData : MonoBehaviour
                 }
                 else if (fireVulnerability == 0 && shouldIncrease)
                 {
-                    fireVulnerability += (1 + vulerabilityIncrease);
+                    fireVulnerability = (1 + vulerabilityIncrease);
                 }
                 else if (fireVulnerability != 0 && !shouldIncrease)
                 {
@@ -824,7 +824,7 @@ public class ClassData : MonoBehaviour
                 }
                 else if (meleeVulnerability == 0 && shouldIncrease)
                 {
-                    meleeVulnerability += (1 + vulerabilityIncrease);
+                    meleeVulnerability = (1 + vulerabilityIncrease);
                 }
                 else if (meleeVulnerability != 0 && !shouldIncrease)
                 {

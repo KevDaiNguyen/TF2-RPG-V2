@@ -26,8 +26,9 @@ MonoBehaviour:
   meleeResist: 0
   bulletVulnerability: 0
   explosiveVulnerability: 0
-  fireVulnerability: 0
+  fireVulnerability: 0.2
   meleeVulnerability: 0
+  passiveStats: 1
   clipSize: 0
   reserveSize: 0
   minCritChance: 0

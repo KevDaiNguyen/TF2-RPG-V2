@@ -22,13 +22,14 @@ MonoBehaviour:
   meterText: Charge Meter
   activeWeapon: 1
   bulletResist: 0
-  explosiveResist: 0
-  fireResist: 0
+  explosiveResist: 0.5
+  fireResist: 0.3
   meleeResist: 0
   bulletVulnerability: 0
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  passiveStats: 1
   clipSize: 1
   reserveSize: 9999
   minCritChance: 0
