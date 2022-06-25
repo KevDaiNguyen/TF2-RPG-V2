@@ -334,13 +334,32 @@ public class DisplayBattleUI : MonoBehaviour
 
     public void EquipWeapon(int slotNum)
     {
-        if (slotNum > 0 && slotNum < 4 && !dataInstance.showExtraSlot)
+        switch (slotNum)
         {
-            dataInstance.equippedSlotNum = slotNum;
-        }
-        if (slotNum > 0 && slotNum < 5 && dataInstance.showExtraSlot)
-        {
-            dataInstance.equippedSlotNum = slotNum;
+            case 1:
+                if (dataInstance.primarySlot.activeWeapon)
+                {
+                    dataInstance.equippedSlotNum = slotNum;
+                }
+                break;
+            case 2:
+                if (dataInstance.secondarySlot.activeWeapon)
+                {
+                    dataInstance.equippedSlotNum = slotNum;
+                }
+                break;
+            case 3:
+                if (dataInstance.meleeSlot.activeWeapon)
+                {
+                    dataInstance.equippedSlotNum = slotNum;
+                }
+                break;
+            case 4:
+                if (dataInstance.extraSlot.activeWeapon)
+                {
+                    dataInstance.equippedSlotNum = slotNum;
+                }
+                break;
         }
     }
 
@@ -349,17 +368,17 @@ public class DisplayBattleUI : MonoBehaviour
 
     }
 
-    public void OnEquip()
+    public void OnEquip(int weaponSlotNum)
     {
 
     }
 
-    public void OnDequip()
+    public void OnDequip(int weaponSlotNum)
     {
          
     }
 
-    public void PassiveEquip()
+    public void PassiveEquip() //idk how to do yet
     {
 
     }

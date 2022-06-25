@@ -19,7 +19,7 @@ MonoBehaviour:
   hasMeterBar: 1
   maxMeterNum: 100
   meterText: Cloak Meter
-  activeWeapon: 0
+  activeWeapon: 1
   bulletResist: 0
   explosiveResist: 0
   fireResist: 0

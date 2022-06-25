@@ -41,7 +41,7 @@ public class WeaponDatabase : MonoBehaviour
     public static WeaponMaker[] sniperSecondaries = new WeaponMaker[6];
     public static WeaponMaker[] sniperMelees = new WeaponMaker[4];
 
-    public static WeaponMaker[] spyPrimaries = new WeaponMaker[6];
+    public static WeaponMaker[] spyPrimaries = new WeaponMaker[5];
     public static WeaponMaker[] spySecondaries = new WeaponMaker[2];
     public static WeaponMaker[] spyMelees = new WeaponMaker[5];
     public static WeaponMaker[] spyWatches = new WeaponMaker[3];

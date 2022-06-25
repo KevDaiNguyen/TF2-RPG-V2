@@ -30,6 +30,8 @@ public class WeaponMaker : ScriptableObject
     public float fireVulnerability;
     public float meleeVulnerability;
 
+    public bool passiveStats;
+
     [Header("Size of ammo capacities"), Space(5)]
     public int clipSize;
     public int reserveSize;
