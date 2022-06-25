@@ -13,6 +13,7 @@ public class DisplayBattleUI : MonoBehaviour
 
     [Header("---Healthbar---")]
     public Image healthbarFill;
+    private int originalHealth;
 
     [Header("---Class Stats---")]
     public TextMeshProUGUI className;
@@ -55,13 +56,14 @@ public class DisplayBattleUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        originalHealth = dataInstance.currentHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
         classBody.sprite = dataInstance.classSprite;
+        healthbarFill.fillAmount = (dataInstance.currentHealth / originalHealth);
 
         if (currentlySelected)
         {
@@ -101,14 +103,14 @@ public class DisplayBattleUI : MonoBehaviour
                         chargeBarObject.SetActive(false);
                     }
                     // ----------------------------------------------------------------
-                    weaponTabs[0].transform.localPosition = new Vector3(-360, (weaponTabs[0].transform.position).y, (weaponTabs[0].transform.position).z);
+                    weaponTabs[0].transform.localPosition = new Vector3(-360, (weaponTabs[0].transform.localPosition).y, (weaponTabs[0].transform.localPosition).z);
 
-                    weaponTabs[1].transform.localPosition = new Vector3(-300, (weaponTabs[1].transform.position).y, (weaponTabs[1].transform.position).z);
-                    weaponTabs[2].transform.localPosition = new Vector3(-300, (weaponTabs[2].transform.position).y, (weaponTabs[2].transform.position).z);
+                    weaponTabs[1].transform.localPosition = new Vector3(-300, (weaponTabs[1].transform.localPosition).y, (weaponTabs[1].transform.localPosition).z);
+                    weaponTabs[2].transform.localPosition = new Vector3(-300, (weaponTabs[2].transform.localPosition).y, (weaponTabs[2].transform.localPosition).z);
                     if (dataInstance.showExtraSlot)
                     {
                         weaponTabs[3].SetActive(true);
-                        weaponTabs[3].transform.localPosition = new Vector3(-300, (weaponTabs[3].transform.position).y, (weaponTabs[3].transform.position).z);
+                        weaponTabs[3].transform.localPosition = new Vector3(-300, (weaponTabs[3].transform.localPosition).y, (weaponTabs[3].transform.localPosition).z);
                     }
                     else
                     {
@@ -145,14 +147,14 @@ public class DisplayBattleUI : MonoBehaviour
                         chargeBarObject.SetActive(false);
                     }
                     // ----------------------------------------------------------------
-                    weaponTabs[1].transform.position = new Vector3(-360, (weaponTabs[1].transform.position).y, (weaponTabs[1].transform.position).z);
+                    weaponTabs[1].transform.localPosition = new Vector3(-360, (weaponTabs[1].transform.localPosition).y, (weaponTabs[1].transform.localPosition).z);
 
-                    weaponTabs[0].transform.position = new Vector3(-300, (weaponTabs[0].transform.position).y, (weaponTabs[0].transform.position).z);
-                    weaponTabs[2].transform.position = new Vector3(-300, (weaponTabs[2].transform.position).y, (weaponTabs[2].transform.position).z);
+                    weaponTabs[0].transform.localPosition = new Vector3(-300, (weaponTabs[0].transform.localPosition).y, (weaponTabs[0].transform.localPosition).z);
+                    weaponTabs[2].transform.localPosition = new Vector3(-300, (weaponTabs[2].transform.localPosition).y, (weaponTabs[2].transform.localPosition).z);
                     if (dataInstance.showExtraSlot)
                     {
                         weaponTabs[3].SetActive(true);
-                        weaponTabs[3].transform.position = new Vector3(-300, (weaponTabs[3].transform.position).y, (weaponTabs[3].transform.position).z);
+                        weaponTabs[3].transform.localPosition = new Vector3(-300, (weaponTabs[3].transform.localPosition).y, (weaponTabs[3].transform.localPosition).z);
                     }
                     else
                     {
@@ -187,14 +189,14 @@ public class DisplayBattleUI : MonoBehaviour
                         chargeBarObject.SetActive(false);
                     }
                     // ----------------------------------------------------------------
-                    weaponTabs[2].transform.position = new Vector3(-360, (weaponTabs[2].transform.position).y, (weaponTabs[2].transform.position).z);
+                    weaponTabs[2].transform.localPosition = new Vector3(-360, (weaponTabs[2].transform.localPosition).y, (weaponTabs[2].transform.localPosition).z);
 
-                    weaponTabs[0].transform.position = new Vector3(-300, (weaponTabs[0].transform.position).y, (weaponTabs[0].transform.position).z);
-                    weaponTabs[1].transform.position = new Vector3(-300, (weaponTabs[1].transform.position).y, (weaponTabs[1].transform.position).z);
+                    weaponTabs[0].transform.localPosition = new Vector3(-300, (weaponTabs[0].transform.localPosition).y, (weaponTabs[0].transform.localPosition).z);
+                    weaponTabs[1].transform.localPosition = new Vector3(-300, (weaponTabs[1].transform.localPosition).y, (weaponTabs[1].transform.localPosition).z);
                     if (dataInstance.showExtraSlot)
                     {
                         weaponTabs[3].SetActive(true);
-                        weaponTabs[3].transform.position = new Vector3(-300, (weaponTabs[3].transform.position).y, (weaponTabs[3].transform.position).z);
+                        weaponTabs[3].transform.localPosition = new Vector3(-300, (weaponTabs[3].transform.localPosition).y, (weaponTabs[3].transform.localPosition).z);
                     }
                     else
                     {
@@ -231,11 +233,11 @@ public class DisplayBattleUI : MonoBehaviour
                             chargeBarObject.SetActive(false);
                         }
                         // ----------------------------------------------------------------
-                        weaponTabs[3].transform.position = new Vector3(-360, (weaponTabs[3].transform.position).y, (weaponTabs[3].transform.position).z);
+                        weaponTabs[3].transform.localPosition = new Vector3(-360, (weaponTabs[3].transform.localPosition).y, (weaponTabs[3].transform.localPosition).z);
 
-                        weaponTabs[0].transform.position = new Vector3(-300, (weaponTabs[0].transform.position).y, (weaponTabs[0].transform.position).z);
-                        weaponTabs[1].transform.position = new Vector3(-300, (weaponTabs[1].transform.position).y, (weaponTabs[1].transform.position).z);
-                        weaponTabs[2].transform.position = new Vector3(-300, (weaponTabs[2].transform.position).y, (weaponTabs[2].transform.position).z);
+                        weaponTabs[0].transform.localPosition = new Vector3(-300, (weaponTabs[0].transform.localPosition).y, (weaponTabs[0].transform.localPosition).z);
+                        weaponTabs[1].transform.localPosition = new Vector3(-300, (weaponTabs[1].transform.localPosition).y, (weaponTabs[1].transform.localPosition).z);
+                        weaponTabs[2].transform.localPosition = new Vector3(-300, (weaponTabs[2].transform.localPosition).y, (weaponTabs[2].transform.localPosition).z);
                         // ---------------------------------------------------------------
                         skillLogo1.sprite = dataInstance.equippedLogo1;
                         skillDescription1.text = dataInstance.equippedSkill1;

@@ -65,6 +65,12 @@ public class ClassData : MonoBehaviour
         isBlu = false;
         slotSpace = 1;
 
+        defaultHealth = 125;
+        defaultSpeed = 133;
+
+        currentHealth = defaultHealth;
+        currentSpeed = defaultSpeed;
+
         bulletResist = 0;
         explosiveResist = 0;
         fireResist = 0;
