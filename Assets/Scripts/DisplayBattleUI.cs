@@ -55,15 +55,17 @@ public class DisplayBattleUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        classBody.sprite = dataInstance.classSprite;
+
         if (currentlySelected)
         {
-            classBody.sprite = dataInstance.classSprite;
+            //classBody.sprite = dataInstance.classSprite;
 
             className.text = dataInstance.className;
             classHealthNum.text = dataInstance.currentHealth.ToString();
@@ -73,8 +75,8 @@ public class DisplayBattleUI : MonoBehaviour
             fireResist.text = dataInstance.fireResist.ToString() + "%";
             meleeResist.text = dataInstance.meleeResist.ToString() + "%";
 
-            speedNum.text = "Speed /n" + dataInstance.currentSpeed.ToString();
-            dodgeChance.text = "Dodge Chance /n" + (dataInstance.currentSpeed - 75).ToString() + "%";
+            speedNum.text = "Speed \n" + dataInstance.currentSpeed.ToString();
+            dodgeChance.text = "Dodge Chance \n" + (dataInstance.currentSpeed - 75).ToString() + "%";
 
             switch (dataInstance.equippedSlotNum)
             {
@@ -99,14 +101,14 @@ public class DisplayBattleUI : MonoBehaviour
                         chargeBarObject.SetActive(false);
                     }
                     // ----------------------------------------------------------------
-                    weaponTabs[0].transform.position = new Vector3(-360, (weaponTabs[0].transform.position).y, (weaponTabs[0].transform.position).z);
+                    weaponTabs[0].transform.localPosition = new Vector3(-360, (weaponTabs[0].transform.position).y, (weaponTabs[0].transform.position).z);
 
-                    weaponTabs[1].transform.position = new Vector3(-300, (weaponTabs[1].transform.position).y, (weaponTabs[1].transform.position).z);
-                    weaponTabs[2].transform.position = new Vector3(-300, (weaponTabs[2].transform.position).y, (weaponTabs[2].transform.position).z);
+                    weaponTabs[1].transform.localPosition = new Vector3(-300, (weaponTabs[1].transform.position).y, (weaponTabs[1].transform.position).z);
+                    weaponTabs[2].transform.localPosition = new Vector3(-300, (weaponTabs[2].transform.position).y, (weaponTabs[2].transform.position).z);
                     if (dataInstance.showExtraSlot)
                     {
                         weaponTabs[3].SetActive(true);
-                        weaponTabs[3].transform.position = new Vector3(-300, (weaponTabs[3].transform.position).y, (weaponTabs[3].transform.position).z);
+                        weaponTabs[3].transform.localPosition = new Vector3(-300, (weaponTabs[3].transform.position).y, (weaponTabs[3].transform.position).z);
                     }
                     else
                     {

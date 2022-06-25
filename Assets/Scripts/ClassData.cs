@@ -85,6 +85,10 @@ public class ClassData : MonoBehaviour
         meleeMeterNum = 0;
         extraMeterNum = 0;
 
+        primarySlot = WeaponDatabase.scoutPrimaries[0];
+        secondarySlot = WeaponDatabase.scoutSecondaries[0];
+        meleeSlot = WeaponDatabase.scoutMelees[0];
+
         showExtraSlot = false;
 
         classDead = false;
@@ -96,6 +100,7 @@ public class ClassData : MonoBehaviour
     void Update()
     {
         ClassCheck();
+
         switch (equippedSlotNum)
         {
             case 1:
@@ -110,6 +115,178 @@ public class ClassData : MonoBehaviour
             case 4:
                 SkillCheck("Extra");
                 break;
+        }
+    }
+
+    public void ClassCheck()
+    {
+        if (!switchedClass)
+        {
+            switch (className)
+            {
+                case "Scout":
+                    defaultHealth = 125;
+                    defaultSpeed = 133;
+
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redScouts[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.blueScouts[0];
+                    }
+
+                    primarySlot = WeaponDatabase.scoutPrimaries[Random.Range(0, WeaponDatabase.scoutPrimaries.Length)];
+                    secondarySlot = WeaponDatabase.scoutSecondaries[Random.Range(0, WeaponDatabase.scoutSecondaries.Length)];
+                    meleeSlot = WeaponDatabase.scoutMelees[Random.Range(0, WeaponDatabase.scoutMelees.Length)];
+                    break;
+                case "Soldier":
+                    defaultHealth = 200;
+                    defaultSpeed = 80;
+
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redSoldier[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.blueSoldier[0];
+                    }
+
+                    primarySlot = WeaponDatabase.soldierPrimaries[Random.Range(0, WeaponDatabase.soldierPrimaries.Length)];
+                    secondarySlot = WeaponDatabase.soldierSecondaries[Random.Range(0, WeaponDatabase.soldierSecondaries.Length)];
+                    meleeSlot = WeaponDatabase.soldierMelees[Random.Range(0, WeaponDatabase.soldierMelees.Length)];
+                    break;
+                case "Pyro":
+                    defaultHealth = 175;
+                    defaultSpeed = 100;
+
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redPyro[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.bluePyro[0];
+                    }
+
+                    primarySlot = WeaponDatabase.pyroPrimaries[Random.Range(0, WeaponDatabase.pyroPrimaries.Length)];
+                    secondarySlot = WeaponDatabase.pyroSecondaries[Random.Range(0, WeaponDatabase.pyroSecondaries.Length)];
+                    meleeSlot = WeaponDatabase.pyroMelees[Random.Range(0, WeaponDatabase.pyroMelees.Length)];
+                    break;
+                case "Demoman":
+                    defaultHealth = 175;
+                    defaultSpeed = 93;
+
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redDemo[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.blueDemo[0];
+                    }
+
+                    primarySlot = WeaponDatabase.demomanPrimaries[Random.Range(0, WeaponDatabase.demomanPrimaries.Length)];
+                    secondarySlot = WeaponDatabase.demomanSecondaries[Random.Range(0, WeaponDatabase.demomanSecondaries.Length)];
+                    meleeSlot = WeaponDatabase.demomanMelees[Random.Range(0, WeaponDatabase.demomanMelees.Length)];
+                    break;
+                case "Heavy":
+                    defaultHealth = 300;
+                    defaultSpeed = 77;
+
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redHeavy[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.blueHeavy[0];
+                    }
+
+                    primarySlot = WeaponDatabase.heavyPrimaries[Random.Range(0, WeaponDatabase.heavyPrimaries.Length)];
+                    secondarySlot = WeaponDatabase.heavySecondaries[Random.Range(0, WeaponDatabase.heavySecondaries.Length)];
+                    meleeSlot = WeaponDatabase.heavyMelees[Random.Range(0, WeaponDatabase.heavyMelees.Length)];
+                    break;
+                case "Engineer":
+                    defaultHealth = 125;
+                    defaultSpeed = 100;
+                    slotSpace = 2;
+
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redEngi[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.blueEngi[0];
+                    }
+
+                    primarySlot = WeaponDatabase.engineerPrimaries[Random.Range(0, WeaponDatabase.engineerPrimaries.Length)];
+                    secondarySlot = WeaponDatabase.engineerSecondaries[Random.Range(0, WeaponDatabase.engineerSecondaries.Length)];
+                    meleeSlot = WeaponDatabase.engineerMelees[Random.Range(0, WeaponDatabase.engineerMelees.Length)];
+                    break;
+                case "Medic":
+                    defaultHealth = 150;
+                    defaultSpeed = 107;
+
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redMedic[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.blueMedic[0];
+                    }
+
+                    primarySlot = WeaponDatabase.medicPrimaries[Random.Range(0, WeaponDatabase.medicPrimaries.Length)];
+                    secondarySlot = WeaponDatabase.medicSecondaries[Random.Range(0, WeaponDatabase.medicSecondaries.Length)];
+                    meleeSlot = WeaponDatabase.medicMelees[Random.Range(0, WeaponDatabase.medicMelees.Length)];
+                    break;
+                case "Sniper":
+                    defaultHealth = 125;
+                    defaultSpeed = 100;
+
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redSniper[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.blueSniper[0];
+                    }
+
+                    primarySlot = WeaponDatabase.sniperPrimaries[Random.Range(0, WeaponDatabase.sniperPrimaries.Length)];
+                    secondarySlot = WeaponDatabase.sniperSecondaries[Random.Range(0, WeaponDatabase.sniperSecondaries.Length)];
+                    meleeSlot = WeaponDatabase.sniperMelees[Random.Range(0, WeaponDatabase.sniperMelees.Length)];
+                    break;
+                case "Spy":
+                    defaultHealth = 125;
+                    defaultSpeed = 107;
+
+                    if (!isBlu)
+                    {
+                        classSprite = spriteDatabase.redSpy[0];
+                    }
+                    else
+                    {
+                        classSprite = spriteDatabase.blueSpy[0];
+                    }
+
+                    showExtraSlot = true;
+
+                    primarySlot = WeaponDatabase.spyPrimaries[Random.Range(0, WeaponDatabase.spyPrimaries.Length)];
+                    secondarySlot = WeaponDatabase.spySecondaries[Random.Range(0, WeaponDatabase.spySecondaries.Length)];
+                    meleeSlot = WeaponDatabase.spyMelees[Random.Range(0, WeaponDatabase.spyMelees.Length)];
+                    extraSlot = WeaponDatabase.spyWatches[Random.Range(0, WeaponDatabase.spyWatches.Length)];
+                    break;
+            }
+
+            currentHealth = defaultHealth;
+            currentSpeed = defaultSpeed;
+
+            switchedClass = true;
         }
     }
 
@@ -322,177 +499,6 @@ public class ClassData : MonoBehaviour
         }
     }
 
-    public void ClassCheck()
-    {
-        if (!switchedClass)
-        {
-            switch (className)
-            {
-                case "Scout":
-                    defaultHealth = 125;
-                    defaultSpeed = 133;
-
-                    if (!isBlu)
-                    {
-                        classSprite = spriteDatabase.redScouts[0];
-                    }
-                    else
-                    {
-                        classSprite = spriteDatabase.blueScouts[0];
-                    }
-
-                    primarySlot = WeaponDatabase.scoutPrimaries[Random.Range(0, WeaponDatabase.scoutPrimaries.Length)];
-                    secondarySlot = WeaponDatabase.scoutSecondaries[Random.Range(0, WeaponDatabase.scoutSecondaries.Length)];
-                    meleeSlot = WeaponDatabase.scoutMelees[Random.Range(0, WeaponDatabase.scoutMelees.Length)];
-                    break;
-                case "Soldier":
-                    defaultHealth = 200;
-                    defaultSpeed = 80;
-
-                    if (!isBlu)
-                    {
-                        classSprite = spriteDatabase.redSoldier[0];
-                    }
-                    else
-                    {
-                        classSprite = spriteDatabase.blueSoldier[0];
-                    }
-
-                    primarySlot = WeaponDatabase.soldierPrimaries[Random.Range(0, WeaponDatabase.soldierPrimaries.Length)];
-                    secondarySlot = WeaponDatabase.soldierSecondaries[Random.Range(0, WeaponDatabase.soldierSecondaries.Length)];
-                    meleeSlot = WeaponDatabase.soldierMelees[Random.Range(0, WeaponDatabase.soldierMelees.Length)];
-                    break;
-                case "Pyro":
-                    defaultHealth = 175;
-                    defaultSpeed = 100;
-
-                    if (!isBlu)
-                    {
-                        classSprite = spriteDatabase.redPyro[0];
-                    }
-                    else
-                    {
-                        classSprite = spriteDatabase.bluePyro[0];
-                    }
-
-                    primarySlot = WeaponDatabase.pyroPrimaries[Random.Range(0, WeaponDatabase.pyroPrimaries.Length)];
-                    secondarySlot = WeaponDatabase.pyroSecondaries[Random.Range(0, WeaponDatabase.pyroSecondaries.Length)];
-                    meleeSlot = WeaponDatabase.pyroMelees[Random.Range(0, WeaponDatabase.pyroMelees.Length)];
-                    break;
-                case "Demoman":
-                    defaultHealth = 175;
-                    defaultSpeed = 93;
-
-                    if (!isBlu)
-                    {
-                        classSprite = spriteDatabase.redDemo[0];
-                    }
-                    else
-                    {
-                        classSprite = spriteDatabase.blueDemo[0];
-                    }
-
-                    primarySlot = WeaponDatabase.demomanPrimaries[Random.Range(0, WeaponDatabase.demomanPrimaries.Length)];
-                    secondarySlot = WeaponDatabase.demomanSecondaries[Random.Range(0, WeaponDatabase.demomanSecondaries.Length)];
-                    meleeSlot = WeaponDatabase.demomanMelees[Random.Range(0, WeaponDatabase.demomanMelees.Length)];
-                    break;
-                case "Heavy":
-                    defaultHealth = 300;
-                    defaultSpeed = 77;
-
-                    if (!isBlu)
-                    {
-                        classSprite = spriteDatabase.redHeavy[0];
-                    }
-                    else
-                    {
-                        classSprite = spriteDatabase.blueHeavy[0];
-                    }
-
-                    primarySlot = WeaponDatabase.heavyPrimaries[Random.Range(0, WeaponDatabase.heavyPrimaries.Length)];
-                    secondarySlot = WeaponDatabase.heavySecondaries[Random.Range(0, WeaponDatabase.heavySecondaries.Length)];
-                    meleeSlot = WeaponDatabase.heavyMelees[Random.Range(0, WeaponDatabase.heavyMelees.Length)];
-                    break;
-                case "Engineer":
-                    defaultHealth = 125;
-                    defaultSpeed = 100;
-                    slotSpace = 2;
-
-                    if (!isBlu)
-                    {
-                        classSprite = spriteDatabase.redEngi[0];
-                    }
-                    else
-                    {
-                        classSprite = spriteDatabase.blueEngi[0];
-                    }
-
-                    primarySlot = WeaponDatabase.engineerPrimaries[Random.Range(0, WeaponDatabase.engineerPrimaries.Length)];
-                    secondarySlot = WeaponDatabase.engineerSecondaries[Random.Range(0, WeaponDatabase.engineerSecondaries.Length)];
-                    meleeSlot = WeaponDatabase.engineerMelees[Random.Range(0, WeaponDatabase.engineerMelees.Length)];
-                    break;
-                case "Medic":
-                    defaultHealth = 150;
-                    defaultSpeed = 107;
-
-                    if (!isBlu)
-                    {
-                        classSprite = spriteDatabase.redMedic[0];
-                    }
-                    else
-                    {
-                        classSprite = spriteDatabase.blueMedic[0];
-                    }
-
-                    primarySlot = WeaponDatabase.medicPrimaries[Random.Range(0, WeaponDatabase.medicPrimaries.Length)];
-                    secondarySlot = WeaponDatabase.medicSecondaries[Random.Range(0, WeaponDatabase.medicSecondaries.Length)];
-                    meleeSlot = WeaponDatabase.medicMelees[Random.Range(0, WeaponDatabase.medicMelees.Length)];
-                    break;
-                case "Sniper":
-                    defaultHealth = 125;
-                    defaultSpeed = 100;
-
-                    if (!isBlu)
-                    {
-                        classSprite = spriteDatabase.redSniper[0];
-                    }
-                    else
-                    {
-                        classSprite = spriteDatabase.blueSniper[0];
-                    }
-
-                    primarySlot = WeaponDatabase.sniperPrimaries[Random.Range(0, WeaponDatabase.sniperPrimaries.Length)];
-                    secondarySlot = WeaponDatabase.sniperSecondaries[Random.Range(0, WeaponDatabase.sniperSecondaries.Length)];
-                    meleeSlot = WeaponDatabase.sniperMelees[Random.Range(0, WeaponDatabase.sniperMelees.Length)];
-                    break;
-                case "Spy":
-                    defaultHealth = 125;
-                    defaultSpeed = 107;
-
-                    if (!isBlu)
-                    {
-                        classSprite = spriteDatabase.redSpy[0];
-                    }
-                    else
-                    {
-                        classSprite = spriteDatabase.blueSpy[0];
-                    }
-
-                    showExtraSlot = true;
-
-                    primarySlot = WeaponDatabase.spyPrimaries[Random.Range(0, WeaponDatabase.spyPrimaries.Length)];
-                    secondarySlot = WeaponDatabase.spySecondaries[Random.Range(0, WeaponDatabase.spySecondaries.Length)];
-                    meleeSlot = WeaponDatabase.spyMelees[Random.Range(0, WeaponDatabase.spyMelees.Length)];
-                    extraSlot = WeaponDatabase.spyWatches[Random.Range(0, WeaponDatabase.spyWatches.Length)];
-                    break;
-            }
-
-            currentHealth = defaultHealth;
-            currentSpeed = defaultSpeed;
-
-            switchedClass = true;
-        }
-    }
 
     public void IncreaseMeterBar(int increaseAmount)
     {
