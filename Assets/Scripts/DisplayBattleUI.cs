@@ -38,6 +38,9 @@ public class DisplayBattleUI : MonoBehaviour
     [Header("---Tab Display---")]
     public GameObject[] weaponTabs;
 
+    [Header("---Tab Display---")]
+    public Image[] weaponTabImages;
+
     [Header("---Skill Choice Box---")]
     public TextMeshProUGUI[] activeSkillChoices;
 
@@ -79,6 +82,11 @@ public class DisplayBattleUI : MonoBehaviour
 
             speedNum.text = "Speed \n" + dataInstance.currentSpeed.ToString();
             dodgeChance.text = "Dodge Chance \n" + (dataInstance.currentSpeed - 75).ToString() + "%";
+
+            weaponTabImages[0].sprite = dataInstance.primarySlot.weaponImage;
+            weaponTabImages[1].sprite = dataInstance.secondarySlot.weaponImage;
+            weaponTabImages[2].sprite = dataInstance.meleeSlot.weaponImage;
+            weaponTabImages[3].sprite = dataInstance.extraSlot.weaponImage;
 
             switch (dataInstance.equippedSlotNum)
             {
@@ -123,6 +131,21 @@ public class DisplayBattleUI : MonoBehaviour
                     skillLogo2.sprite = dataInstance.equippedLogo2;
                     skillDescription2.text = dataInstance.equippedSkill2;
                     // ---------------------------------------------------------------
+                    for (int i = 0; i < activeSkillChoices.Length; i++)
+                    {
+                        if (dataInstance.skillChoice1P == i)
+                        {
+                            activeSkillChoices[i].color = Color.white;
+                        }
+                        else if (dataInstance.skillChoice2P == i)
+                        {
+                            activeSkillChoices[i].color = Color.white;
+                        }
+                        else
+                        {
+                            activeSkillChoices[i].color = Color.black;
+                        }
+                    }
 
 
                     break;
@@ -133,7 +156,7 @@ public class DisplayBattleUI : MonoBehaviour
                     }
                     else
                     {
-                        ammoCount.text = dataInstance.meleeSlot.clipSize.ToString();
+                        ammoCount.text = dataInstance.secondarySlot.clipSize.ToString();
                     }
                     // ----------------------------------------------------------------
                     if (dataInstance.secondarySlot.hasMeterBar)
@@ -167,6 +190,22 @@ public class DisplayBattleUI : MonoBehaviour
                     skillLogo2.sprite = dataInstance.equippedLogo2;
                     skillDescription2.text = dataInstance.equippedSkill2;
                     // ---------------------------------------------------------------
+                    for (int i = 0; i < activeSkillChoices.Length; i++)
+                    {
+                        if (dataInstance.skillChoice1S == i)
+                        {
+                            activeSkillChoices[i].color = Color.white;
+                        }
+                        else if (dataInstance.skillChoice2S == i)
+                        {
+                            activeSkillChoices[i].color = Color.white;
+                        }
+                        else
+                        {
+                            activeSkillChoices[i].color = Color.black;
+                        }
+                    }
+
                     break;
                 case 3:
                     if (dataInstance.meleeSlot.clipSize <= 0)
@@ -209,6 +248,22 @@ public class DisplayBattleUI : MonoBehaviour
                     skillLogo2.sprite = dataInstance.equippedLogo2;
                     skillDescription2.text = dataInstance.equippedSkill2;
                     // ---------------------------------------------------------------
+                    for (int i = 0; i < activeSkillChoices.Length; i++)
+                    {
+                        if (dataInstance.skillChoice1M == i)
+                        {
+                            activeSkillChoices[i].color = Color.white;
+                        }
+                        else if (dataInstance.skillChoice2M == i)
+                        {
+                            activeSkillChoices[i].color = Color.white;
+                        }
+                        else
+                        {
+                            activeSkillChoices[i].color = Color.black;
+                        }
+                    }
+
                     break;
                 case 4:
                     if (dataInstance.showExtraSlot)
@@ -245,7 +300,23 @@ public class DisplayBattleUI : MonoBehaviour
                         skillLogo2.sprite = dataInstance.equippedLogo2;
                         skillDescription2.text = dataInstance.equippedSkill2;
                         // ---------------------------------------------------------------
+                        for (int i = 0; i < activeSkillChoices.Length; i++)
+                        {
+                            if (dataInstance.skillChoice1E == i)
+                            {
+                                activeSkillChoices[i].color = Color.white;
+                            }
+                            else if (dataInstance.skillChoice2E == i)
+                            {
+                                activeSkillChoices[i].color = Color.white;
+                            }
+                            else
+                            {
+                                activeSkillChoices[i].color = Color.black;
+                            }
+                        }
                     }
+
                     break;
             }
         }

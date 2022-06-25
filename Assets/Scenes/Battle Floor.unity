@@ -639,6 +639,7 @@ GameObject:
   - component: {fileID: 111591202}
   - component: {fileID: 111591204}
   - component: {fileID: 111591203}
+  - component: {fileID: 111591205}
   m_Layer: 5
   m_Name: Skill Choice 2
   m_TagString: Untagged
@@ -705,6 +706,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111591201}
   m_CullTransparentMesh: 1
+--- !u!114 &111591205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111591201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 111591203}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 131726139}
+        m_TargetAssemblyTypeName: InfoBookButtons, Assembly-CSharp
+        m_MethodName: SkillChange
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &131726137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,7 +1334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880d882d09287094bbec38b1ab0ac419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  className: Scout
+  className: Soldier
   isBlu: 0
   currentHealth: 0
   currentSpeed: 0
@@ -1294,8 +1351,14 @@ MonoBehaviour:
   switchedClass: 0
   classDead: 0
   equippedSlotNum: 0
-  skillChoice1: 0
-  skillChoice2: 0
+  skillChoice1P: 0
+  skillChoice2P: 0
+  skillChoice1S: 0
+  skillChoice2S: 0
+  skillChoice1M: 0
+  skillChoice2M: 0
+  skillChoice1E: 0
+  skillChoice2E: 0
   equippedLogo1: {fileID: 0}
   equippedSkill1: 
   equippedSkillAcc1: 
@@ -1344,6 +1407,11 @@ MonoBehaviour:
   - {fileID: 1280263960}
   - {fileID: 1042111155}
   - {fileID: 407323016}
+  weaponTabImages:
+  - {fileID: 934199065}
+  - {fileID: 1245905896}
+  - {fileID: 1498566763}
+  - {fileID: 1311865825}
   activeSkillChoices:
   - {fileID: 421007109}
   - {fileID: 2006304149}
@@ -2758,7 +2826,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1311865824}
   m_Father: {fileID: 131726138}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2897,7 +2966,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 50, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &421007109
 MonoBehaviour:
@@ -3277,8 +3346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880d882d09287094bbec38b1ab0ac419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  className: Scout
-  isBlu: 0
+  className: Heavy
+  isBlu: 1
   currentHealth: 0
   currentSpeed: 0
   slotSpace: 0
@@ -3294,8 +3363,14 @@ MonoBehaviour:
   switchedClass: 0
   classDead: 0
   equippedSlotNum: 0
-  skillChoice1: 0
-  skillChoice2: 0
+  skillChoice1P: 0
+  skillChoice2P: 0
+  skillChoice1S: 0
+  skillChoice2S: 0
+  skillChoice1M: 0
+  skillChoice2M: 0
+  skillChoice1E: 0
+  skillChoice2E: 0
   equippedLogo1: {fileID: 0}
   equippedSkill1: 
   equippedSkillAcc1: 
@@ -3344,6 +3419,11 @@ MonoBehaviour:
   - {fileID: 1280263960}
   - {fileID: 1042111155}
   - {fileID: 407323016}
+  weaponTabImages:
+  - {fileID: 934199065}
+  - {fileID: 1245905896}
+  - {fileID: 1498566763}
+  - {fileID: 1311865825}
   activeSkillChoices:
   - {fileID: 421007109}
   - {fileID: 2006304149}
@@ -4544,7 +4624,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 934199064}
   m_Father: {fileID: 131726138}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5566,8 +5647,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880d882d09287094bbec38b1ab0ac419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  className: Scout
-  isBlu: 0
+  className: Spy
+  isBlu: 1
   currentHealth: 0
   currentSpeed: 0
   slotSpace: 0
@@ -5583,8 +5664,14 @@ MonoBehaviour:
   switchedClass: 0
   classDead: 0
   equippedSlotNum: 0
-  skillChoice1: 0
-  skillChoice2: 0
+  skillChoice1P: 0
+  skillChoice2P: 0
+  skillChoice1S: 0
+  skillChoice2S: 0
+  skillChoice1M: 0
+  skillChoice2M: 0
+  skillChoice1E: 0
+  skillChoice2E: 0
   equippedLogo1: {fileID: 0}
   equippedSkill1: 
   equippedSkillAcc1: 
@@ -5633,6 +5720,11 @@ MonoBehaviour:
   - {fileID: 1280263960}
   - {fileID: 1042111155}
   - {fileID: 407323016}
+  weaponTabImages:
+  - {fileID: 934199065}
+  - {fileID: 1245905896}
+  - {fileID: 1498566763}
+  - {fileID: 1311865825}
   activeSkillChoices:
   - {fileID: 421007109}
   - {fileID: 2006304149}
@@ -6353,8 +6445,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880d882d09287094bbec38b1ab0ac419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  className: Scout
-  isBlu: 0
+  className: Medic
+  isBlu: 1
   currentHealth: 0
   currentSpeed: 0
   slotSpace: 0
@@ -6370,8 +6462,14 @@ MonoBehaviour:
   switchedClass: 0
   classDead: 0
   equippedSlotNum: 0
-  skillChoice1: 0
-  skillChoice2: 0
+  skillChoice1P: 0
+  skillChoice2P: 0
+  skillChoice1S: 0
+  skillChoice2S: 0
+  skillChoice1M: 0
+  skillChoice2M: 0
+  skillChoice1E: 0
+  skillChoice2E: 0
   equippedLogo1: {fileID: 0}
   equippedSkill1: 
   equippedSkillAcc1: 
@@ -6420,6 +6518,11 @@ MonoBehaviour:
   - {fileID: 1280263960}
   - {fileID: 1042111155}
   - {fileID: 407323016}
+  weaponTabImages:
+  - {fileID: 934199065}
+  - {fileID: 1245905896}
+  - {fileID: 1498566763}
+  - {fileID: 1311865825}
   activeSkillChoices:
   - {fileID: 421007109}
   - {fileID: 2006304149}
@@ -6724,6 +6827,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934157722}
   m_CullTransparentMesh: 1
+--- !u!1 &934199063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 934199064}
+  - component: {fileID: 934199066}
+  - component: {fileID: 934199065}
+  m_Layer: 5
+  m_Name: Primary Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &934199064
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934199063}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 632333575}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -35, y: 0}
+  m_SizeDelta: {x: 60, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &934199065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934199063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &934199066
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934199063}
+  m_CullTransparentMesh: 1
 --- !u!1 &936800002
 GameObject:
   m_ObjectHideFlags: 0
@@ -6760,7 +6939,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 50, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &936800004
 MonoBehaviour:
@@ -6870,6 +7049,7 @@ GameObject:
   - component: {fileID: 970576103}
   - component: {fileID: 970576105}
   - component: {fileID: 970576104}
+  - component: {fileID: 970576106}
   m_Layer: 5
   m_Name: Skill Choice 3
   m_TagString: Untagged
@@ -6936,6 +7116,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970576102}
   m_CullTransparentMesh: 1
+--- !u!114 &970576106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970576102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 970576104}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 131726139}
+        m_TargetAssemblyTypeName: InfoBookButtons, Assembly-CSharp
+        m_MethodName: SkillChange
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &970881208
 GameObject:
   m_ObjectHideFlags: 0
@@ -6989,7 +7225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880d882d09287094bbec38b1ab0ac419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  className: Scout
+  className: Pyro
   isBlu: 0
   currentHealth: 0
   currentSpeed: 0
@@ -7006,8 +7242,14 @@ MonoBehaviour:
   switchedClass: 0
   classDead: 0
   equippedSlotNum: 0
-  skillChoice1: 0
-  skillChoice2: 0
+  skillChoice1P: 0
+  skillChoice2P: 0
+  skillChoice1S: 0
+  skillChoice2S: 0
+  skillChoice1M: 0
+  skillChoice2M: 0
+  skillChoice1E: 0
+  skillChoice2E: 0
   equippedLogo1: {fileID: 0}
   equippedSkill1: 
   equippedSkillAcc1: 
@@ -7056,6 +7298,11 @@ MonoBehaviour:
   - {fileID: 1280263960}
   - {fileID: 1042111155}
   - {fileID: 407323016}
+  weaponTabImages:
+  - {fileID: 934199065}
+  - {fileID: 1245905896}
+  - {fileID: 1498566763}
+  - {fileID: 1311865825}
   activeSkillChoices:
   - {fileID: 421007109}
   - {fileID: 2006304149}
@@ -7500,7 +7747,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1498566762}
   m_Father: {fileID: 131726138}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8935,6 +9183,7 @@ GameObject:
   - component: {fileID: 1169219346}
   - component: {fileID: 1169219348}
   - component: {fileID: 1169219347}
+  - component: {fileID: 1169219349}
   m_Layer: 5
   m_Name: Skill Choice 1
   m_TagString: Untagged
@@ -9001,6 +9250,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169219345}
   m_CullTransparentMesh: 1
+--- !u!114 &1169219349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169219345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1169219347}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 131726139}
+        m_TargetAssemblyTypeName: InfoBookButtons, Assembly-CSharp
+        m_MethodName: SkillChange
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1183884441
 GameObject:
   m_ObjectHideFlags: 0
@@ -9277,6 +9582,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235358371}
+  m_CullTransparentMesh: 1
+--- !u!1 &1245905894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1245905895}
+  - component: {fileID: 1245905897}
+  - component: {fileID: 1245905896}
+  m_Layer: 5
+  m_Name: Secondary Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1245905895
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245905894}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1280263961}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -35, y: 0}
+  m_SizeDelta: {x: 60, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1245905896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245905894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1245905897
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245905894}
   m_CullTransparentMesh: 1
 --- !u!1 &1250754315
 GameObject:
@@ -9688,7 +10069,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1245905895}
   m_Father: {fileID: 131726138}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10003,6 +10385,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298871071}
+  m_CullTransparentMesh: 1
+--- !u!1 &1311865823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1311865824}
+  - component: {fileID: 1311865826}
+  - component: {fileID: 1311865825}
+  m_Layer: 5
+  m_Name: Extra Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1311865824
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311865823}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 407323017}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -35, y: 0}
+  m_SizeDelta: {x: 60, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1311865825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311865823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1311865826
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311865823}
   m_CullTransparentMesh: 1
 --- !u!1 &1327661809
 GameObject:
@@ -10848,8 +11306,14 @@ MonoBehaviour:
   switchedClass: 0
   classDead: 0
   equippedSlotNum: 0
-  skillChoice1: 0
-  skillChoice2: 0
+  skillChoice1P: 0
+  skillChoice2P: 0
+  skillChoice1S: 0
+  skillChoice2S: 0
+  skillChoice1M: 0
+  skillChoice2M: 0
+  skillChoice1E: 0
+  skillChoice2E: 0
   equippedLogo1: {fileID: 0}
   equippedSkill1: 
   equippedSkillAcc1: 
@@ -10898,6 +11362,11 @@ MonoBehaviour:
   - {fileID: 1280263960}
   - {fileID: 1042111155}
   - {fileID: 407323016}
+  weaponTabImages:
+  - {fileID: 934199065}
+  - {fileID: 1245905896}
+  - {fileID: 1498566763}
+  - {fileID: 1311865825}
   activeSkillChoices:
   - {fileID: 421007109}
   - {fileID: 2006304149}
@@ -11304,6 +11773,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491032884}
+  m_CullTransparentMesh: 1
+--- !u!1 &1498566761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1498566762}
+  - component: {fileID: 1498566764}
+  - component: {fileID: 1498566763}
+  m_Layer: 5
+  m_Name: Melee Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1498566762
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498566761}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1042111156}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -35, y: 0}
+  m_SizeDelta: {x: 60, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1498566763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498566761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1498566764
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498566761}
   m_CullTransparentMesh: 1
 --- !u!1 &1503404482
 GameObject:
@@ -14025,6 +14570,7 @@ GameObject:
   - component: {fileID: 1908863089}
   - component: {fileID: 1908863091}
   - component: {fileID: 1908863090}
+  - component: {fileID: 1908863092}
   m_Layer: 5
   m_Name: Skill Choice 4
   m_TagString: Untagged
@@ -14091,6 +14637,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1908863088}
   m_CullTransparentMesh: 1
+--- !u!114 &1908863092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908863088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1908863090}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 131726139}
+        m_TargetAssemblyTypeName: InfoBookButtons, Assembly-CSharp
+        m_MethodName: SkillChange
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1909309222
 GameObject:
   m_ObjectHideFlags: 0
@@ -14735,7 +15337,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 50, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2006304149
 MonoBehaviour:
@@ -15115,7 +15717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880d882d09287094bbec38b1ab0ac419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  className: Scout
+  className: Demoman
   isBlu: 0
   currentHealth: 0
   currentSpeed: 0
@@ -15132,8 +15734,14 @@ MonoBehaviour:
   switchedClass: 0
   classDead: 0
   equippedSlotNum: 0
-  skillChoice1: 0
-  skillChoice2: 0
+  skillChoice1P: 0
+  skillChoice2P: 0
+  skillChoice1S: 0
+  skillChoice2S: 0
+  skillChoice1M: 0
+  skillChoice2M: 0
+  skillChoice1E: 0
+  skillChoice2E: 0
   equippedLogo1: {fileID: 0}
   equippedSkill1: 
   equippedSkillAcc1: 
@@ -15182,6 +15790,11 @@ MonoBehaviour:
   - {fileID: 1280263960}
   - {fileID: 1042111155}
   - {fileID: 407323016}
+  weaponTabImages:
+  - {fileID: 934199065}
+  - {fileID: 1245905896}
+  - {fileID: 1498566763}
+  - {fileID: 1311865825}
   activeSkillChoices:
   - {fileID: 421007109}
   - {fileID: 2006304149}
@@ -16189,8 +16802,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880d882d09287094bbec38b1ab0ac419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  className: Scout
-  isBlu: 0
+  className: Sniper
+  isBlu: 1
   currentHealth: 0
   currentSpeed: 0
   slotSpace: 0
@@ -16206,8 +16819,14 @@ MonoBehaviour:
   switchedClass: 0
   classDead: 0
   equippedSlotNum: 0
-  skillChoice1: 0
-  skillChoice2: 0
+  skillChoice1P: 0
+  skillChoice2P: 0
+  skillChoice1S: 0
+  skillChoice2S: 0
+  skillChoice1M: 0
+  skillChoice2M: 0
+  skillChoice1E: 0
+  skillChoice2E: 0
   equippedLogo1: {fileID: 0}
   equippedSkill1: 
   equippedSkillAcc1: 
@@ -16256,6 +16875,11 @@ MonoBehaviour:
   - {fileID: 1280263960}
   - {fileID: 1042111155}
   - {fileID: 407323016}
+  weaponTabImages:
+  - {fileID: 934199065}
+  - {fileID: 1245905896}
+  - {fileID: 1498566763}
+  - {fileID: 1311865825}
   activeSkillChoices:
   - {fileID: 421007109}
   - {fileID: 2006304149}
@@ -16444,7 +17068,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 50, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2093231588
 MonoBehaviour:
