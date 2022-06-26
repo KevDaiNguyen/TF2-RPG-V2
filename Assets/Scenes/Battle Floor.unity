@@ -2229,7 +2229,6 @@ MonoBehaviour:
   secondarySlotArea: {fileID: 1245905894}
   meleeSlotArea: {fileID: 1498566761}
   extraSlotArea: {fileID: 1311865823}
-  hoveringSlot: 0
 --- !u!1 &272461994
 GameObject:
   m_ObjectHideFlags: 0
@@ -14906,7 +14905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.63924503, g: 0.46164113, b: 0.735849, a: 1}
+  m_Color: {r: 0.37484407, g: 0, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

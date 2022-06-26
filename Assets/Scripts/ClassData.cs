@@ -548,9 +548,9 @@ public class ClassData : MonoBehaviour
     }
 
 
-    public void IncreaseMeterBar(int increaseAmount)
+    public void IncreaseMeterBar(int increaseAmount, int slotNumber)
     {
-        switch (equippedSlotNum)
+        switch (slotNumber)
         {
             case 1:
                 if (primaryMeterNum + increaseAmount >= primarySlot.maxMeterNum)

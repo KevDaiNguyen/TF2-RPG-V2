@@ -99,6 +99,11 @@ public class DisplayBattleUI : MonoBehaviour
                 originalHealth += dataInstance.extraSlot.healthChange;
                 dataInstance.ChangeMaxHealth(dataInstance.extraSlot.healthChange);
             }
+
+            if (dataInstance.showExtraSlot && dataInstance.className == "Spy")
+            {
+                dataInstance.IncreaseMeterBar(100, 4);
+            }
             equipedPassives = true;
         }
 
