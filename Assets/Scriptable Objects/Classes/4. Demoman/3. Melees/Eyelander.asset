@@ -19,7 +19,7 @@ MonoBehaviour:
   weaponSlot: 3
   hasMeterBar: 1
   maxMeterNum: 4
-  meterText: Max Stats Increase
+  meterText: Max Stat Increase
   activeWeapon: 1
   bulletResist: 0
   explosiveResist: 0

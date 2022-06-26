@@ -62,6 +62,7 @@ public class DisplayBattleUI : MonoBehaviour
     public bool currentlySelected;
 
     private bool equipedPassives = false;
+    private int previousSlotNum;
 
     // Start is called before the first frame update
     void Start()
@@ -420,6 +421,8 @@ public class DisplayBattleUI : MonoBehaviour
 
     public void EquipWeapon(int slotNum)
     {
+        previousSlotNum = dataInstance.equippedSlotNum;
+
         switch (slotNum)
         {
             case 1:
@@ -447,72 +450,146 @@ public class DisplayBattleUI : MonoBehaviour
                 }
                 break;
         }
-    }
 
-    public void SwitchValues()
-    {
-
+        OnDequip(previousSlotNum);
+        OnEquip(slotNum);
     }
 
     public void OnEquip(int weaponSlotNum)
     {
-
+        switch (weaponSlotNum)
+        {
+            case 1:
+                if (!dataInstance.primarySlot.passiveStats)
+                {
+                    ResistVunlerabilityChange(weaponSlotNum, true);
+                }
+                break;
+            case 2:
+                if (!dataInstance.secondarySlot.passiveStats)
+                {
+                    ResistVunlerabilityChange(weaponSlotNum, true);
+                }
+                break;
+            case 3:
+                if (!dataInstance.meleeSlot.passiveStats)
+                {
+                    ResistVunlerabilityChange(weaponSlotNum, true);
+                }
+                break;
+            case 4:
+                if (!dataInstance.extraSlot.passiveStats)
+                {
+                    ResistVunlerabilityChange(weaponSlotNum, true);
+                }
+                break;
+        }
     }
 
     public void OnDequip(int weaponSlotNum)
     {
-         
+        switch (weaponSlotNum)
+        {
+            case 1:
+                if (!dataInstance.primarySlot.passiveStats)
+                {
+                    ResistVunlerabilityChange(weaponSlotNum, false);
+                }
+                break;
+            case 2:
+                if (!dataInstance.secondarySlot.passiveStats)
+                {
+                    ResistVunlerabilityChange(weaponSlotNum, false);
+                }
+                break;
+            case 3:
+                if (!dataInstance.meleeSlot.passiveStats)
+                {
+                    ResistVunlerabilityChange(weaponSlotNum, false);
+                }
+                break;
+            case 4:
+                if (!dataInstance.extraSlot.passiveStats)
+                {
+                    ResistVunlerabilityChange(weaponSlotNum, false);
+                }
+                break;
+        }
     }
 
     public void PassiveEquip()
     {
         if (dataInstance.primarySlot.passiveStats)
         {
-            dataInstance.ChangeResist(dataInstance.primarySlot.bulletResist, "Bullet", true);
-            dataInstance.ChangeResist(dataInstance.primarySlot.fireResist, "Fire", true);
-            dataInstance.ChangeResist(dataInstance.primarySlot.explosiveResist, "Explosive", true);
-            dataInstance.ChangeResist(dataInstance.primarySlot.meleeResist, "Melee", true);
-
-            dataInstance.ChangeVulnerability(dataInstance.primarySlot.bulletVulnerability, "Bullet", true);
-            dataInstance.ChangeVulnerability(dataInstance.primarySlot.fireVulnerability, "Fire", true);
-            dataInstance.ChangeVulnerability(dataInstance.primarySlot.explosiveVulnerability, "Explosive", true);
-            dataInstance.ChangeVulnerability(dataInstance.primarySlot.meleeVulnerability, "Melee", true);
+            ResistVunlerabilityChange(1, true);
         }
         if (dataInstance.secondarySlot.passiveStats)
         {
-            dataInstance.ChangeResist(dataInstance.secondarySlot.bulletResist, "Bullet", true);
-            dataInstance.ChangeResist(dataInstance.secondarySlot.fireResist, "Fire", true);
-            dataInstance.ChangeResist(dataInstance.secondarySlot.explosiveResist, "Explosive", true);
-            dataInstance.ChangeResist(dataInstance.secondarySlot.meleeResist, "Melee", true);
-
-            dataInstance.ChangeVulnerability(dataInstance.secondarySlot.bulletVulnerability, "Bullet", true);
-            dataInstance.ChangeVulnerability(dataInstance.secondarySlot.fireVulnerability, "Fire", true);
-            dataInstance.ChangeVulnerability(dataInstance.secondarySlot.explosiveVulnerability, "Explosive", true);
-            dataInstance.ChangeVulnerability(dataInstance.secondarySlot.meleeVulnerability, "Melee", true);
+            ResistVunlerabilityChange(2, true);
         }
         if (dataInstance.meleeSlot.passiveStats)
         {
-            dataInstance.ChangeResist(dataInstance.meleeSlot.bulletResist, "Bullet", true);
-            dataInstance.ChangeResist(dataInstance.meleeSlot.fireResist, "Fire", true);
-            dataInstance.ChangeResist(dataInstance.meleeSlot.explosiveResist, "Explosive", true);
-            dataInstance.ChangeResist(dataInstance.meleeSlot.meleeResist, "Melee", true);
-
-            dataInstance.ChangeVulnerability(dataInstance.meleeSlot.bulletVulnerability, "Bullet", true);
-            dataInstance.ChangeVulnerability(dataInstance.meleeSlot.fireVulnerability, "Fire", true);
-            dataInstance.ChangeVulnerability(dataInstance.meleeSlot.explosiveVulnerability, "Explosive", true);
-            dataInstance.ChangeVulnerability(dataInstance.meleeSlot.meleeVulnerability, "Melee", true);
+            ResistVunlerabilityChange(3, true);
         }
         if (dataInstance.extraSlot.passiveStats)
         {
-            dataInstance.ChangeResist(dataInstance.extraSlot.bulletResist, "Bullet", true);
-            dataInstance.ChangeResist(dataInstance.extraSlot.fireResist, "Fire", true);
-            dataInstance.ChangeResist(dataInstance.extraSlot.explosiveResist, "Explosive", true);
-            dataInstance.ChangeResist(dataInstance.extraSlot.meleeResist, "Melee", true);
-
-            dataInstance.ChangeVulnerability(dataInstance.extraSlot.bulletVulnerability, "Bullet", true);
-            dataInstance.ChangeVulnerability(dataInstance.extraSlot.fireVulnerability, "Fire", true);
-            dataInstance.ChangeVulnerability(dataInstance.extraSlot.explosiveVulnerability, "Explosive", true);
-            dataInstance.ChangeVulnerability(dataInstance.extraSlot.meleeVulnerability, "Melee", true);
+            ResistVunlerabilityChange(4, true);
         }
+    }
+
+    public void ResistVunlerabilityChange(int slotNum, bool shouldIncrease)
+    {
+        switch (slotNum)
+        {
+            case 1:
+                dataInstance.ChangeResist(dataInstance.primarySlot.bulletResist, "Bullet", shouldIncrease);
+                dataInstance.ChangeResist(dataInstance.primarySlot.fireResist, "Fire", shouldIncrease);
+                dataInstance.ChangeResist(dataInstance.primarySlot.explosiveResist, "Explosive", shouldIncrease);
+                dataInstance.ChangeResist(dataInstance.primarySlot.meleeResist, "Melee", shouldIncrease);
+
+                dataInstance.ChangeVulnerability(dataInstance.primarySlot.bulletVulnerability, "Bullet", shouldIncrease);
+                dataInstance.ChangeVulnerability(dataInstance.primarySlot.fireVulnerability, "Fire", shouldIncrease);
+                dataInstance.ChangeVulnerability(dataInstance.primarySlot.explosiveVulnerability, "Explosive", shouldIncrease);
+                dataInstance.ChangeVulnerability(dataInstance.primarySlot.meleeVulnerability, "Melee", shouldIncrease);
+                break;
+            case 2:
+                dataInstance.ChangeResist(dataInstance.secondarySlot.bulletResist, "Bullet", shouldIncrease);
+                dataInstance.ChangeResist(dataInstance.secondarySlot.fireResist, "Fire", shouldIncrease);
+                dataInstance.ChangeResist(dataInstance.secondarySlot.explosiveResist, "Explosive", shouldIncrease);
+                dataInstance.ChangeResist(dataInstance.secondarySlot.meleeResist, "Melee", shouldIncrease);
+
+                dataInstance.ChangeVulnerability(dataInstance.secondarySlot.bulletVulnerability, "Bullet", shouldIncrease);
+                dataInstance.ChangeVulnerability(dataInstance.secondarySlot.fireVulnerability, "Fire", shouldIncrease);
+                dataInstance.ChangeVulnerability(dataInstance.secondarySlot.explosiveVulnerability, "Explosive", shouldIncrease);
+                dataInstance.ChangeVulnerability(dataInstance.secondarySlot.meleeVulnerability, "Melee", shouldIncrease);
+                break;
+            case 3:
+                dataInstance.ChangeResist(dataInstance.meleeSlot.bulletResist, "Bullet", shouldIncrease);
+                dataInstance.ChangeResist(dataInstance.meleeSlot.fireResist, "Fire", shouldIncrease);
+                dataInstance.ChangeResist(dataInstance.meleeSlot.explosiveResist, "Explosive", shouldIncrease);
+                dataInstance.ChangeResist(dataInstance.meleeSlot.meleeResist, "Melee", shouldIncrease);
+
+                dataInstance.ChangeVulnerability(dataInstance.meleeSlot.bulletVulnerability, "Bullet", shouldIncrease);
+                dataInstance.ChangeVulnerability(dataInstance.meleeSlot.fireVulnerability, "Fire", shouldIncrease);
+                dataInstance.ChangeVulnerability(dataInstance.meleeSlot.explosiveVulnerability, "Explosive", shouldIncrease);
+                dataInstance.ChangeVulnerability(dataInstance.meleeSlot.meleeVulnerability, "Melee", shouldIncrease);
+                break;
+            case 4:
+                dataInstance.ChangeResist(dataInstance.extraSlot.bulletResist, "Bullet", shouldIncrease);
+                dataInstance.ChangeResist(dataInstance.extraSlot.fireResist, "Fire", shouldIncrease);
+                dataInstance.ChangeResist(dataInstance.extraSlot.explosiveResist, "Explosive", shouldIncrease);
+                dataInstance.ChangeResist(dataInstance.extraSlot.meleeResist, "Melee", shouldIncrease);
+
+                dataInstance.ChangeVulnerability(dataInstance.extraSlot.bulletVulnerability, "Bullet", shouldIncrease);
+                dataInstance.ChangeVulnerability(dataInstance.extraSlot.fireVulnerability, "Fire", shouldIncrease);
+                dataInstance.ChangeVulnerability(dataInstance.extraSlot.explosiveVulnerability, "Explosive", shouldIncrease);
+                dataInstance.ChangeVulnerability(dataInstance.extraSlot.meleeVulnerability, "Melee", shouldIncrease);
+                break;
+        }
+    }
+
+    public void TempBuff(float resistIncrease, string damageType, bool shouldIncrease)
+    {
+        dataInstance.ChangeResist(resistIncrease, damageType, shouldIncrease);
     }
 }

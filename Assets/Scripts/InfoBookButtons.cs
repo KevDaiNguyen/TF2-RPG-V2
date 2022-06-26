@@ -6,11 +6,10 @@ public class InfoBookButtons: MonoBehaviour
 {
     public DisplayBattleUI[] uiInstances;
     private DisplayBattleUI currentBattleUI;
-    private int currentSlotSelected;
 
     private void Start()
     {
-        currentSlotSelected = 0;
+
     }
 
     private void Update()
@@ -20,7 +19,6 @@ public class InfoBookButtons: MonoBehaviour
             if (uiInstances[i].currentlySelected)
             {
                 currentBattleUI = uiInstances[i];
-                currentSlotSelected = i;
             }
         }
     }
@@ -28,38 +26,38 @@ public class InfoBookButtons: MonoBehaviour
     public void SkillChange(int skillNum)
     {
         int tempInt = 0;
-        switch (uiInstances[currentSlotSelected].dataInstance.equippedSlotNum)
+        switch (currentBattleUI.dataInstance.equippedSlotNum)
         {
             case 1:
-                tempInt = uiInstances[currentSlotSelected].dataInstance.skillChoice1P;
-                if (skillNum != uiInstances[currentSlotSelected].dataInstance.skillChoice1P && skillNum != uiInstances[currentSlotSelected].dataInstance.skillChoice2P)
+                tempInt = currentBattleUI.dataInstance.skillChoice1P;
+                if (skillNum != currentBattleUI.dataInstance.skillChoice1P && skillNum != currentBattleUI.dataInstance.skillChoice2P)
                 {
-                    uiInstances[currentSlotSelected].dataInstance.skillChoice1P = skillNum;
-                    uiInstances[currentSlotSelected].dataInstance.skillChoice2P = tempInt;
+                    currentBattleUI.dataInstance.skillChoice1P = skillNum;
+                    currentBattleUI.dataInstance.skillChoice2P = tempInt;
                 }
                 break;
             case 2:
-                tempInt = uiInstances[currentSlotSelected].dataInstance.skillChoice1S;
-                if (skillNum != uiInstances[currentSlotSelected].dataInstance.skillChoice1S && skillNum != uiInstances[currentSlotSelected].dataInstance.skillChoice2S)
+                tempInt = currentBattleUI.dataInstance.skillChoice1S;
+                if (skillNum != currentBattleUI.dataInstance.skillChoice1S && skillNum != currentBattleUI.dataInstance.skillChoice2S)
                 {
-                    uiInstances[currentSlotSelected].dataInstance.skillChoice1S = skillNum;
-                    uiInstances[currentSlotSelected].dataInstance.skillChoice2S = tempInt;
+                    currentBattleUI.dataInstance.skillChoice1S = skillNum;
+                    currentBattleUI.dataInstance.skillChoice2S = tempInt;
                 }
                 break;
             case 3:
-                tempInt = uiInstances[currentSlotSelected].dataInstance.skillChoice1M;
-                if (skillNum != uiInstances[currentSlotSelected].dataInstance.skillChoice1M && skillNum != uiInstances[currentSlotSelected].dataInstance.skillChoice2M)
+                tempInt = currentBattleUI.dataInstance.skillChoice1M;
+                if (skillNum != currentBattleUI.dataInstance.skillChoice1M && skillNum != currentBattleUI.dataInstance.skillChoice2M)
                 {
-                    uiInstances[currentSlotSelected].dataInstance.skillChoice1M = skillNum;
-                    uiInstances[currentSlotSelected].dataInstance.skillChoice2M = tempInt;
+                    currentBattleUI.dataInstance.skillChoice1M = skillNum;
+                    currentBattleUI.dataInstance.skillChoice2M = tempInt;
                 }
                 break;
             case 4:
-                tempInt = uiInstances[currentSlotSelected].dataInstance.skillChoice1E;
-                if (skillNum != uiInstances[currentSlotSelected].dataInstance.skillChoice1E && skillNum != uiInstances[currentSlotSelected].dataInstance.skillChoice2E)
+                tempInt = currentBattleUI.dataInstance.skillChoice1E;
+                if (skillNum != currentBattleUI.dataInstance.skillChoice1E && skillNum != currentBattleUI.dataInstance.skillChoice2E)
                 {
-                    uiInstances[currentSlotSelected].dataInstance.skillChoice1E = skillNum;
-                    uiInstances[currentSlotSelected].dataInstance.skillChoice2E = tempInt;
+                    currentBattleUI.dataInstance.skillChoice1E = skillNum;
+                    currentBattleUI.dataInstance.skillChoice2E = tempInt;
                 }
                 break;
         }
