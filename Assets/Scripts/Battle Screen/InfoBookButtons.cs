@@ -5,7 +5,7 @@ using UnityEngine;
 public class InfoBookButtons: MonoBehaviour
 {
     public DisplayBattleUI[] uiInstances;
-    private DisplayBattleUI currentBattleUI;
+    public DisplayBattleUI currentBattleUI;
 
     private void Start()
     {
