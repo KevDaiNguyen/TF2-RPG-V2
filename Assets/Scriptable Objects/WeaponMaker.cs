@@ -32,6 +32,11 @@ public class WeaponMaker : ScriptableObject
 
     public bool passiveStats;
 
+    [Header("Resist/Vulnerabilities when equipped"), Space(5)]
+    public int healthChange;
+    public int speedChange;
+    public bool equipSpeedBoost;
+
     [Header("Size of ammo capacities"), Space(5)]
     public int clipSize;
     public int reserveSize;

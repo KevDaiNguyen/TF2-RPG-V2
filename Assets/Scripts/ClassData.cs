@@ -595,9 +595,15 @@ public class ClassData : MonoBehaviour
         }
     }
 
-    public void SetSpeed(int speedChangeNum)
+    public void ChangeSpeed(int speedChangeNum)
     {
-        currentSpeed = speedChangeNum;
+        currentSpeed += speedChangeNum;
+    }
+
+    public void ChangeMaxHealth(int healthChangeNum)
+    {
+        defaultHealth += healthChangeNum;
+        currentHealth = defaultHealth;
     }
 
     public void TakeHealing(int healthChangeNum, bool fromMedigun, bool isQuickFix)

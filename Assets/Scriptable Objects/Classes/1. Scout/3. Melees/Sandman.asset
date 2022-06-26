@@ -29,6 +29,10 @@ MonoBehaviour:
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  passiveStats: 0
+  healthChange: -15
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 1
   reserveSize: 9999
   minCritChance: 15

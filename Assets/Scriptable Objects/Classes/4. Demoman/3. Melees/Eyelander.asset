@@ -30,6 +30,9 @@ MonoBehaviour:
   fireVulnerability: 0
   meleeVulnerability: 0
   passiveStats: 0
+  healthChange: -25
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 0
   reserveSize: 0
   minCritChance: 0

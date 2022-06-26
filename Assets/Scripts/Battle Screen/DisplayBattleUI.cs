@@ -79,13 +79,31 @@ public class DisplayBattleUI : MonoBehaviour
         if (!equipedPassives)
         {
             PassiveEquip();
+            if (dataInstance.primarySlot.healthChange != 0)
+            {
+                originalHealth += dataInstance.primarySlot.healthChange;
+                dataInstance.ChangeMaxHealth(dataInstance.primarySlot.healthChange);
+            }
+            if (dataInstance.secondarySlot.healthChange != 0)
+            {
+                originalHealth += dataInstance.secondarySlot.healthChange;
+                dataInstance.ChangeMaxHealth(dataInstance.secondarySlot.healthChange);
+            }
+            if (dataInstance.meleeSlot.healthChange != 0)
+            {
+                originalHealth += dataInstance.meleeSlot.healthChange;
+                dataInstance.ChangeMaxHealth(dataInstance.meleeSlot.healthChange);
+            }
+            if (dataInstance.extraSlot.healthChange != 0)
+            {
+                originalHealth += dataInstance.extraSlot.healthChange;
+                dataInstance.ChangeMaxHealth(dataInstance.extraSlot.healthChange);
+            }
             equipedPassives = true;
         }
 
         if (currentlySelected)
         {
-            //classBody.sprite = dataInstance.classSprite;
-
             className.text = dataInstance.className;
             classHealthNum.text = dataInstance.currentHealth.ToString();
 
@@ -463,24 +481,28 @@ public class DisplayBattleUI : MonoBehaviour
                 if (!dataInstance.primarySlot.passiveStats)
                 {
                     ResistVunlerabilityChange(weaponSlotNum, true);
+                    dataInstance.ChangeSpeed(dataInstance.primarySlot.speedChange);
                 }
                 break;
             case 2:
                 if (!dataInstance.secondarySlot.passiveStats)
                 {
                     ResistVunlerabilityChange(weaponSlotNum, true);
+                    dataInstance.ChangeSpeed(dataInstance.secondarySlot.speedChange);
                 }
                 break;
             case 3:
                 if (!dataInstance.meleeSlot.passiveStats)
                 {
                     ResistVunlerabilityChange(weaponSlotNum, true);
+                    dataInstance.ChangeSpeed(dataInstance.meleeSlot.speedChange);
                 }
                 break;
             case 4:
                 if (!dataInstance.extraSlot.passiveStats)
                 {
                     ResistVunlerabilityChange(weaponSlotNum, true);
+                    dataInstance.ChangeSpeed(dataInstance.extraSlot.speedChange);
                 }
                 break;
         }
@@ -494,24 +516,28 @@ public class DisplayBattleUI : MonoBehaviour
                 if (!dataInstance.primarySlot.passiveStats)
                 {
                     ResistVunlerabilityChange(weaponSlotNum, false);
+                    dataInstance.ChangeSpeed(dataInstance.primarySlot.speedChange * -1);
                 }
                 break;
             case 2:
                 if (!dataInstance.secondarySlot.passiveStats)
                 {
                     ResistVunlerabilityChange(weaponSlotNum, false);
+                    dataInstance.ChangeSpeed(dataInstance.secondarySlot.speedChange * -1);
                 }
                 break;
             case 3:
                 if (!dataInstance.meleeSlot.passiveStats)
                 {
                     ResistVunlerabilityChange(weaponSlotNum, false);
+                    dataInstance.ChangeSpeed(dataInstance.meleeSlot.speedChange * -1);
                 }
                 break;
             case 4:
                 if (!dataInstance.extraSlot.passiveStats)
                 {
                     ResistVunlerabilityChange(weaponSlotNum, false);
+                    dataInstance.ChangeSpeed(dataInstance.extraSlot.speedChange * -1);
                 }
                 break;
         }

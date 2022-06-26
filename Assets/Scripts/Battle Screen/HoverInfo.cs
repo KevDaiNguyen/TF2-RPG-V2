@@ -23,6 +23,10 @@ public class HoverInfo : MonoBehaviour
 
     private int hoveringSlot;
 
+    private float nextCheck = 0f;
+    private float hoverTime = 0.5f;
+    private bool currentlyHovering = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,28 +84,37 @@ public class HoverInfo : MonoBehaviour
 
     public void MouseCheck()
     {
-        if (Input.mousePosition.x < (primarySlotArea.transform.position.x + 25) && Input.mousePosition.x > (primarySlotArea.transform.position.x - 25)
+        if (Input.mousePosition.x < (primarySlotArea.transform.position.x + 25) && Input.mousePosition.x > (primarySlotArea.transform.position.x - 25) && Time.time > nextCheck
             && Input.mousePosition.y < (primarySlotArea.transform.position.y + 25) && Input.mousePosition.y > (primarySlotArea.transform.position.y - 25) && primarySlotArea.activeInHierarchy)
         {
+            currentlyHovering = true;
             hoveringSlot = 1;
         }
-        else if (Input.mousePosition.x < (secondarySlotArea.transform.position.x + 25) && Input.mousePosition.x > (secondarySlotArea.transform.position.x - 25)
+        else if (Input.mousePosition.x < (secondarySlotArea.transform.position.x + 25) && Input.mousePosition.x > (secondarySlotArea.transform.position.x - 25) && Time.time > nextCheck
             && Input.mousePosition.y < (secondarySlotArea.transform.position.y + 25) && Input.mousePosition.y > (secondarySlotArea.transform.position.y - 25) && secondarySlotArea.activeInHierarchy)
         {
+            currentlyHovering = true;
             hoveringSlot = 2;
         }
-        else if (Input.mousePosition.x < (meleeSlotArea.transform.position.x + 25) && Input.mousePosition.x > (meleeSlotArea.transform.position.x - 25)
+        else if (Input.mousePosition.x < (meleeSlotArea.transform.position.x + 25) && Input.mousePosition.x > (meleeSlotArea.transform.position.x - 25) && Time.time > nextCheck
             && Input.mousePosition.y < (meleeSlotArea.transform.position.y + 25) && Input.mousePosition.y > (meleeSlotArea.transform.position.y - 25) && meleeSlotArea.activeInHierarchy)
         {
+            currentlyHovering = true;
             hoveringSlot = 3;
         }
-        else if (Input.mousePosition.x < (extraSlotArea.transform.position.x + 25) && Input.mousePosition.x > (extraSlotArea.transform.position.x - 25)
+        else if (Input.mousePosition.x < (extraSlotArea.transform.position.x + 25) && Input.mousePosition.x > (extraSlotArea.transform.position.x - 25) && Time.time > nextCheck
             && Input.mousePosition.y < (extraSlotArea.transform.position.y + 25) && Input.mousePosition.y > (extraSlotArea.transform.position.y - 25) && extraSlotArea.activeInHierarchy)
         {
+            currentlyHovering = true;
             hoveringSlot = 4;
         }
         else
         {
+            if (currentlyHovering)
+            {
+                nextCheck = Time.time + hoverTime;
+                currentlyHovering = false;
+            }
             hoveringSlot = 0;
         }
     }
