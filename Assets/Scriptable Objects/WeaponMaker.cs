@@ -6,7 +6,7 @@ using UnityEngine;
 public class WeaponMaker : ScriptableObject
 {
     public string weaponName;
-    [TextArea(2, 5)]
+    [TextArea(3, 9)]
     public string weaponDescription;
     public Sprite weaponImage;
     public int weaponSlot;

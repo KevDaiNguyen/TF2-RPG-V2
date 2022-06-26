@@ -21,7 +21,7 @@ public class HoverInfo : MonoBehaviour
     public GameObject meleeSlotArea;
     public GameObject extraSlotArea;
 
-    public int hoveringSlot;
+    private int hoveringSlot;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +34,8 @@ public class HoverInfo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MouseCheck();
+
         switch (hoveringSlot)
         {
             case 1:
@@ -73,6 +75,34 @@ public class HoverInfo : MonoBehaviour
                 weaponName.color = new Vector4(0, 0, 0, 0);
                 weaponDesc.color = new Vector4(0, 0, 0, 0);
                 break;
+        }
+    }
+
+    public void MouseCheck()
+    {
+        if (Input.mousePosition.x < (primarySlotArea.transform.position.x + 25) && Input.mousePosition.x > (primarySlotArea.transform.position.x - 25)
+            && Input.mousePosition.y < (primarySlotArea.transform.position.y + 25) && Input.mousePosition.y > (primarySlotArea.transform.position.y - 25) && primarySlotArea.activeInHierarchy)
+        {
+            hoveringSlot = 1;
+        }
+        else if (Input.mousePosition.x < (secondarySlotArea.transform.position.x + 25) && Input.mousePosition.x > (secondarySlotArea.transform.position.x - 25)
+            && Input.mousePosition.y < (secondarySlotArea.transform.position.y + 25) && Input.mousePosition.y > (secondarySlotArea.transform.position.y - 25) && secondarySlotArea.activeInHierarchy)
+        {
+            hoveringSlot = 2;
+        }
+        else if (Input.mousePosition.x < (meleeSlotArea.transform.position.x + 25) && Input.mousePosition.x > (meleeSlotArea.transform.position.x - 25)
+            && Input.mousePosition.y < (meleeSlotArea.transform.position.y + 25) && Input.mousePosition.y > (meleeSlotArea.transform.position.y - 25) && meleeSlotArea.activeInHierarchy)
+        {
+            hoveringSlot = 3;
+        }
+        else if (Input.mousePosition.x < (extraSlotArea.transform.position.x + 25) && Input.mousePosition.x > (extraSlotArea.transform.position.x - 25)
+            && Input.mousePosition.y < (extraSlotArea.transform.position.y + 25) && Input.mousePosition.y > (extraSlotArea.transform.position.y - 25) && extraSlotArea.activeInHierarchy)
+        {
+            hoveringSlot = 4;
+        }
+        else
+        {
+            hoveringSlot = 0;
         }
     }
 }
