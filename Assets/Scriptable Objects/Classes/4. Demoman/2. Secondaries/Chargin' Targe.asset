@@ -18,7 +18,8 @@ MonoBehaviour:
   weaponImage: {fileID: 21300000, guid: 3298a28eda5d9e0449cef5681c40f486, type: 3}
   weaponSlot: 2
   hasMeterBar: 1
-  maxMeterNum: 100
+  startFullMeter: 1
+  maxMeterNum: 2
   meterText: Charge Meter
   activeWeapon: 1
   bulletResist: 0
@@ -30,6 +31,9 @@ MonoBehaviour:
   fireVulnerability: 0
   meleeVulnerability: 0
   passiveStats: 1
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 1
   reserveSize: 9999
   minCritChance: 0

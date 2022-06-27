@@ -17,6 +17,7 @@ MonoBehaviour:
   weaponImage: {fileID: 21300000, guid: 43d49d62726ebe744bc3fe174db24069, type: 3}
   weaponSlot: 2
   hasMeterBar: 1
+  startFullMeter: 1
   maxMeterNum: 2
   meterText: Item Respawn
   activeWeapon: 1
@@ -28,6 +29,10 @@ MonoBehaviour:
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 1
   reserveSize: 9999
   minCritChance: 0

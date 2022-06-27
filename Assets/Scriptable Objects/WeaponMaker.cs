@@ -13,6 +13,7 @@ public class WeaponMaker : ScriptableObject
 
     [Header("If weapon has cooldowns/stored damage"), Space(5)]
     public bool hasMeterBar;
+    public bool startFullMeter;
     [Header("Meter Bar Setup"), Space(5)]
     public int maxMeterNum;
     public string meterText;

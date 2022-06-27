@@ -79,6 +79,7 @@ public class DisplayBattleUI : MonoBehaviour
         if (!equipedPassives)
         {
             PassiveEquip();
+            // ------------------------------------------------------------------------
             if (dataInstance.primarySlot.healthChange != 0)
             {
                 originalHealth += dataInstance.primarySlot.healthChange;
@@ -99,11 +100,25 @@ public class DisplayBattleUI : MonoBehaviour
                 originalHealth += dataInstance.extraSlot.healthChange;
                 dataInstance.ChangeMaxHealth(dataInstance.extraSlot.healthChange);
             }
-
-            if (dataInstance.showExtraSlot && dataInstance.className == "Spy")
+            // --------------------------------------------------------------------------
+            if (dataInstance.primarySlot.hasMeterBar && dataInstance.primarySlot.startFullMeter)
             {
-                dataInstance.IncreaseMeterBar(100, 4);
+                dataInstance.IncreaseMeterBar(dataInstance.primarySlot.maxMeterNum, 1);
             }
+            if (dataInstance.secondarySlot.hasMeterBar && dataInstance.secondarySlot.startFullMeter)
+            {
+                dataInstance.IncreaseMeterBar(dataInstance.secondarySlot.maxMeterNum, 2);
+            }
+            if (dataInstance.meleeSlot.hasMeterBar && dataInstance.meleeSlot.startFullMeter)
+            {
+                dataInstance.IncreaseMeterBar(dataInstance.meleeSlot.maxMeterNum, 3);
+            }
+            if (dataInstance.extraSlot.hasMeterBar && dataInstance.extraSlot.startFullMeter)
+            {
+                dataInstance.IncreaseMeterBar(dataInstance.extraSlot.maxMeterNum, 4);
+            }
+            // -------------------------------------------------------------------------
+
             equipedPassives = true;
         }
 
@@ -131,7 +146,18 @@ public class DisplayBattleUI : MonoBehaviour
                     }
                     else
                     {
-                        ammoCount.text = dataInstance.primarySlot.clipSize.ToString();
+                        if (dataInstance.primarySlot.reserveSize == 0)
+                        {
+                            ammoCount.text = dataInstance.primarySlot.clipSize.ToString();
+                        }
+                        else if (dataInstance.primarySlot.reserveSize == 9999)
+                        {
+                            ammoCount.text = dataInstance.primarySlot.clipSize.ToString() + "/INF";
+                        }
+                        else
+                        {
+                            ammoCount.text = dataInstance.primarySlot.clipSize.ToString() + "/" + dataInstance.primarySlot.reserveSize.ToString();
+                        }
                     }
                     // ----------------------------------------------------------------
                     if (dataInstance.primarySlot.hasMeterBar)
@@ -190,7 +216,18 @@ public class DisplayBattleUI : MonoBehaviour
                     }
                     else
                     {
-                        ammoCount.text = dataInstance.secondarySlot.clipSize.ToString();
+                        if (dataInstance.primarySlot.reserveSize == 0)
+                        {
+                            ammoCount.text = dataInstance.primarySlot.clipSize.ToString();
+                        }
+                        else if (dataInstance.primarySlot.reserveSize == 9999)
+                        {
+                            ammoCount.text = dataInstance.primarySlot.clipSize.ToString() + "/INF";
+                        }
+                        else
+                        {
+                            ammoCount.text = dataInstance.secondarySlot.clipSize.ToString() + "/" + dataInstance.secondarySlot.reserveSize.ToString();
+                        }
                     }
                     // ----------------------------------------------------------------
                     if (dataInstance.secondarySlot.hasMeterBar)
@@ -248,7 +285,18 @@ public class DisplayBattleUI : MonoBehaviour
                     }
                     else
                     {
-                        ammoCount.text = dataInstance.meleeSlot.clipSize.ToString();
+                        if (dataInstance.primarySlot.reserveSize == 0)
+                        {
+                            ammoCount.text = dataInstance.primarySlot.clipSize.ToString();
+                        }
+                        else if (dataInstance.primarySlot.reserveSize == 9999)
+                        {
+                            ammoCount.text = dataInstance.primarySlot.clipSize.ToString() + "/INF";
+                        }
+                        else
+                        {
+                            ammoCount.text = dataInstance.meleeSlot.clipSize.ToString() + "/" + dataInstance.meleeSlot.reserveSize.ToString();
+                        }
                     }
                     // ----------------------------------------------------------------
                     if (dataInstance.meleeSlot.hasMeterBar)
@@ -308,7 +356,18 @@ public class DisplayBattleUI : MonoBehaviour
                         }
                         else
                         {
-                            ammoCount.text = dataInstance.extraSlot.clipSize.ToString();
+                            if (dataInstance.primarySlot.reserveSize == 0)
+                            {
+                                ammoCount.text = dataInstance.primarySlot.clipSize.ToString();
+                            }
+                            else if (dataInstance.primarySlot.reserveSize == 9999)
+                            {
+                                ammoCount.text = dataInstance.primarySlot.clipSize.ToString() + "/INF";
+                            }
+                            else
+                            {
+                                ammoCount.text = dataInstance.extraSlot.clipSize.ToString() + "/" + dataInstance.extraSlot.reserveSize.ToString();
+                            }
                         }
                         // ----------------------------------------------------------------
                         if (dataInstance.extraSlot.hasMeterBar)

@@ -71,8 +71,6 @@ public class ClassData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //className = "Scout";
-        //isBlu = false;
         slotSpace = 1;
 
         defaultHealth = 125;
