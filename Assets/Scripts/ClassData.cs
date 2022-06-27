@@ -6,6 +6,7 @@ public class ClassData : MonoBehaviour
 {
     [Header("---Class Identifier---")]
     public string className;
+    public int currentPosition;
     [Header("---Team Decider---")]
     public bool isBlu;
     [Header("---Variable Health---")]

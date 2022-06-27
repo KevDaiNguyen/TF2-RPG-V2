@@ -1451,7 +1451,7 @@ RectTransform:
   - {fileID: 633360115}
   - {fileID: 562059242}
   m_Father: {fileID: 999969940}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1471,6 +1471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   className: Soldier
+  currentPosition: 3
   isBlu: 0
   currentHealth: 0
   currentSpeed: 0
@@ -3722,6 +3723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   className: Heavy
+  currentPosition: 5
   isBlu: 1
   currentHealth: 0
   currentSpeed: 0
@@ -6108,6 +6110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   className: Spy
+  currentPosition: 8
   isBlu: 1
   currentHealth: 0
   currentSpeed: 0
@@ -7045,6 +7048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   className: Medic
+  currentPosition: 6
   isBlu: 1
   currentHealth: 0
   currentSpeed: 0
@@ -7809,7 +7813,7 @@ RectTransform:
   - {fileID: 556300118}
   - {fileID: 987898662}
   m_Father: {fileID: 999969940}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7829,6 +7833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   className: Pyro
+  currentPosition: 1
   isBlu: 0
   currentHealth: 0
   currentSpeed: 0
@@ -8521,10 +8526,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1459799159}
-  - {fileID: 227667251}
-  - {fileID: 2025763703}
   - {fileID: 970881209}
+  - {fileID: 2025763703}
+  - {fileID: 227667251}
+  - {fileID: 1459799159}
   - {fileID: 508319803}
   - {fileID: 903963023}
   - {fileID: 2089755604}
@@ -12378,7 +12383,7 @@ RectTransform:
   - {fileID: 356903506}
   - {fileID: 1378360459}
   m_Father: {fileID: 999969940}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12398,6 +12403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   className: Scout
+  currentPosition: 4
   isBlu: 0
   currentHealth: 0
   currentSpeed: 0
@@ -17313,7 +17319,7 @@ RectTransform:
   - {fileID: 636933350}
   - {fileID: 1555125744}
   m_Father: {fileID: 999969940}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17333,6 +17339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   className: Demoman
+  currentPosition: 2
   isBlu: 0
   currentHealth: 0
   currentSpeed: 0
@@ -18499,6 +18506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   className: Sniper
+  currentPosition: 7
   isBlu: 1
   currentHealth: 0
   currentSpeed: 0
