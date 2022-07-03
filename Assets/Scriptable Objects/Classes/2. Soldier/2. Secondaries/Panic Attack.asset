@@ -13,16 +13,34 @@ MonoBehaviour:
   m_Name: Panic Attack
   m_EditorClassIdentifier: 
   weaponName: Panic Attack
-  weaponDescription: Weapon accuracy decreases if fired continuously.
+  weaponDescription: A 6-shot shotgun that deals high damage at close range but successive
+    shots become less accurate.
   weaponImage: {fileID: 21300000, guid: 7b4afff85164d8d4ab8420eaa74bf973, type: 3}
   weaponSlot: 2
+  hasMeterBar: 0
+  startFullMeter: 0
+  maxMeterNum: 0
+  meterText: 
   activeWeapon: 1
+  bulletResist: 0
+  explosiveResist: 0
+  fireResist: 0
+  meleeResist: 0
+  bulletVulnerability: 0
+  explosiveVulnerability: 0
+  fireVulnerability: 0
+  meleeVulnerability: 0
+  passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 6
   reserveSize: 32
   minCritChance: 2
   maxCritChance: 12
   skillName1: 
   skillDesc1: 
+  skillLogo1: {fileID: 0}
   ammoCost1: 0
   accuracy1: 0
   skillRange1: 0
@@ -32,6 +50,7 @@ MonoBehaviour:
   enemyDamageMax1: 0
   skillName2: 
   skillDesc2: 
+  skillLogo2: {fileID: 0}
   ammoCost2: 0
   accuracy2: 0
   skillRange2: 0
@@ -41,6 +60,7 @@ MonoBehaviour:
   enemyDamageMax2: 0
   skillName3: 
   skillDesc3: 
+  skillLogo3: {fileID: 0}
   ammoCost3: 0
   accuracy3: 0
   skillRange3: 0
@@ -50,6 +70,7 @@ MonoBehaviour:
   enemyDamageMax3: 0
   skillName4: 
   skillDesc4: 
+  skillLogo4: {fileID: 0}
   ammoCost4: 0
   accuracy4: 0
   skillRange4: 0

@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 735d17946064b924fab4cb55dfb3df12, type: 3}
-  m_Name: Buff Banner
+  m_Name: Liberty Launcher
   m_EditorClassIdentifier: 
-  weaponName: Buff Banner
-  weaponDescription: A horn that enables the whole team to temporarily deal Mini-crit
-    damage after sacrificing 1 turn and filling up the Rage meter with damage.
-  weaponImage: {fileID: 21300000, guid: bc6115aa282d9e14aa1f7d7a2af6296d, type: 3}
-  weaponSlot: 2
-  hasMeterBar: 1
+  weaponName: Liberty Launcher
+  weaponDescription: A 5-shot rocket launcher with increased rocket speed that deals
+    less damage to enemies and self when rocket jumping.
+  weaponImage: {fileID: 21300000, guid: 30324a17d03d9c34b963d27797530d8e, type: 3}
+  weaponSlot: 1
+  hasMeterBar: 0
   startFullMeter: 0
-  maxMeterNum: 600
-  meterText: Rage Meter
+  maxMeterNum: 0
+  meterText: 
   activeWeapon: 1
   bulletResist: 0
   explosiveResist: 0
@@ -34,10 +34,10 @@ MonoBehaviour:
   healthChange: 0
   speedChange: 0
   equipSpeedBoost: 0
-  clipSize: 600
-  reserveSize: 0
-  minCritChance: 0
-  maxCritChance: 0
+  clipSize: 5
+  reserveSize: 20
+  minCritChance: 2
+  maxCritChance: 12
   skillName1: 
   skillDesc1: 
   skillLogo1: {fileID: 0}

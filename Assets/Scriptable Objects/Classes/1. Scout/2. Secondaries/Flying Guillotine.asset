@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Flying Guillotine
   m_EditorClassIdentifier: 
   weaponName: Flying Guillotine
-  weaponDescription: Throw at enemy to cause bleed, deal more damage from afar.
+  weaponDescription: A throwable item that causes bleed on enemy hit; hitting enemies
+    further away reduce the recharge time.
   weaponImage: {fileID: 21300000, guid: 7ab5416a1fd6baf4d9b8889ae17bc9d2, type: 3}
   weaponSlot: 2
   hasMeterBar: 1

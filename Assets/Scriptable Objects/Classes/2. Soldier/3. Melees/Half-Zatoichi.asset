@@ -13,16 +13,35 @@ MonoBehaviour:
   m_Name: Half-Zatoichi
   m_EditorClassIdentifier: 
   weaponName: Half-Zatoichi
-  weaponDescription: Longer melee reach and heals self of 50% base health on kill.
+  weaponDescription: A 65-damage melee with 1 extra slot reach and heals the soldier
+    for half of his base health on kill. Anyone equipped with this weapon can instantly
+    kill anyone else with this weapon equipped.
   weaponImage: {fileID: 21300000, guid: ef88312f15bd4434eab3cc06692dea2b, type: 3}
   weaponSlot: 3
+  hasMeterBar: 0
+  startFullMeter: 0
+  maxMeterNum: 0
+  meterText: 
   activeWeapon: 1
+  bulletResist: 0
+  explosiveResist: 0
+  fireResist: 0
+  meleeResist: 0
+  bulletVulnerability: 0
+  explosiveVulnerability: 0
+  fireVulnerability: 0
+  meleeVulnerability: 0
+  passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 0
   reserveSize: 0
   minCritChance: 0
   maxCritChance: 0
   skillName1: 
   skillDesc1: 
+  skillLogo1: {fileID: 0}
   ammoCost1: 0
   accuracy1: 0
   skillRange1: 0
@@ -32,6 +51,7 @@ MonoBehaviour:
   enemyDamageMax1: 0
   skillName2: 
   skillDesc2: 
+  skillLogo2: {fileID: 0}
   ammoCost2: 0
   accuracy2: 0
   skillRange2: 0
@@ -41,6 +61,7 @@ MonoBehaviour:
   enemyDamageMax2: 0
   skillName3: 
   skillDesc3: 
+  skillLogo3: {fileID: 0}
   ammoCost3: 0
   accuracy3: 0
   skillRange3: 0
@@ -50,6 +71,7 @@ MonoBehaviour:
   enemyDamageMax3: 0
   skillName4: 
   skillDesc4: 
+  skillLogo4: {fileID: 0}
   ammoCost4: 0
   accuracy4: 0
   skillRange4: 0

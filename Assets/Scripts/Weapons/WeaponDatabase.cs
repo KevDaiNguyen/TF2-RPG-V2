@@ -13,7 +13,7 @@ public class WeaponDatabase : MonoBehaviour
     public static WeaponMaker[] scoutSecondaries = new WeaponMaker[7];
     public static WeaponMaker[] scoutMelees = new WeaponMaker[8];
 
-    public static WeaponMaker[] soldierPrimaries = new WeaponMaker[7];
+    public static WeaponMaker[] soldierPrimaries = new WeaponMaker[8];
     public static WeaponMaker[] soldierSecondaries = new WeaponMaker[10];
     public static WeaponMaker[] soldierMelees = new WeaponMaker[7];
 

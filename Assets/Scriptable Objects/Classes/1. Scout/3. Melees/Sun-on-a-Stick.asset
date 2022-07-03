@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Sun-on-a-Stick
   m_EditorClassIdentifier: 
   weaponName: Sun-on-a-Stick
-  weaponDescription: Deal critical hits on burning enemies.
+  weaponDescription: A 26-damage melee that deals Critical hits when the enemy is
+    on fire and also gains fire resistance when held out.
   weaponImage: {fileID: 21300000, guid: 552c36111f9e1674abdcca3749e93c99, type: 3}
   weaponSlot: 3
   hasMeterBar: 0
+  startFullMeter: 0
   maxMeterNum: 0
   meterText: 
   activeWeapon: 1
@@ -29,6 +31,9 @@ MonoBehaviour:
   fireVulnerability: 0
   meleeVulnerability: 0
   passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 0
   reserveSize: 0
   minCritChance: 15

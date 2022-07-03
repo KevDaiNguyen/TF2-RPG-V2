@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Air Strike
   m_EditorClassIdentifier: 
   weaponName: Air Strike
-  weaponDescription: Gain clip size with more kills up to a max of 8.
+  weaponDescription: A 4-shot rocket launcher that gains an extra 4 shots in the
+    clip size after killing 4 enemies. Additionally gain attack speed when in air
+    from rocket jumping and take less damage from rocket jumps. Rockets deal less
+    damage and has lower splash damage radius.
   weaponImage: {fileID: 21300000, guid: eaef1cdb29d819946bae382e5f231dcc, type: 3}
   weaponSlot: 1
   hasMeterBar: 1
+  startFullMeter: 0
   maxMeterNum: 8
   meterText: Max Clip Increase
   activeWeapon: 1
@@ -28,6 +32,10 @@ MonoBehaviour:
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 4
   reserveSize: 20
   minCritChance: 2

@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Soda Popper
   m_EditorClassIdentifier: 
   weaponName: Soda Popper
-  weaponDescription: Building up meter with damage, activate to fly into the sky.
+  weaponDescription: A 2-shot shotgun that enables multiple air jumps after filling
+    up damage meter.
   weaponImage: {fileID: 21300000, guid: d6b273b986fa7f94cb93871691fcc62c, type: 3}
   weaponSlot: 1
   hasMeterBar: 1
+  startFullMeter: 0
   maxMeterNum: 350
   meterText: Hype Meter
   activeWeapon: 1
@@ -28,6 +30,10 @@ MonoBehaviour:
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 2
   reserveSize: 32
   minCritChance: 2

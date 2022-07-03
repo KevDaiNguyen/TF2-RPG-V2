@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Sandman
   m_EditorClassIdentifier: 
   weaponName: Sandman
-  weaponDescription: Launch a baseball at enemy to slow them down, the further the
-    launch the greater the slow.
+  weaponDescription: A 35-damage melee that can launch a baseball at the enemy to
+    slow them down; hitting enemies further away with the ball increases the slowing
+    effect.
   weaponImage: {fileID: 21300000, guid: 666d9dc2d5f61b34ab8fb388271ae86f, type: 3}
   weaponSlot: 3
   hasMeterBar: 1

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Mad Milk
   m_EditorClassIdentifier: 
   weaponName: Mad Milk
-  weaponDescription: Throw at enemy to heal based off of following damage.
+  weaponDescription: A throwable item on enemies where the damage dealt on the debuffed
+    enemies would heal the attacker.
   weaponImage: {fileID: 21300000, guid: 62df3319091b5f24f997de14828afafc, type: 3}
   weaponSlot: 2
   hasMeterBar: 1

@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: B.A.S.E. Jumper
   m_EditorClassIdentifier: 
   weaponName: B.A.S.E. Jumper
-  weaponDescription: Use in air to stay in the air for 1 extra turn.
+  weaponDescription: An item that allows the user to double the amount of time in
+    the air, but decreases the speed bonus in the air. Can only activate the parachute
+    once before needing to touch the ground and can cancel the parachute at any time.
   weaponImage: {fileID: 21300000, guid: 0b74cb76950ebd548a4bbfbc9627bfb7, type: 3}
   weaponSlot: 2
   hasMeterBar: 1

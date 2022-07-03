@@ -19407,6 +19407,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cdfb1d1379e51cd4093ddf653fc2144d, type: 2}
   - {fileID: 11400000, guid: 45b5e04326e1847428577a6209943418, type: 2}
   - {fileID: 11400000, guid: 1c7a094e049d29141b35a3cb8bdb7607, type: 2}
+  - {fileID: 11400000, guid: e5fbc65ede13cad42b845eda534f547e, type: 2}
   soldierSecondaries:
   - {fileID: 11400000, guid: 6860f2525d6c6f245932ba30f51277b9, type: 2}
   - {fileID: 11400000, guid: 61056237b8463bb41927c3e95f43c2a1, type: 2}
