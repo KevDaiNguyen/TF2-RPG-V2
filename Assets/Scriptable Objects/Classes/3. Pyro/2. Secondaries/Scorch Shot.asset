@@ -13,17 +13,35 @@ MonoBehaviour:
   m_Name: Scorch Shot
   m_EditorClassIdentifier: 
   weaponName: Scorch Shot
-  weaponDescription: Deal Mini-crit damage to enemies on fire and also knocks them
-    back.
+  weaponDescription: A flare gun that deals Mini-crit damage to burning enemeis and
+    knocking them back 1 slot. Can be used to destroy enemy stickies on a slot. This
+    weapon is automatically  reloads when not equipped.
   weaponImage: {fileID: 21300000, guid: 941f33ce03f3d124cb84c7ec7498003f, type: 3}
   weaponSlot: 2
+  hasMeterBar: 0
+  startFullMeter: 0
+  maxMeterNum: 0
+  meterText: 
   activeWeapon: 1
+  bulletResist: 0
+  explosiveResist: 0
+  fireResist: 0
+  meleeResist: 0
+  bulletVulnerability: 0
+  explosiveVulnerability: 0
+  fireVulnerability: 0
+  meleeVulnerability: 0
+  passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 1
   reserveSize: 16
   minCritChance: 2
   maxCritChance: 12
   skillName1: 
   skillDesc1: 
+  skillLogo1: {fileID: 0}
   ammoCost1: 0
   accuracy1: 0
   skillRange1: 0
@@ -33,6 +51,7 @@ MonoBehaviour:
   enemyDamageMax1: 0
   skillName2: 
   skillDesc2: 
+  skillLogo2: {fileID: 0}
   ammoCost2: 0
   accuracy2: 0
   skillRange2: 0
@@ -42,6 +61,7 @@ MonoBehaviour:
   enemyDamageMax2: 0
   skillName3: 
   skillDesc3: 
+  skillLogo3: {fileID: 0}
   ammoCost3: 0
   accuracy3: 0
   skillRange3: 0
@@ -51,6 +71,7 @@ MonoBehaviour:
   enemyDamageMax3: 0
   skillName4: 
   skillDesc4: 
+  skillLogo4: {fileID: 0}
   ammoCost4: 0
   accuracy4: 0
   skillRange4: 0

@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Gas Passer
   m_EditorClassIdentifier: 
   weaponName: Gas Passer
-  weaponDescription: Throw at enemies to cover them in gasoline once fully charged.
-    Enemies hit when covered in gasoline will light on fire.
+  weaponDescription: A throwable gas can enables enemies coated in gas to catch on
+    fire from any form of damage, even pyros. Gas meter slowly accumulates from damage
+    or enough turns passing.
   weaponImage: {fileID: 21300000, guid: 682b4f94fca7578419679266aae0a8f9, type: 3}
   weaponSlot: 2
   hasMeterBar: 1
+  startFullMeter: 0
   maxMeterNum: 750
-  meterText: Damage Requirement
+  meterText: Gas Meter
   activeWeapon: 1
   bulletResist: 0
   explosiveResist: 0
@@ -29,6 +31,10 @@ MonoBehaviour:
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 1
   reserveSize: 9999
   minCritChance: 0

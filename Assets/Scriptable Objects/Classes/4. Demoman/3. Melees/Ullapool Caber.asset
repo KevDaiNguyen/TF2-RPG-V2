@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ullapool Caber
   m_EditorClassIdentifier: 
   weaponName: Ullapool Caber
-  weaponDescription: Hit an enemy to deal a high damage, one-time use, explosion.
+  weaponDescription: 'A 55-damage melee that on first sucessful melee hit, explodes
+    to damage both the demoman and the enemy. '
   weaponImage: {fileID: 21300000, guid: 39aea573258799941bb4933fdef70b0d, type: 3}
   weaponSlot: 3
   hasMeterBar: 1

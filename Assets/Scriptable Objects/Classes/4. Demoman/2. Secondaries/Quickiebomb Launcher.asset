@@ -13,12 +13,28 @@ MonoBehaviour:
   m_Name: Quickiebomb Launcher
   m_EditorClassIdentifier: 
   weaponName: 
-  weaponDescription: Stick desired enemy slot with an triggerable explosion, stickies
-    are primed on same turn.
+  weaponDescription: A stickybomb launcher that can destroy enemy stickies in the
+    same slot on detonation. Sticky gains more damage when charged to reach further
+    slots.
   weaponImage: {fileID: 21300000, guid: 499b6896f9dfb1a4299ef5221f854439, type: 3}
   weaponSlot: 0
   hasMeterBar: 0
+  startFullMeter: 0
+  maxMeterNum: 0
+  meterText: 
   activeWeapon: 1
+  bulletResist: 0
+  explosiveResist: 0
+  fireResist: 0
+  meleeResist: 0
+  bulletVulnerability: 0
+  explosiveVulnerability: 0
+  fireVulnerability: 0
+  meleeVulnerability: 0
+  passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 0
   reserveSize: 0
   minCritChance: 2

@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Eyelander
   m_EditorClassIdentifier: 
   weaponName: Eyelander
-  weaponDescription: Longer melee reach and gains health and speed for each kill
-    up to a maximum of 4.
+  weaponDescription: A 65-damage melee with 1 extra slot reach and can gain speed
+    boost and max health on kills, up to 4 timtes. Decreases maximum health.
   weaponImage: {fileID: 21300000, guid: 78141f139c07a9940b330ea6b883b391, type: 3}
   weaponSlot: 3
   hasMeterBar: 1
+  startFullMeter: 0
   maxMeterNum: 4
   meterText: Max Stat Increase
   activeWeapon: 1

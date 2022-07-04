@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Phlogistinator
   m_EditorClassIdentifier: 
   weaponName: Phlogistinator
-  weaponDescription: Temporarily gain critical damage after dealing enough fire damage.
+  weaponDescription: A flamethrower that grants temporary Critical hits after sacrificing
+    1 turn and filling Mmmph meter, but does not have any airblast skills.
   weaponImage: {fileID: 21300000, guid: 1c0acdc591612d149aa26b1808974a9d, type: 3}
   weaponSlot: 1
   hasMeterBar: 1
+  startFullMeter: 0
   maxMeterNum: 300
   meterText: Mmmph Meter
   activeWeapon: 1
@@ -28,6 +30,10 @@ MonoBehaviour:
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 200
   reserveSize: 0
   minCritChance: 0

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Chargin' Targe
   m_EditorClassIdentifier: 
   weaponName: Chargin' Targe
-  weaponDescription: Gain high explosive and fire resistance and can charge from
-    afar to deal a melee critical hit if timed correctly.
+  weaponDescription: A shield that grants high resistances and enables Critical damage
+    melee damage at max range or Mini-crit damage at half range.
   weaponImage: {fileID: 21300000, guid: 3298a28eda5d9e0449cef5681c40f486, type: 3}
   weaponSlot: 2
   hasMeterBar: 1

@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Claidheamh Mor
   m_EditorClassIdentifier: 
   weaponName: Claidheamh Mor
-  weaponDescription: Longer melee reach, slightly recharges charge on kill, and reaches
-    one more slot on charge.
+  weaponDescription: A 65-damage melee that refills 25% charge meter on kill and
+    raises max charge distance. Increases overall damage vulnerability when held
+    out.
   weaponImage: {fileID: 21300000, guid: f0f2c6ef82887a041bea8b60d92c0cde, type: 3}
   weaponSlot: 3
   hasMeterBar: 0
+  startFullMeter: 0
   maxMeterNum: 0
   meterText: 
   activeWeapon: 1
@@ -30,6 +32,9 @@ MonoBehaviour:
   fireVulnerability: 0.15
   meleeVulnerability: 0.15
   passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 0
   reserveSize: 0
   minCritChance: 0
