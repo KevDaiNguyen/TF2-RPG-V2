@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Sandvich
   m_EditorClassIdentifier: 
   weaponName: Sandvich
-  weaponDescription: Consume to heal to max health.
+  weaponDescription: A food item that heals the heavy to full health after sacrificing
+    a turn. Can be thrown to allies for a medium health pack.
   weaponImage: {fileID: 21300000, guid: ca24add6049b0e84ba1a3bb543206c46, type: 3}
   weaponSlot: 2
   hasMeterBar: 1

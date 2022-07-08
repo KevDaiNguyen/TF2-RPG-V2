@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Eviction Notice
   m_EditorClassIdentifier: 
   weaponName: Eviction Notice
-  weaponDescription: Gain speed on enemy hit.
+  weaponDescription: A 26-damage melee that provides increased speed and a speed
+    boost on enemy hit, but maximum health decreases for every turn held out until
+    100 max health. Maximum health slowly regenerates back to original when not equipped.
   weaponImage: {fileID: 21300000, guid: 4f6773e47fb71ff42b0ab9c343ded9b0, type: 3}
   weaponSlot: 3
   hasMeterBar: 0
+  startFullMeter: 0
   maxMeterNum: 0
   meterText: 
   activeWeapon: 1

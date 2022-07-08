@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Fists of Steel
   m_EditorClassIdentifier: 
   weaponName: Fists of Steel
-  weaponDescription: Hold out to gain high resistance to all ranged weapons but take
-    extra damage to melee weapons.
+  weaponDescription: A 65-damage melee that greatly reduces ranged damage but increases
+    melee damage taken when held out. Additionally decreases heal rate and overheal
+    when held out.
   weaponImage: {fileID: 21300000, guid: cd4522d2eb6b13545b512a263b92fb40, type: 3}
   weaponSlot: 3
   hasMeterBar: 0
+  startFullMeter: 0
   maxMeterNum: 0
   meterText: 
   activeWeapon: 1
@@ -30,6 +32,9 @@ MonoBehaviour:
   fireVulnerability: 0
   meleeVulnerability: 1
   passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 0
   reserveSize: 0
   minCritChance: 15

@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Gloves of Running Urgently
   m_EditorClassIdentifier: 
   weaponName: Gloves of Running Urgently
-  weaponDescription: While equipped, gain a speed buff but slowly decrease max health
-    down to 100 health for each turn passed.
+  weaponDescription: A 65-damage melee that provides a speed boost when held out
+    but slowly decreases max health until 100 max health. Max health regenerates
+    back to original when not equipped.
   weaponImage: {fileID: 21300000, guid: 6e076a411644a294e81c3f7a6987c884, type: 3}
   weaponSlot: 3
   hasMeterBar: 0
+  startFullMeter: 0
   maxMeterNum: 0
   meterText: 
   activeWeapon: 1

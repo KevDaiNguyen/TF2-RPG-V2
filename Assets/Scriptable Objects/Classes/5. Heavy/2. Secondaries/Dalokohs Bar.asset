@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Dalokohs Bar
   m_EditorClassIdentifier: 
   weaponName: Dalokohs Bar
-  weaponDescription: Consume to gain temporary max health.
+  weaponDescription: A food item that heals for 100 health or provides heavy a temporary
+    increase in max health when eaten at near full health. Has high recharge rate.
+    Can be thrown to heal allies for a small health pack.
   weaponImage: {fileID: 21300000, guid: 74b724a3b7ccf4e4799dabac2aa618f3, type: 3}
   weaponSlot: 2
   hasMeterBar: 1
