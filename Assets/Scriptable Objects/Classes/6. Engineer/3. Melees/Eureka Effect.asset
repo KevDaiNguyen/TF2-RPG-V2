@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Eureka Effect
   m_EditorClassIdentifier: 
   weaponName: Eureka Effect
-  weaponDescription: Can choose to teleport back to spawn (Heal back to full and
-    regain max ammo).
+  weaponDescription: A 65-damage melee that uses less metal when building or upgrading
+    teleporters. Buildings completion boost is lower than stock Wrench. Can teleport
+    to spawn for a full heal after sacrificing 1 turn. Gains less metal.
   weaponImage: {fileID: 21300000, guid: 5030fa7af872ea7428315731af5b6842, type: 3}
   weaponSlot: 3
   hasMeterBar: 1

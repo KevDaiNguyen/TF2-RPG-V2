@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Wrench
   m_EditorClassIdentifier: 
   weaponName: Wrench
-  weaponDescription: Stock Weapon
+  weaponDescription: 'A 65-damage melee that hits 1 slot away and that can reduce
+    the amount of turns the engineer''s buildings take to complete. Can be used to
+    heal the engineer''s buildings at the cost of metal. '
   weaponImage: {fileID: 21300000, guid: caf9d7c12eccdad4a98071fa80b0e67d, type: 3}
   weaponSlot: 3
   hasMeterBar: 1

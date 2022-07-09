@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Pistol
   m_EditorClassIdentifier: 
   weaponName: Pistol
-  weaponDescription: A 12-shot pistol enables moderate damage from afar.
+  weaponDescription: A 12-shot pistol enables moderate damage from afar. Has greatly
+    increased reserved ammo size relative to Scout's pistol ammo capacity.
   weaponImage: {fileID: 21300000, guid: d7c4005bd34bcb74180fbbb7143c78c2, type: 3}
   weaponSlot: 2
   hasMeterBar: 0
