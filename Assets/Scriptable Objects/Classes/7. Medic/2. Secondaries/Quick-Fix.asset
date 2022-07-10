@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Quick-Fix
   m_EditorClassIdentifier: 
   weaponName: Quick-Fix
-  weaponDescription: Uber a teammate for both self and teammate to rapid healing
-    for 2 turns.
+  weaponDescription: A Medi-gun that heals for more per turn and can follow any ally
+    that launches themselves into the air when healing them. Provides less overheal.
+    On Uber activation, the medic and an ally will receive 3 times heal rate and
+    immunity to knockback.
   weaponImage: {fileID: 21300000, guid: 1e689a54d2c3ad344a72d96d45ffd6af, type: 3}
   weaponSlot: 2
   hasMeterBar: 1
+  startFullMeter: 0
   maxMeterNum: 100
   meterText: Uber Percent
   activeWeapon: 1
@@ -29,6 +32,10 @@ MonoBehaviour:
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 100
   reserveSize: 0
   minCritChance: 0

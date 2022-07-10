@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Vaccinator
   m_EditorClassIdentifier: 
   weaponName: Vaccinator
-  weaponDescription: Uber to gain high resistance to bullet damage, fire damage,
-    or explosive damage for 1 turn for self and teammate.
+  weaponDescription: A Medi-gun that passively provides a resistance to the 3 ranged
+    damage sources when healing an ally. Uber charge is divided into 25% pieces,
+    allowing a 1 turn uber of high resistance to currently selected damage type.
+    Uber also converts all Critical or Mini-crit damage to normal damage.
   weaponImage: {fileID: 21300000, guid: ea876e5761b27504cb3db71bdbfaf7dd, type: 3}
   weaponSlot: 2
   hasMeterBar: 1
+  startFullMeter: 0
   maxMeterNum: 100
   meterText: Uber Percent
   activeWeapon: 1
@@ -29,6 +32,10 @@ MonoBehaviour:
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 100
   reserveSize: 0
   minCritChance: 0

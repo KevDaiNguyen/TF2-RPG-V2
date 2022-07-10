@@ -771,21 +771,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scriptable Objects/Classes/7. Medic/1. Primaries
+    - Assets/Scriptable Objects/Classes/8. Sniper/1. Primaries
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scriptable Objects/Classes/7. Medic/1. Primaries
+  - Assets/Scriptable Objects/Classes/8. Sniper/1. Primaries
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Kevin\Documents\GitHub\TF2-RPG-V2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 463}
-    m_SelectedIDs: d6640000
-    m_LastClickedID: 25814
+    m_SelectedIDs: dc640000
+    m_LastClickedID: 25820
     m_ExpandedIDs: 00000000886400008a6400008c6400008e64000090640000926400009464000096640000986400009a6400009c6400009e640000a0640000a2640000a4640000a6640000a864000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
