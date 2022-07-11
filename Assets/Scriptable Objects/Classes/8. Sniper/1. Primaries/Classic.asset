@@ -13,11 +13,27 @@ MonoBehaviour:
   m_Name: Classic
   m_EditorClassIdentifier: 
   weaponName: Classic
-  weaponDescription: Can charge sniper without zooming in.
+  weaponDescription: A sniper rifle that can charge without scoping in. Cannot deal
+    Critical damage unless fully charged and has decreased damage on body shot.
   weaponImage: {fileID: 21300000, guid: ffd01e4ca1490ac43b518aceffb14a6b, type: 3}
   weaponSlot: 1
   hasMeterBar: 0
+  startFullMeter: 0
+  maxMeterNum: 0
+  meterText: 
   activeWeapon: 1
+  bulletResist: 0
+  explosiveResist: 0
+  fireResist: 0
+  meleeResist: 0
+  bulletVulnerability: 0
+  explosiveVulnerability: 0
+  fireVulnerability: 0
+  meleeVulnerability: 0
+  passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 25
   reserveSize: 0
   minCritChance: 0

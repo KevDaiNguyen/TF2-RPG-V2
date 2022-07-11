@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Hitman's Heatmaker
   m_EditorClassIdentifier: 
   weaponName: Hitman's Heatmaker
-  weaponDescription: After dealing enough damage, temporarily decrease charge time.
+  weaponDescription: A sniper rifle that has decreased damage on body shots. On kills,
+    gain Focus. When focus is active, full charge rate is faster.
   weaponImage: {fileID: 21300000, guid: 80550c71f60ae1c46b2931c57119bb83, type: 3}
   weaponSlot: 1
   hasMeterBar: 1
+  startFullMeter: 0
   maxMeterNum: 3
   meterText: Focus Meter
   activeWeapon: 1
@@ -28,6 +30,10 @@ MonoBehaviour:
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 25
   reserveSize: 0
   minCritChance: 0

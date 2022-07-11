@@ -13,11 +13,28 @@ MonoBehaviour:
   m_Name: Huntsman
   m_EditorClassIdentifier: 
   weaponName: Huntsman
-  weaponDescription: Cannot scope in, but has lower charge time.
+  weaponDescription: A bow and arrow that has reduced charge time and speed reduction
+    while charging is greatly reduced. Allies can light the arrow on fire to ignite
+    hit enemies on fire.
   weaponImage: {fileID: 21300000, guid: 249fb7e834674a84291184f0f2210349, type: 3}
   weaponSlot: 1
   hasMeterBar: 0
+  startFullMeter: 0
+  maxMeterNum: 0
+  meterText: 
   activeWeapon: 1
+  bulletResist: 0
+  explosiveResist: 0
+  fireResist: 0
+  meleeResist: 0
+  bulletVulnerability: 0
+  explosiveVulnerability: 0
+  fireVulnerability: 0
+  meleeVulnerability: 0
+  passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 1
   reserveSize: 12
   minCritChance: 0
