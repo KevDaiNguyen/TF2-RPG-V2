@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Cloak and Dagger
   m_EditorClassIdentifier: 
   weaponName: Cloak and Dagger
-  weaponDescription: Cloak regens as self stays still.
+  weaponDescription: An invis watch that has increased recharge rate and can slowly
+    refill cloak meter while cloaked if the spy does not move between slots. Moving
+    while cloaked drastically drains cloak meter.
   weaponImage: {fileID: 21300000, guid: 63b9fc44442ea1545853302bed6e9b00, type: 3}
   weaponSlot: 4
   hasMeterBar: 1

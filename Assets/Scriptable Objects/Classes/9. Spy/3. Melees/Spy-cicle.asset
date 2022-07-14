@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Spy-cicle
   m_EditorClassIdentifier: 
   weaponName: Spy-cicle
-  weaponDescription: Can prevent 1 instance of fire damage and become immune to afterburn
-    after 1 turn the weapon was destroyed.
+  weaponDescription: 'A knife that sacrifices itself if spy was hit by fire to become
+    temporarily fireproof for 1 turn and afterburn immune for 2 turns. '
   weaponImage: {fileID: 21300000, guid: a332bd0f98a6dd74c8564d4d777746b2, type: 3}
   weaponSlot: 3
   hasMeterBar: 1

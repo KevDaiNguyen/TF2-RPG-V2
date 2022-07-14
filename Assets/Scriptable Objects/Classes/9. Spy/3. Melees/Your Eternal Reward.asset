@@ -13,16 +13,34 @@ MonoBehaviour:
   m_Name: Your Eternal Reward
   m_EditorClassIdentifier: 
   weaponName: Your Eternal Reward
-  weaponDescription: Directly disguise as the enemy on a successful backstab.
+  weaponDescription: A knife that instantly disguises the spy into the enemy that
+    was killed from the backstab. Decreased maximum cloak duration.
   weaponImage: {fileID: 21300000, guid: a1bf6a7e201b45c48b50182a7179f671, type: 3}
   weaponSlot: 3
+  hasMeterBar: 0
+  startFullMeter: 0
+  maxMeterNum: 0
+  meterText: 
   activeWeapon: 1
+  bulletResist: 0
+  explosiveResist: 0
+  fireResist: 0
+  meleeResist: 0
+  bulletVulnerability: 0
+  explosiveVulnerability: 0
+  fireVulnerability: 0
+  meleeVulnerability: 0
+  passiveStats: 0
+  healthChange: 0
+  speedChange: 0
+  equipSpeedBoost: 0
   clipSize: 0
   reserveSize: 0
   minCritChance: 0
   maxCritChance: 0
   skillName1: 
   skillDesc1: 
+  skillLogo1: {fileID: 0}
   ammoCost1: 0
   accuracy1: 0
   skillRange1: 0
@@ -32,6 +50,7 @@ MonoBehaviour:
   enemyDamageMax1: 0
   skillName2: 
   skillDesc2: 
+  skillLogo2: {fileID: 0}
   ammoCost2: 0
   accuracy2: 0
   skillRange2: 0
@@ -41,6 +60,7 @@ MonoBehaviour:
   enemyDamageMax2: 0
   skillName3: 
   skillDesc3: 
+  skillLogo3: {fileID: 0}
   ammoCost3: 0
   accuracy3: 0
   skillRange3: 0
@@ -50,6 +70,7 @@ MonoBehaviour:
   enemyDamageMax3: 0
   skillName4: 
   skillDesc4: 
+  skillLogo4: {fileID: 0}
   ammoCost4: 0
   accuracy4: 0
   skillRange4: 0

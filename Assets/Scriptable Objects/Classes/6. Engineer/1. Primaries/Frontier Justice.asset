@@ -19,7 +19,7 @@ MonoBehaviour:
   weaponSlot: 1
   hasMeterBar: 1
   startFullMeter: 0
-  maxMeterNum: 99
+  maxMeterNum: 35
   meterText: Stored Crits
   activeWeapon: 1
   bulletResist: 0

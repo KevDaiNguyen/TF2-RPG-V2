@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Conniver's Kunai
   m_EditorClassIdentifier: 
   weaponName: Conniver's Kunai
-  weaponDescription: Gain high, temproary health on successful backstab.
+  weaponDescription: A knife that absorbs the health of backstab victim with a minimum
+    health gain of 75 health. Extra health is converted into overheal up to 210.
+    Maximum health is greatly reduced.
   weaponImage: {fileID: 21300000, guid: 5f6d0595622d92a47994798eae1cac5e, type: 3}
   weaponSlot: 3
   hasMeterBar: 0
+  startFullMeter: 0
   maxMeterNum: 0
   meterText: 
   activeWeapon: 1
