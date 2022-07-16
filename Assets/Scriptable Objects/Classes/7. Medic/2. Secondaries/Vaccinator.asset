@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Vaccinator
   weaponDescription: A Medi-gun that passively provides a resistance to the 3 ranged
-    damage sources when healing an ally. Uber charge is divided into 25% pieces,
-    allowing a 1 turn uber of high resistance to currently selected damage type.
-    Uber also converts all Critical or Mini-crit damage to normal damage.
+    sources when healing an ally. Uber charge is divided into 25% pieces, allowing
+    a 1 turn uber of high resistance to currently selected damage type. Uber also
+    converts all Critical or Mini-crit damage to normal damage.
   weaponImage: {fileID: 21300000, guid: ea876e5761b27504cb3db71bdbfaf7dd, type: 3}
   weaponSlot: 2
   hasMeterBar: 1

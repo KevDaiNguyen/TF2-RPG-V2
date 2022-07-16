@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: Medi Gun
   m_EditorClassIdentifier: 
   weaponName: Medi Gun
-  weaponDescription: A Medi-gun that heals allies and can provide temporary increased
-    maximum health when ally was at full health. Every turn passed while healing
-    a target will increase the Uber charge until full. When ready, the medic can
-    turn himself and an ally invincible for 2 turns. Medic will match the speed of
-    any ally that is faster than him when healing them.
+  weaponDescription: A Medi-gun that heals allies and can provide overheal when ally
+    is at full health. Every turn healing a target will increase the Uber charge.
+    The medic can turn himself and an ally invincible for 2 turns. Medic matches
+    the speed of any faster ally while healing them.
   weaponImage: {fileID: 21300000, guid: e0e2592abd7d3b9489d047531576c8cc, type: 3}
   weaponSlot: 2
   hasMeterBar: 1

@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Ambassador
   m_EditorClassIdentifier: 
   weaponName: Ambassador
-  weaponDescription: A 6-shot reolver that can aim for the head for Critical damage,
-    but cannot be triggered in successive turns. Has slower firing speed and lower
-    damage on non-Critical damage. Critical damage decreases with the number of slots
-    away from target.
+  weaponDescription: A 6-shot reolver that can headshot, but cannot be triggered
+    in successive turns. Has slower firing speed and lower damage on non-Critical
+    damage. Critical damage decreases with the number of slots away from target.
   weaponImage: {fileID: 21300000, guid: 28d5095a3c025164d92ddc91b12d22c1, type: 3}
   weaponSlot: 1
   hasMeterBar: 0

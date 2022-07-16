@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Invis Watch
   weaponDescription: An invis watch that makes the spy become unable to be directly
-    targetted and enables backstabs. Maximum turns invisible is 2.
+    targetted and enables backstabs. Maximum turns invisible is 2. While watch is
+    up for cloaking, the spy cannot use his other weapons.
   weaponImage: {fileID: 21300000, guid: 23ddf0b5db069bf41b46f946e3057387, type: 3}
   weaponSlot: 4
   hasMeterBar: 1

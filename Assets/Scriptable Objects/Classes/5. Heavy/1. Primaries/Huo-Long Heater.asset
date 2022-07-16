@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Huo-Long Heater
   weaponDescription: A minigun that ignites enemies within 1 slot range from the
-    heavy when spun up and deals more damage to burning enemies. Otherwise, deals
-    less damage to non-burning players and consumes more ammo per action.
+    heavy when spun up and deals more damage to burning enemies. Consumes more ammo
+    per action or every turn spun up.
   weaponImage: {fileID: 21300000, guid: aac6bb31df28e3f478e1100a718b4bbc, type: 3}
   weaponSlot: 1
   hasMeterBar: 0

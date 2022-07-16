@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Concheror
   m_EditorClassIdentifier: 
   weaponName: Concheror
-  weaponDescription: A horn that enables the whole team to temporarily heal the damage
-    they deal after sacrificing 1 turn and filling up the Rage meter with damage.
-    Additinoally gain small passive health regen.
+  weaponDescription: A horn that enables the whole team to temporarily heal per damage
+    dealt and a speed boost after sacrificing 1 turn and filling the Rage meter.
+    Additionally gain small passive health regen.
   weaponImage: {fileID: 21300000, guid: eabad47b74fe3b042a2ea04375628bb0, type: 3}
   weaponSlot: 2
   hasMeterBar: 1

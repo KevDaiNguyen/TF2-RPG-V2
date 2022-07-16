@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Air Strike
   weaponDescription: A 4-shot rocket launcher that gains an extra 4 shots in the
-    clip size after killing 4 enemies. Additionally gain attack speed when in air
-    from rocket jumping and take less damage from rocket jumps. Rockets deal less
-    damage and has lower splash damage radius.
+    clip size after killing 4 enemies. Gain attack speed in air from rocket jumps
+    and take less damage from rocket jumps. Rockets deal less damage and has lower
+    splash radius.
   weaponImage: {fileID: 21300000, guid: eaef1cdb29d819946bae382e5f231dcc, type: 3}
   weaponSlot: 1
   hasMeterBar: 1

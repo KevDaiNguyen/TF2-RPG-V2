@@ -15,7 +15,8 @@ MonoBehaviour:
   weaponName: Crusader's Crossbow
   weaponDescription: A neddle gun that fires a single large needle that heals allies
     and damages enemies on hit. Heal amount or damage dealt depends on the number
-    of slots away the medic was from the target.
+    of slots away the medic was from the target. Weapon is automatically reloaded
+    when not equipped.
   weaponImage: {fileID: 21300000, guid: 6efd8f7da7715a84f856cc68dca05e92, type: 3}
   weaponSlot: 1
   hasMeterBar: 0

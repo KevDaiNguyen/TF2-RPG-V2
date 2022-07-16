@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Jag
   m_EditorClassIdentifier: 
   weaponName: Jag
-  weaponDescription: A 49-damage melee that allows buildings to complete much faster,
-    but heals buildings for less. Deals less damage to enemy buildings.
+  weaponDescription: A 49-damage melee that allows buildings to complete much faster
+    per hit, but heals buildings for less. Deals less damage to enemy buildings.
   weaponImage: {fileID: 21300000, guid: 463a0412a30125a4c9e0236df105f963, type: 3}
   weaponSlot: 3
   hasMeterBar: 1

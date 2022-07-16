@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Sydney Sleeper
   m_EditorClassIdentifier: 
   weaponName: Sydney Sleeper
-  weaponDescription: A sniper rifle that has increased charge rate but scoped shots
-    can only deal Mini-crit damage. On scoped hit, enemies are coated in Jarate for
-    how many turns passed charging. Sniper can shoot burning allies to extinguish
-    them and himself. Scoped headshots reduces the cooldown of Jarate by 1 turn.
+  weaponDescription: A sniper rifle that has increased charge rate but  can only
+    deal Mini-crit headshots. On scoped hit, enemies are coated in Jarate for how
+    many turns passed charging. Sniper can shoot burning allies to extinguish them
+    and himself. Scoped headshots reduces the cooldown of Jarate by 1 turn.
   weaponImage: {fileID: 21300000, guid: b44be06fcf716fd439de9b7063242adc, type: 3}
   weaponSlot: 1
   hasMeterBar: 0
