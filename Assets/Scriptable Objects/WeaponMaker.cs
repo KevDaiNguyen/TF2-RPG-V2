@@ -57,7 +57,8 @@ public class WeaponMaker : ScriptableObject
     public int ammoCost1;
     public int accuracy1;
     public int skillRange1;
-    
+    public bool secondarySkill1;
+
     [Space(4)]
     public int selfDamageMin1;
     public int enemyDamageMin1;
@@ -75,6 +76,7 @@ public class WeaponMaker : ScriptableObject
     public int ammoCost2;
     public int accuracy2;
     public int skillRange2;
+    public bool secondarySkill2;
 
     [Space(4)]
     public int selfDamageMin2;
@@ -93,6 +95,7 @@ public class WeaponMaker : ScriptableObject
     public int ammoCost3;
     public int accuracy3;
     public int skillRange3;
+    public bool secondarySkill3;
 
     [Space(4)]
     public int selfDamageMin3;
@@ -111,6 +114,7 @@ public class WeaponMaker : ScriptableObject
     public int ammoCost4;
     public int accuracy4;
     public int skillRange4;
+    public bool secondarySkill4;
 
     [Space(4)]
     public int selfDamageMin4;

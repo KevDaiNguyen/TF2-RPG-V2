@@ -7,6 +7,7 @@ using TMPro;
 public class DisplayBattleUI : MonoBehaviour
 {
     public ClassData dataInstance;
+    public SkillCard cardInstance;
 
     [Header("---The sprite above the healthbar---")]
     public Image classBody;
@@ -493,7 +494,16 @@ public class DisplayBattleUI : MonoBehaviour
 
     public void SelectClass()
     {
-        currentlySelected = true;
+        if (!cardInstance.currentlyChoosingTarget)
+        {
+            currentlySelected = true;
+        }
+        else
+        {
+            cardInstance.targetSlot = dataInstance.currentPosition;
+            cardInstance.currentlyChoosingTarget = false;
+            cardInstance.foundTarget = true;
+        }
     }
 
     public void DeselectClass()
