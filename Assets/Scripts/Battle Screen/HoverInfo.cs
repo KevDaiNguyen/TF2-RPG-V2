@@ -20,6 +20,7 @@ public class HoverInfo : MonoBehaviour
     public GameObject secondarySlotArea;
     public GameObject meleeSlotArea;
     public GameObject extraSlotArea;
+    public GameObject[] allSlotAreas; //----------------------------------
 
     private int hoveringSlot;
 
@@ -33,6 +34,11 @@ public class HoverInfo : MonoBehaviour
         hoverObject.GetComponent<Image>().color = new Vector4(255, 255, 255, 0);
         weaponName.color = new Vector4(0, 0, 0, 0);
         weaponDesc.color = new Vector4(0, 0, 0, 0);
+
+        allSlotAreas[0] = primarySlotArea;
+        allSlotAreas[0] = secondarySlotArea;
+        allSlotAreas[0] = meleeSlotArea;
+        allSlotAreas[0] = extraSlotArea;
     }
 
     // Update is called once per frame

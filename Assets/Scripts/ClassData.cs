@@ -37,15 +37,19 @@ public class ClassData : MonoBehaviour
     [Header("---Which Skill Nums out of 0-3---")]
     public int skillChoice1P;
     public int skillChoice2P;
+    public int[] allSkillChoicesP; // --------------------------------
 
     public int skillChoice1S;
     public int skillChoice2S;
+    public int[] allSkillChoicesS; //---------------------------------
 
     public int skillChoice1M;
     public int skillChoice2M;
+    public int[] allSkillChoicesM; //------------------------------------
 
     public int skillChoice1E;
     public int skillChoice2E;
+    public int[] allSkillChoicesE; //-------------------------------------
     [Header("---Current Skill and Logo of equipped Weapon---")]
     public Sprite equippedLogo1;
     public string equippedSkill1;
@@ -58,6 +62,7 @@ public class ClassData : MonoBehaviour
     public int secondaryMeterNum;
     public int meleeMeterNum;
     public int extraMeterNum;
+    public int[] allMaxMeterNums; //--------------------------------
     [Header("---If extra slot is needed---")]
     public bool showExtraSlot;
     [Header("---Holds all weapons in slots---")]
@@ -65,6 +70,7 @@ public class ClassData : MonoBehaviour
     public WeaponMaker secondarySlot;
     public WeaponMaker meleeSlot;
     public WeaponMaker extraSlot;
+    public WeaponMaker[] allWeaponSlots; //--------------------------------------
     [Header("---Class Sprites---")]
     public ClassSprites spriteDatabase;
 
@@ -122,6 +128,8 @@ public class ClassData : MonoBehaviour
         classDead = false;
 
         switchedClass = false;
+
+        FillArrays();
     }
 
     // Update is called once per frame
@@ -144,6 +152,31 @@ public class ClassData : MonoBehaviour
                 SkillCheck("Extra");
                 break;
         }
+    }
+
+    public void FillArrays()
+    {
+        allSkillChoicesP[0] = skillChoice1P;
+        allSkillChoicesP[1] = skillChoice2P;
+
+        allSkillChoicesS[0] = skillChoice1S;
+        allSkillChoicesS[1] = skillChoice2S;
+
+        allSkillChoicesM[0] = skillChoice1M;
+        allSkillChoicesM[1] = skillChoice2M;
+
+        allSkillChoicesE[0] = skillChoice1E;
+        allSkillChoicesE[1] = skillChoice2E;
+
+        allMaxMeterNums[0] = primaryMeterNum;
+        allMaxMeterNums[1] = secondaryMeterNum;
+        allMaxMeterNums[2] = meleeMeterNum;
+        allMaxMeterNums[3] = extraMeterNum;
+
+        allWeaponSlots[0] = primarySlot;
+        allWeaponSlots[1] = secondarySlot;
+        allWeaponSlots[2] = meleeSlot;
+        allWeaponSlots[3] = extraSlot;
     }
 
     public void ClassCheck()

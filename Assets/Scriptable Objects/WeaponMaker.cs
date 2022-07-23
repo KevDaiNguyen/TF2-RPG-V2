@@ -138,6 +138,104 @@ public class WeaponMaker : ScriptableObject
     public int selfDamageMax4;
     public int enemyDamageMax4;
 
+    // -------------------------------------------------------
+    [Space(10)]
+    public string[] allSkillNames;
+    public string[] allSkillDescs;
+    public Sprite[] allSkillLogos;
+    public int[] allAmmoCosts;
+    public int[] allAccuracies;
+    public string[] allActionTypes;
+    public int[] allSkillRanges;
+    public bool[] allDistanceChoices;
+    public bool[] allHasSecondarySkills;
+    public int[] allSelfDamageMins;
+    public int[] allEnemyDamageMins;
+    public int[] allSelfDamageMaxs;
+    public int[] allEnemyDamageMaxs;
+
+    void Start()
+    {
+        FillStuff();
+    }
+
+    public void FillStuff()
+    {
+        allSkillNames[0] = skillName1;
+        allSkillNames[1] = skillName2;
+        allSkillNames[2] = skillName3;
+        allSkillNames[3] = skillName4;
+
+
+        allSkillDescs[0] = skillDesc1;
+        allSkillDescs[1] = skillDesc2;
+        allSkillDescs[2] = skillDesc3;
+        allSkillDescs[3] = skillDesc4;
+
+
+        allSkillLogos[0] = skillLogo1;
+        allSkillLogos[1] = skillLogo2;
+        allSkillLogos[2] = skillLogo3;
+        allSkillLogos[3] = skillLogo4;
+
+
+        allAmmoCosts[0] = ammoCost1;
+        allAmmoCosts[1] = ammoCost2;
+        allAmmoCosts[2] = ammoCost3;
+        allAmmoCosts[3] = ammoCost4;
+
+
+        allAccuracies[0] = accuracy1;
+        allAccuracies[1] = accuracy2;
+        allAccuracies[2] = accuracy3;
+        allAccuracies[3] = accuracy4;
+
+
+        allActionTypes[0] = actionType1;
+        allActionTypes[1] = actionType2;
+        allActionTypes[2] = actionType3;
+        allActionTypes[3] = actionType4;
+
+
+        allSkillRanges[0] = skillRange1;
+        allSkillRanges[1] = skillRange2;
+        allSkillRanges[2] = skillRange3;
+        allSkillRanges[3] = skillRange4;
+
+
+        allDistanceChoices[0] = distanceChoice1;
+        allDistanceChoices[1] = distanceChoice2;
+        allDistanceChoices[2] = distanceChoice3;
+        allDistanceChoices[3] = distanceChoice4;
+
+
+        allHasSecondarySkills[0] = secondarySkill1;
+        allHasSecondarySkills[1] = secondarySkill2;
+        allHasSecondarySkills[2] = secondarySkill3;
+        allHasSecondarySkills[3] = secondarySkill4;
+
+
+        allSelfDamageMins[0] = selfDamageMin1;
+        allSelfDamageMins[1] = selfDamageMin2;
+        allSelfDamageMins[2] = selfDamageMin3;
+        allSelfDamageMins[3] = selfDamageMin4;
+
+        allEnemyDamageMins[0] = enemyDamageMin1;
+        allEnemyDamageMins[1] = enemyDamageMin2;
+        allEnemyDamageMins[2] = enemyDamageMin3;
+        allEnemyDamageMins[3] = enemyDamageMin4;
+
+        allSelfDamageMaxs[0] = selfDamageMax1;
+        allSelfDamageMaxs[1] = selfDamageMax2;
+        allSelfDamageMaxs[2] = selfDamageMax3;
+        allSelfDamageMaxs[3] = selfDamageMax4;
+
+        allEnemyDamageMaxs[0] = enemyDamageMax1;
+        allEnemyDamageMaxs[1] = enemyDamageMax2;
+        allEnemyDamageMaxs[2] = enemyDamageMax3;
+        allEnemyDamageMaxs[3] = enemyDamageMax4;
+    }
+
     /* // This is for the actual weapon script
     public void UseSkill(int skillNum)
     {
