@@ -24,11 +24,13 @@ public class DisplayBattleUI : MonoBehaviour
     public TextMeshProUGUI explosiveResist;
     public TextMeshProUGUI fireResist;
     public TextMeshProUGUI meleeResist;
+    public TextMeshProUGUI[] allResists = new TextMeshProUGUI[4];
 
     public TextMeshProUGUI bulletVulnerability;
     public TextMeshProUGUI explosiveVulnerability;
     public TextMeshProUGUI fireVulnerability;
     public TextMeshProUGUI meleeVulnerability;
+    public TextMeshProUGUI[] allVulnerabilities = new TextMeshProUGUI[4];
 
     public TextMeshProUGUI speedNum;
     public TextMeshProUGUI dodgeChance;
@@ -69,6 +71,16 @@ public class DisplayBattleUI : MonoBehaviour
     void Start()
     {
         originalHealth = dataInstance.currentHealth;
+
+        allResists[0] = bulletResist;
+        allResists[1] = explosiveResist;
+        allResists[2] = fireResist;
+        allResists[3] = meleeResist;
+
+        allVulnerabilities[0] = bulletVulnerability;
+        allVulnerabilities[1] = explosiveVulnerability;
+        allVulnerabilities[2] = fireVulnerability;
+        allVulnerabilities[3] = meleeVulnerability;
     }
 
     // Update is called once per frame
@@ -90,42 +102,15 @@ public class DisplayBattleUI : MonoBehaviour
         {
             PassiveEquip();
             // ------------------------------------------------------------------------
-            if (dataInstance.primarySlot.healthChange != 0)
+            if (dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].healthChange != 0)
             {
-                originalHealth += dataInstance.primarySlot.healthChange;
-                dataInstance.ChangeMaxHealth(dataInstance.primarySlot.healthChange);
-            }
-            if (dataInstance.secondarySlot.healthChange != 0)
-            {
-                originalHealth += dataInstance.secondarySlot.healthChange;
-                dataInstance.ChangeMaxHealth(dataInstance.secondarySlot.healthChange);
-            }
-            if (dataInstance.meleeSlot.healthChange != 0)
-            {
-                originalHealth += dataInstance.meleeSlot.healthChange;
-                dataInstance.ChangeMaxHealth(dataInstance.meleeSlot.healthChange);
-            }
-            if (dataInstance.extraSlot.healthChange != 0)
-            {
-                originalHealth += dataInstance.extraSlot.healthChange;
-                dataInstance.ChangeMaxHealth(dataInstance.extraSlot.healthChange);
+                originalHealth += dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].healthChange;
+                dataInstance.ChangeMaxHealth(dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].healthChange);
             }
             // --------------------------------------------------------------------------
-            if (dataInstance.primarySlot.hasMeterBar && dataInstance.primarySlot.startFullMeter)
+            if (dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].hasMeterBar && dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].startFullMeter)
             {
                 dataInstance.IncreaseMeterBar(dataInstance.primarySlot.maxMeterNum, 1);
-            }
-            if (dataInstance.secondarySlot.hasMeterBar && dataInstance.secondarySlot.startFullMeter)
-            {
-                dataInstance.IncreaseMeterBar(dataInstance.secondarySlot.maxMeterNum, 2);
-            }
-            if (dataInstance.meleeSlot.hasMeterBar && dataInstance.meleeSlot.startFullMeter)
-            {
-                dataInstance.IncreaseMeterBar(dataInstance.meleeSlot.maxMeterNum, 3);
-            }
-            if (dataInstance.extraSlot.hasMeterBar && dataInstance.extraSlot.startFullMeter)
-            {
-                dataInstance.IncreaseMeterBar(dataInstance.extraSlot.maxMeterNum, 4);
             }
             // -------------------------------------------------------------------------
 
@@ -147,358 +132,99 @@ public class DisplayBattleUI : MonoBehaviour
             weaponTabImages[2].sprite = dataInstance.meleeSlot.weaponImage;
             weaponTabImages[3].sprite = dataInstance.extraSlot.weaponImage;
 
-            switch (dataInstance.equippedSlotNum)
+
+            if (dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].clipSize <= 0)
             {
-                case 1:
-                    if (dataInstance.primarySlot.clipSize <= 0)
-                    {
-                        ammoCount.text = "Reload";
-                    }
-                    else
-                    {
-                        if (dataInstance.primarySlot.reserveSize == 0)
-                        {
-                            ammoCount.text = dataInstance.primarySlot.clipSize.ToString();
-                        }
-                        else if (dataInstance.primarySlot.reserveSize == 9999)
-                        {
-                            ammoCount.text = dataInstance.primarySlot.clipSize.ToString() + "/INF";
-                        }
-                        else
-                        {
-                            ammoCount.text = dataInstance.primarySlot.clipSize.ToString() + "/" + dataInstance.primarySlot.reserveSize.ToString();
-                        }
-                    }
-                    // ----------------------------------------------------------------
-                    if (dataInstance.primarySlot.hasMeterBar)
-                    {
-                        chargeBarObject.SetActive(true);
-                        chargeBarText.text = dataInstance.primarySlot.meterText;
-                        chargeBar.fillAmount = (dataInstance.primaryMeterNum / dataInstance.primarySlot.maxMeterNum);
-                    }
-                    else
-                    {
-                        chargeBarObject.SetActive(false);
-                    }
-                    // ----------------------------------------------------------------
-                    weaponTabs[0].transform.localPosition = new Vector3(-360, (weaponTabs[0].transform.localPosition).y, (weaponTabs[0].transform.localPosition).z);
+                ammoCount.text = "Reload";
+            }
+            else
+            {
+                if (dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].reserveSize == 0)
+                {
+                    ammoCount.text = dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].clipSize.ToString();
+                }
+                else if (dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].reserveSize == 9999)
+                {
+                    ammoCount.text = dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].clipSize.ToString() + "/INF";
+                }
+                else
+                {
+                    ammoCount.text = dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].clipSize.ToString() + "/" + dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].reserveSize.ToString();
+                }
+            }
+            // ----------------------------------------------------------------
+            if (dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].hasMeterBar)
+            {
+                chargeBarObject.SetActive(true);
+                chargeBarText.text = dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].meterText;
+                chargeBar.fillAmount = (dataInstance.allMeterNums[dataInstance.equippedSlotNum - 1] / dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].maxMeterNum);
+            }
+            else
+            {
+                chargeBarObject.SetActive(false);
+            }
+            // ----------------------------------------------------------------
+            weaponTabs[0].transform.localPosition = new Vector3(-360, (weaponTabs[0].transform.localPosition).y, (weaponTabs[0].transform.localPosition).z);
 
-                    weaponTabs[1].transform.localPosition = new Vector3(-300, (weaponTabs[1].transform.localPosition).y, (weaponTabs[1].transform.localPosition).z);
-                    weaponTabs[2].transform.localPosition = new Vector3(-300, (weaponTabs[2].transform.localPosition).y, (weaponTabs[2].transform.localPosition).z);
-                    if (dataInstance.showExtraSlot)
-                    {
-                        weaponTabs[3].SetActive(true);
-                        weaponTabs[3].transform.localPosition = new Vector3(-300, (weaponTabs[3].transform.localPosition).y, (weaponTabs[3].transform.localPosition).z);
-                    }
-                    else
-                    {
-                        weaponTabs[3].SetActive(false);
-                    }
-                    // ---------------------------------------------------------------
-                    skillLogo1.sprite = dataInstance.equippedLogo1;
-                    skillDescription1.text = dataInstance.equippedSkill1;
+            weaponTabs[1].transform.localPosition = new Vector3(-300, (weaponTabs[1].transform.localPosition).y, (weaponTabs[1].transform.localPosition).z);
+            weaponTabs[2].transform.localPosition = new Vector3(-300, (weaponTabs[2].transform.localPosition).y, (weaponTabs[2].transform.localPosition).z);
 
-                    skillLogo2.sprite = dataInstance.equippedLogo2;
-                    skillDescription2.text = dataInstance.equippedSkill2;
-                    // ---------------------------------------------------------------
-                    for (int i = 0; i < activeSkillChoices.Length; i++)
-                    {
-                        if (dataInstance.skillChoice1P == i)
-                        {
-                            activeSkillChoices[i].color = Color.white;
-                        }
-                        else if (dataInstance.skillChoice2P == i)
-                        {
-                            activeSkillChoices[i].color = Color.white;
-                        }
-                        else
-                        {
-                            activeSkillChoices[i].color = Color.black;
-                        }
-                    }
+            if (dataInstance.showExtraSlot)
+            {
+                weaponTabs[3].SetActive(true);
+                weaponTabs[3].transform.localPosition = new Vector3(-300, (weaponTabs[3].transform.localPosition).y, (weaponTabs[3].transform.localPosition).z);
+            }
+            else
+            {
+                weaponTabs[3].SetActive(false);
+            }
+            // ---------------------------------------------------------------
+            skillLogo1.sprite = dataInstance.allEquippedLogos[0];
+            skillDescription1.text = dataInstance.allEquippedSkills[0];
 
-
-                    break;
-                case 2:
-                    if (dataInstance.secondarySlot.clipSize <= 0)
-                    {
-                        ammoCount.text = "Reload";
-                    }
-                    else
-                    {
-                        if (dataInstance.primarySlot.reserveSize == 0)
-                        {
-                            ammoCount.text = dataInstance.primarySlot.clipSize.ToString();
-                        }
-                        else if (dataInstance.primarySlot.reserveSize == 9999)
-                        {
-                            ammoCount.text = dataInstance.primarySlot.clipSize.ToString() + "/INF";
-                        }
-                        else
-                        {
-                            ammoCount.text = dataInstance.secondarySlot.clipSize.ToString() + "/" + dataInstance.secondarySlot.reserveSize.ToString();
-                        }
-                    }
-                    // ----------------------------------------------------------------
-                    if (dataInstance.secondarySlot.hasMeterBar)
-                    {
-                        chargeBarObject.SetActive(true);
-                        chargeBarText.text = dataInstance.secondarySlot.meterText;
-                        chargeBar.fillAmount = (dataInstance.secondaryMeterNum / dataInstance.secondarySlot.maxMeterNum);
-                    }
-                    else
-                    {
-                        chargeBarObject.SetActive(false);
-                    }
-                    // ----------------------------------------------------------------
-                    weaponTabs[1].transform.localPosition = new Vector3(-360, (weaponTabs[1].transform.localPosition).y, (weaponTabs[1].transform.localPosition).z);
-
-                    weaponTabs[0].transform.localPosition = new Vector3(-300, (weaponTabs[0].transform.localPosition).y, (weaponTabs[0].transform.localPosition).z);
-                    weaponTabs[2].transform.localPosition = new Vector3(-300, (weaponTabs[2].transform.localPosition).y, (weaponTabs[2].transform.localPosition).z);
-                    if (dataInstance.showExtraSlot)
-                    {
-                        weaponTabs[3].SetActive(true);
-                        weaponTabs[3].transform.localPosition = new Vector3(-300, (weaponTabs[3].transform.localPosition).y, (weaponTabs[3].transform.localPosition).z);
-                    }
-                    else
-                    {
-                        weaponTabs[3].SetActive(false);
-                    }
-                    // ---------------------------------------------------------------
-                    skillLogo1.sprite = dataInstance.equippedLogo1;
-                    skillDescription1.text = dataInstance.equippedSkill1;
-
-                    skillLogo2.sprite = dataInstance.equippedLogo2;
-                    skillDescription2.text = dataInstance.equippedSkill2;
-                    // ---------------------------------------------------------------
-                    for (int i = 0; i < activeSkillChoices.Length; i++)
-                    {
-                        if (dataInstance.skillChoice1S == i)
-                        {
-                            activeSkillChoices[i].color = Color.white;
-                        }
-                        else if (dataInstance.skillChoice2S == i)
-                        {
-                            activeSkillChoices[i].color = Color.white;
-                        }
-                        else
-                        {
-                            activeSkillChoices[i].color = Color.black;
-                        }
-                    }
-
-                    break;
-                case 3:
-                    if (dataInstance.meleeSlot.clipSize <= 0)
-                    {
-                        ammoCount.text = "Reload";
-                    }
-                    else
-                    {
-                        if (dataInstance.primarySlot.reserveSize == 0)
-                        {
-                            ammoCount.text = dataInstance.primarySlot.clipSize.ToString();
-                        }
-                        else if (dataInstance.primarySlot.reserveSize == 9999)
-                        {
-                            ammoCount.text = dataInstance.primarySlot.clipSize.ToString() + "/INF";
-                        }
-                        else
-                        {
-                            ammoCount.text = dataInstance.meleeSlot.clipSize.ToString() + "/" + dataInstance.meleeSlot.reserveSize.ToString();
-                        }
-                    }
-                    // ----------------------------------------------------------------
-                    if (dataInstance.meleeSlot.hasMeterBar)
-                    {
-                        chargeBarObject.SetActive(true);
-                        chargeBarText.text = dataInstance.meleeSlot.meterText;
-                        chargeBar.fillAmount = (dataInstance.meleeMeterNum / dataInstance.meleeSlot.maxMeterNum);
-                    }
-                    else
-                    {
-                        chargeBarObject.SetActive(false);
-                    }
-                    // ----------------------------------------------------------------
-                    weaponTabs[2].transform.localPosition = new Vector3(-360, (weaponTabs[2].transform.localPosition).y, (weaponTabs[2].transform.localPosition).z);
-
-                    weaponTabs[0].transform.localPosition = new Vector3(-300, (weaponTabs[0].transform.localPosition).y, (weaponTabs[0].transform.localPosition).z);
-                    weaponTabs[1].transform.localPosition = new Vector3(-300, (weaponTabs[1].transform.localPosition).y, (weaponTabs[1].transform.localPosition).z);
-                    if (dataInstance.showExtraSlot)
-                    {
-                        weaponTabs[3].SetActive(true);
-                        weaponTabs[3].transform.localPosition = new Vector3(-300, (weaponTabs[3].transform.localPosition).y, (weaponTabs[3].transform.localPosition).z);
-                    }
-                    else
-                    {
-                        weaponTabs[3].SetActive(false);
-                    }
-                    // ---------------------------------------------------------------
-                    skillLogo1.sprite = dataInstance.equippedLogo1;
-                    skillDescription1.text = dataInstance.equippedSkill1;
-
-                    skillLogo2.sprite = dataInstance.equippedLogo2;
-                    skillDescription2.text = dataInstance.equippedSkill2;
-                    // ---------------------------------------------------------------
-                    for (int i = 0; i < activeSkillChoices.Length; i++)
-                    {
-                        if (dataInstance.skillChoice1M == i)
-                        {
-                            activeSkillChoices[i].color = Color.white;
-                        }
-                        else if (dataInstance.skillChoice2M == i)
-                        {
-                            activeSkillChoices[i].color = Color.white;
-                        }
-                        else
-                        {
-                            activeSkillChoices[i].color = Color.black;
-                        }
-                    }
-
-                    break;
-                case 4:
-                    if (dataInstance.showExtraSlot)
-                    {
-                        if (dataInstance.extraSlot.clipSize <= 0)
-                        {
-                            ammoCount.text = "Reload";
-                        }
-                        else
-                        {
-                            if (dataInstance.primarySlot.reserveSize == 0)
-                            {
-                                ammoCount.text = dataInstance.primarySlot.clipSize.ToString();
-                            }
-                            else if (dataInstance.primarySlot.reserveSize == 9999)
-                            {
-                                ammoCount.text = dataInstance.primarySlot.clipSize.ToString() + "/INF";
-                            }
-                            else
-                            {
-                                ammoCount.text = dataInstance.extraSlot.clipSize.ToString() + "/" + dataInstance.extraSlot.reserveSize.ToString();
-                            }
-                        }
-                        // ----------------------------------------------------------------
-                        if (dataInstance.extraSlot.hasMeterBar)
-                        {
-                            chargeBarObject.SetActive(true);
-                            chargeBarText.text = dataInstance.extraSlot.meterText;
-                            chargeBar.fillAmount = (dataInstance.extraMeterNum / dataInstance.extraSlot.maxMeterNum);
-                        }
-                        else
-                        {
-                            chargeBarObject.SetActive(false);
-                        }
-                        // ----------------------------------------------------------------
-                        weaponTabs[3].transform.localPosition = new Vector3(-360, (weaponTabs[3].transform.localPosition).y, (weaponTabs[3].transform.localPosition).z);
-
-                        weaponTabs[0].transform.localPosition = new Vector3(-300, (weaponTabs[0].transform.localPosition).y, (weaponTabs[0].transform.localPosition).z);
-                        weaponTabs[1].transform.localPosition = new Vector3(-300, (weaponTabs[1].transform.localPosition).y, (weaponTabs[1].transform.localPosition).z);
-                        weaponTabs[2].transform.localPosition = new Vector3(-300, (weaponTabs[2].transform.localPosition).y, (weaponTabs[2].transform.localPosition).z);
-                        // ---------------------------------------------------------------
-                        skillLogo1.sprite = dataInstance.equippedLogo1;
-                        skillDescription1.text = dataInstance.equippedSkill1;
-
-                        skillLogo2.sprite = dataInstance.equippedLogo2;
-                        skillDescription2.text = dataInstance.equippedSkill2;
-                        // ---------------------------------------------------------------
-                        for (int i = 0; i < activeSkillChoices.Length; i++)
-                        {
-                            if (dataInstance.skillChoice1E == i)
-                            {
-                                activeSkillChoices[i].color = Color.white;
-                            }
-                            else if (dataInstance.skillChoice2E == i)
-                            {
-                                activeSkillChoices[i].color = Color.white;
-                            }
-                            else
-                            {
-                                activeSkillChoices[i].color = Color.black;
-                            }
-                        }
-                    }
-
-                    break;
+            skillLogo2.sprite = dataInstance.allEquippedLogos[1];
+            skillDescription2.text = dataInstance.allEquippedSkills[1];
+            // ---------------------------------------------------------------
+            for (int i = 0; i < activeSkillChoices.Length; i++)
+            {
+                if (dataInstance.allSkillChoices[i,0] == i)
+                {
+                    activeSkillChoices[i].color = Color.white;
+                }
+                else if (dataInstance.allSkillChoices[i,1] == i)
+                {
+                    activeSkillChoices[i].color = Color.white;
+                }
+                else
+                {
+                    activeSkillChoices[i].color = Color.black;
+                }
             }
         }
     }
 
     public void ResistDisplay()
     {
-        if (dataInstance.bulletResist == 0)
+        for (int i = 0; i < 4; i++)
         {
-            bulletResist.text = "+0%";
-        }
-        else
-        {
-            bulletResist.text = "+" + ((1 - dataInstance.bulletResist) * 100).ToString() + "%";
-        }
+            if (dataInstance.allResists[i] == 0)
+            {
+                allResists[i].text = "+0%";
+            }
+            else
+            {
+                allResists[i].text = "+" + ((1 - dataInstance.allResists[i]) * 100).ToString() + "%";
+            }
 
-        if (dataInstance.explosiveResist == 0)
-        {
-            explosiveResist.text = "+0%";
+            if (dataInstance.allVulnerabilities[i] == 0)
+            {
+                allVulnerabilities[i].text = "-0%";
+            }
+            else
+            {
+                allVulnerabilities[i].text = "+" + ((dataInstance.allVulnerabilities[i] - 1) * 100).ToString() + "%";
+            }
         }
-        else
-        {
-            explosiveResist.text = "+" + ((1 - dataInstance.explosiveResist) * 100).ToString() + "%";
-        }
-
-        if (dataInstance.fireResist == 0)
-        {
-            fireResist.text = "+0%";
-        }
-        else
-        {
-            fireResist.text = "+" + ((1 - dataInstance.fireResist) * 100).ToString() + "%";
-        }
-
-        if (dataInstance.meleeResist == 0)
-        {
-            meleeResist.text = "+0%";
-        }
-        else
-        {
-            meleeResist.text = "+" + ((1 - dataInstance.meleeResist) * 100).ToString() + "%";
-        }
-        // ----------------------------------------------------------------------------------------------
-        if (dataInstance.bulletVulnerability == 0)
-        {
-            bulletVulnerability.text = "-0%";
-        }
-        else
-        {
-            bulletVulnerability.text = "-" + ((dataInstance.bulletVulnerability - 1) * 100).ToString() + "%";
-        }
-
-        if (dataInstance.explosiveVulnerability == 0)
-        {
-            explosiveVulnerability.text = "-0%";
-        }
-        else
-        {
-            explosiveVulnerability.text = "-" + ((dataInstance.explosiveVulnerability - 1) * 100).ToString() + "%";
-        }
-
-        if (dataInstance.fireVulnerability == 0)
-        {
-            fireVulnerability.text = "-0%";
-        }
-        else
-        {
-            fireVulnerability.text = "-" + ((dataInstance.fireVulnerability - 1) * 100).ToString() + "%";
-        }
-
-        if (dataInstance.meleeVulnerability == 0)
-        {
-            meleeVulnerability.text = "-0%";
-        }
-        else
-        {
-            meleeVulnerability.text = "-" + ((dataInstance.meleeVulnerability - 1) * 100).ToString() + "%";
-        }
-
     }
 
     public void SelectClass()
@@ -524,32 +250,9 @@ public class DisplayBattleUI : MonoBehaviour
     {
         previousSlotNum = dataInstance.equippedSlotNum;
 
-        switch (slotNum)
+        if (dataInstance.allWeaponSlots[slotNum - 1].activeWeapon)
         {
-            case 1:
-                if (dataInstance.primarySlot.activeWeapon)
-                {
-                    dataInstance.equippedSlotNum = slotNum;
-                }
-                break;
-            case 2:
-                if (dataInstance.secondarySlot.activeWeapon)
-                {
-                    dataInstance.equippedSlotNum = slotNum;
-                }
-                break;
-            case 3:
-                if (dataInstance.meleeSlot.activeWeapon)
-                {
-                    dataInstance.equippedSlotNum = slotNum;
-                }
-                break;
-            case 4:
-                if (dataInstance.extraSlot.activeWeapon)
-                {
-                    dataInstance.equippedSlotNum = slotNum;
-                }
-                break;
+            dataInstance.equippedSlotNum = slotNum;
         }
 
         OnDequip(previousSlotNum);
@@ -558,143 +261,44 @@ public class DisplayBattleUI : MonoBehaviour
 
     public void OnEquip(int weaponSlotNum)
     {
-        switch (weaponSlotNum)
+        if (!dataInstance.allWeaponSlots[weaponSlotNum].passiveStats)
         {
-            case 1:
-                if (!dataInstance.primarySlot.passiveStats)
-                {
-                    ResistVunlerabilityChange(weaponSlotNum, true);
-                    dataInstance.ChangeSpeed(dataInstance.primarySlot.speedChange);
-                }
-                break;
-            case 2:
-                if (!dataInstance.secondarySlot.passiveStats)
-                {
-                    ResistVunlerabilityChange(weaponSlotNum, true);
-                    dataInstance.ChangeSpeed(dataInstance.secondarySlot.speedChange);
-                }
-                break;
-            case 3:
-                if (!dataInstance.meleeSlot.passiveStats)
-                {
-                    ResistVunlerabilityChange(weaponSlotNum, true);
-                    dataInstance.ChangeSpeed(dataInstance.meleeSlot.speedChange);
-                }
-                break;
-            case 4:
-                if (!dataInstance.extraSlot.passiveStats)
-                {
-                    ResistVunlerabilityChange(weaponSlotNum, true);
-                    dataInstance.ChangeSpeed(dataInstance.extraSlot.speedChange);
-                }
-                break;
+            ResistVunlerabilityChange(weaponSlotNum, true);
+            dataInstance.ChangeSpeed(dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].speedChange);
         }
     }
 
     public void OnDequip(int weaponSlotNum)
     {
-        switch (weaponSlotNum)
+        if (!dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].passiveStats)
         {
-            case 1:
-                if (!dataInstance.primarySlot.passiveStats)
-                {
-                    ResistVunlerabilityChange(weaponSlotNum, false);
-                    dataInstance.ChangeSpeed(dataInstance.primarySlot.speedChange * -1);
-                }
-                break;
-            case 2:
-                if (!dataInstance.secondarySlot.passiveStats)
-                {
-                    ResistVunlerabilityChange(weaponSlotNum, false);
-                    dataInstance.ChangeSpeed(dataInstance.secondarySlot.speedChange * -1);
-                }
-                break;
-            case 3:
-                if (!dataInstance.meleeSlot.passiveStats)
-                {
-                    ResistVunlerabilityChange(weaponSlotNum, false);
-                    dataInstance.ChangeSpeed(dataInstance.meleeSlot.speedChange * -1);
-                }
-                break;
-            case 4:
-                if (!dataInstance.extraSlot.passiveStats)
-                {
-                    ResistVunlerabilityChange(weaponSlotNum, false);
-                    dataInstance.ChangeSpeed(dataInstance.extraSlot.speedChange * -1);
-                }
-                break;
+            ResistVunlerabilityChange(weaponSlotNum, false);
+            dataInstance.ChangeSpeed(dataInstance.allWeaponSlots[dataInstance.equippedSlotNum - 1].speedChange * -1);
         }
     }
 
     public void PassiveEquip()
     {
-        if (dataInstance.primarySlot.passiveStats)
+        for (int i = 0; i < 4; i++)
         {
-            ResistVunlerabilityChange(1, true);
-        }
-        if (dataInstance.secondarySlot.passiveStats)
-        {
-            ResistVunlerabilityChange(2, true);
-        }
-        if (dataInstance.meleeSlot.passiveStats)
-        {
-            ResistVunlerabilityChange(3, true);
-        }
-        if (dataInstance.extraSlot.passiveStats)
-        {
-            ResistVunlerabilityChange(4, true);
+            if (dataInstance.allWeaponSlots[i].passiveStats)
+            {
+                ResistVunlerabilityChange(i, true);
+            }
         }
     }
 
     public void ResistVunlerabilityChange(int slotNum, bool shouldIncrease)
     {
-        switch (slotNum)
-        {
-            case 1:
-                dataInstance.ChangeResist(dataInstance.primarySlot.bulletResist, "Bullet", shouldIncrease);
-                dataInstance.ChangeResist(dataInstance.primarySlot.fireResist, "Fire", shouldIncrease);
-                dataInstance.ChangeResist(dataInstance.primarySlot.explosiveResist, "Explosive", shouldIncrease);
-                dataInstance.ChangeResist(dataInstance.primarySlot.meleeResist, "Melee", shouldIncrease);
+        dataInstance.ChangeResist(dataInstance.allWeaponSlots[slotNum - 1].bulletResist, "Bullet", shouldIncrease);
+        dataInstance.ChangeResist(dataInstance.allWeaponSlots[slotNum - 1].fireResist, "Fire", shouldIncrease);
+        dataInstance.ChangeResist(dataInstance.allWeaponSlots[slotNum - 1].explosiveResist, "Explosive", shouldIncrease);
+        dataInstance.ChangeResist(dataInstance.allWeaponSlots[slotNum - 1].meleeResist, "Melee", shouldIncrease);
 
-                dataInstance.ChangeVulnerability(dataInstance.primarySlot.bulletVulnerability, "Bullet", shouldIncrease);
-                dataInstance.ChangeVulnerability(dataInstance.primarySlot.fireVulnerability, "Fire", shouldIncrease);
-                dataInstance.ChangeVulnerability(dataInstance.primarySlot.explosiveVulnerability, "Explosive", shouldIncrease);
-                dataInstance.ChangeVulnerability(dataInstance.primarySlot.meleeVulnerability, "Melee", shouldIncrease);
-                break;
-            case 2:
-                dataInstance.ChangeResist(dataInstance.secondarySlot.bulletResist, "Bullet", shouldIncrease);
-                dataInstance.ChangeResist(dataInstance.secondarySlot.fireResist, "Fire", shouldIncrease);
-                dataInstance.ChangeResist(dataInstance.secondarySlot.explosiveResist, "Explosive", shouldIncrease);
-                dataInstance.ChangeResist(dataInstance.secondarySlot.meleeResist, "Melee", shouldIncrease);
-
-                dataInstance.ChangeVulnerability(dataInstance.secondarySlot.bulletVulnerability, "Bullet", shouldIncrease);
-                dataInstance.ChangeVulnerability(dataInstance.secondarySlot.fireVulnerability, "Fire", shouldIncrease);
-                dataInstance.ChangeVulnerability(dataInstance.secondarySlot.explosiveVulnerability, "Explosive", shouldIncrease);
-                dataInstance.ChangeVulnerability(dataInstance.secondarySlot.meleeVulnerability, "Melee", shouldIncrease);
-                break;
-            case 3:
-                dataInstance.ChangeResist(dataInstance.meleeSlot.bulletResist, "Bullet", shouldIncrease);
-                dataInstance.ChangeResist(dataInstance.meleeSlot.fireResist, "Fire", shouldIncrease);
-                dataInstance.ChangeResist(dataInstance.meleeSlot.explosiveResist, "Explosive", shouldIncrease);
-                dataInstance.ChangeResist(dataInstance.meleeSlot.meleeResist, "Melee", shouldIncrease);
-
-                dataInstance.ChangeVulnerability(dataInstance.meleeSlot.bulletVulnerability, "Bullet", shouldIncrease);
-                dataInstance.ChangeVulnerability(dataInstance.meleeSlot.fireVulnerability, "Fire", shouldIncrease);
-                dataInstance.ChangeVulnerability(dataInstance.meleeSlot.explosiveVulnerability, "Explosive", shouldIncrease);
-                dataInstance.ChangeVulnerability(dataInstance.meleeSlot.meleeVulnerability, "Melee", shouldIncrease);
-                break;
-            case 4:
-                dataInstance.ChangeResist(dataInstance.extraSlot.bulletResist, "Bullet", shouldIncrease);
-                dataInstance.ChangeResist(dataInstance.extraSlot.fireResist, "Fire", shouldIncrease);
-                dataInstance.ChangeResist(dataInstance.extraSlot.explosiveResist, "Explosive", shouldIncrease);
-                dataInstance.ChangeResist(dataInstance.extraSlot.meleeResist, "Melee", shouldIncrease);
-
-                dataInstance.ChangeVulnerability(dataInstance.extraSlot.bulletVulnerability, "Bullet", shouldIncrease);
-                dataInstance.ChangeVulnerability(dataInstance.extraSlot.fireVulnerability, "Fire", shouldIncrease);
-                dataInstance.ChangeVulnerability(dataInstance.extraSlot.explosiveVulnerability, "Explosive", shouldIncrease);
-                dataInstance.ChangeVulnerability(dataInstance.extraSlot.meleeVulnerability, "Melee", shouldIncrease);
-                break;
-        }
+        dataInstance.ChangeVulnerability(dataInstance.allWeaponSlots[slotNum - 1].bulletVulnerability, "Bullet", shouldIncrease);
+        dataInstance.ChangeVulnerability(dataInstance.allWeaponSlots[slotNum - 1].fireVulnerability, "Fire", shouldIncrease);
+        dataInstance.ChangeVulnerability(dataInstance.allWeaponSlots[slotNum - 1].explosiveVulnerability, "Explosive", shouldIncrease);
+        dataInstance.ChangeVulnerability(dataInstance.allWeaponSlots[slotNum - 1].meleeVulnerability, "Melee", shouldIncrease);
     }
 
     public void TempBuff(float resistIncrease, string damageType, bool shouldIncrease)

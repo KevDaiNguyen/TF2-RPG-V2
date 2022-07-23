@@ -26,6 +26,10 @@ public class ClassData : MonoBehaviour
     public float explosiveVulnerability;
     public float fireVulnerability;
     public float meleeVulnerability;
+
+    // -----------------------------------------
+    public float[] allResists = new float[4];
+    public float[] allVulnerabilities = new float[4];
     [Header("---Basic Class Sprite---")]
     public Sprite classSprite;
     [Header("---Active when changing classes---")]
@@ -37,19 +41,17 @@ public class ClassData : MonoBehaviour
     [Header("---Which Skill Nums out of 0-3---")]
     public int skillChoice1P;
     public int skillChoice2P;
-    public int[] allSkillChoicesP; // --------------------------------
 
     public int skillChoice1S;
     public int skillChoice2S;
-    public int[] allSkillChoicesS; //---------------------------------
 
     public int skillChoice1M;
     public int skillChoice2M;
-    public int[] allSkillChoicesM; //------------------------------------
 
     public int skillChoice1E;
     public int skillChoice2E;
-    public int[] allSkillChoicesE; //-------------------------------------
+
+    public int[,] allSkillChoices = new int[4,2]; //-------------------------------------
     [Header("---Current Skill and Logo of equipped Weapon---")]
     public Sprite equippedLogo1;
     public string equippedSkill1;
@@ -57,12 +59,17 @@ public class ClassData : MonoBehaviour
     public Sprite equippedLogo2;
     public string equippedSkill2;
     public string equippedSkillAcc2;
+
+    public Sprite[] allEquippedLogos = new Sprite[2]; //------------------------------------
+    public string[] allEquippedSkills = new string[2];
+    public string[] allEquippedSkillAccs = new string[2];
     [Header("---Current Values of Meterbar---")]
     public int primaryMeterNum;
     public int secondaryMeterNum;
     public int meleeMeterNum;
     public int extraMeterNum;
-    public int[] allMaxMeterNums; //--------------------------------
+
+    public int[] allMeterNums = new int[4]; //--------------------------------
     [Header("---If extra slot is needed---")]
     public bool showExtraSlot;
     [Header("---Holds all weapons in slots---")]
@@ -70,7 +77,8 @@ public class ClassData : MonoBehaviour
     public WeaponMaker secondarySlot;
     public WeaponMaker meleeSlot;
     public WeaponMaker extraSlot;
-    public WeaponMaker[] allWeaponSlots; //--------------------------------------
+
+    public WeaponMaker[] allWeaponSlots = new WeaponMaker[4]; //--------------------------------------
     [Header("---Class Sprites---")]
     public ClassSprites spriteDatabase;
 
@@ -156,27 +164,46 @@ public class ClassData : MonoBehaviour
 
     public void FillArrays()
     {
-        allSkillChoicesP[0] = skillChoice1P;
-        allSkillChoicesP[1] = skillChoice2P;
+        allSkillChoices[0,0] = skillChoice1P;
+        allSkillChoices[0,1] = skillChoice2P;
 
-        allSkillChoicesS[0] = skillChoice1S;
-        allSkillChoicesS[1] = skillChoice2S;
+        allSkillChoices[1,0] = skillChoice1S;
+        allSkillChoices[1,1] = skillChoice2S;
 
-        allSkillChoicesM[0] = skillChoice1M;
-        allSkillChoicesM[1] = skillChoice2M;
+        allSkillChoices[2,0] = skillChoice1M;
+        allSkillChoices[2,1] = skillChoice2M;
 
-        allSkillChoicesE[0] = skillChoice1E;
-        allSkillChoicesE[1] = skillChoice2E;
+        allSkillChoices[3,0] = skillChoice1E;
+        allSkillChoices[3,1] = skillChoice2E;
 
-        allMaxMeterNums[0] = primaryMeterNum;
-        allMaxMeterNums[1] = secondaryMeterNum;
-        allMaxMeterNums[2] = meleeMeterNum;
-        allMaxMeterNums[3] = extraMeterNum;
+        allMeterNums[0] = primaryMeterNum;
+        allMeterNums[1] = secondaryMeterNum;
+        allMeterNums[2] = meleeMeterNum;
+        allMeterNums[3] = extraMeterNum;
 
         allWeaponSlots[0] = primarySlot;
         allWeaponSlots[1] = secondarySlot;
         allWeaponSlots[2] = meleeSlot;
         allWeaponSlots[3] = extraSlot;
+
+        allResists[0] = bulletResist;
+        allResists[1] = explosiveResist;
+        allResists[2] = fireResist;
+        allResists[3] = meleeResist;
+
+        allVulnerabilities[0] = bulletVulnerability;
+        allVulnerabilities[1] = explosiveVulnerability;
+        allVulnerabilities[2] = fireVulnerability;
+        allVulnerabilities[3] = meleeVulnerability;
+
+        allEquippedLogos[0] = equippedLogo1;
+        allEquippedLogos[1] = equippedLogo2;
+
+        allEquippedSkills[0] = equippedSkill1;
+        allEquippedSkills[1] = equippedSkill2;
+
+        allEquippedSkillAccs[0] = equippedSkillAcc1;
+        allEquippedSkillAccs[1] = equippedSkillAcc2;
     }
 
     public void ClassCheck()

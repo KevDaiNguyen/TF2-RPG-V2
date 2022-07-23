@@ -20,7 +20,7 @@ public class HoverInfo : MonoBehaviour
     public GameObject secondarySlotArea;
     public GameObject meleeSlotArea;
     public GameObject extraSlotArea;
-    public GameObject[] allSlotAreas; //----------------------------------
+    public GameObject[] allSlotAreas = new GameObject[4]; //----------------------------------
 
     private int hoveringSlot;
 

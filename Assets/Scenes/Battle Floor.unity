@@ -619,7 +619,6 @@ GameObject:
   - component: {fileID: 75345259}
   - component: {fileID: 75345261}
   - component: {fileID: 75345260}
-  - component: {fileID: 75345263}
   - component: {fileID: 75345262}
   m_Layer: 5
   m_Name: Skill 1 Background
@@ -733,34 +732,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &75345263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75345258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 586784bba12a3074dad4039d136876b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillCard: {fileID: 75345258}
-  infoInstance: {fileID: 131726139}
-  classSlots:
-  - {fileID: 970881210}
-  - {fileID: 2025763704}
-  - {fileID: 227667252}
-  - {fileID: 1459799160}
-  - {fileID: 508319804}
-  - {fileID: 903963024}
-  - {fileID: 2089755605}
-  - {fileID: 756530505}
-  targetSlot: 0
-  leftRight: Left
-  currentlyChoosingTarget: 0
-  foundTarget: 0
-  attackRange: 0
 --- !u!1 &103152128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,6 +1529,16 @@ MonoBehaviour:
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  allResists:
+  - 0
+  - 0
+  - 0
+  - 0
+  allVulnerabilities:
+  - 0
+  - 0
+  - 0
+  - 0
   classSprite: {fileID: 0}
   switchedClass: 0
   classDead: 0
@@ -1576,15 +1557,30 @@ MonoBehaviour:
   equippedLogo2: {fileID: 0}
   equippedSkill2: 
   equippedSkillAcc2: 
+  allEquippedLogos:
+  - {fileID: 0}
+  - {fileID: 0}
+  allEquippedSkills:
+  - 
+  - 
+  allEquippedSkillAccs:
+  - 
+  - 
   primaryMeterNum: 0
   secondaryMeterNum: 0
   meleeMeterNum: 0
   extraMeterNum: 0
+  allMeterNums: 00000000000000000000000000000000
   showExtraSlot: 0
   primarySlot: {fileID: 0}
   secondarySlot: {fileID: 0}
   meleeSlot: {fileID: 0}
   extraSlot: {fileID: 0}
+  allWeaponSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spriteDatabase: {fileID: 11400000, guid: 47d531d7b903ad44aa10353335732008, type: 2}
   canHit: 0
 --- !u!114 &227667253
@@ -1609,10 +1605,12 @@ MonoBehaviour:
   explosiveResist: {fileID: 2111405410}
   fireResist: {fileID: 2070043355}
   meleeResist: {fileID: 1816363029}
+  allResists: []
   bulletVulnerability: {fileID: 371739013}
   explosiveVulnerability: {fileID: 990367385}
   fireVulnerability: {fileID: 839219518}
   meleeVulnerability: {fileID: 1525619871}
+  allVulnerabilities: []
   speedNum: {fileID: 1078646691}
   dodgeChance: {fileID: 230687804}
   ammoCount: {fileID: 1384219648}
@@ -2306,6 +2304,7 @@ MonoBehaviour:
   secondarySlotArea: {fileID: 1245905894}
   meleeSlotArea: {fileID: 1498566761}
   extraSlotArea: {fileID: 1311865823}
+  allSlotAreas: []
 --- !u!1 &272461994
 GameObject:
   m_ObjectHideFlags: 0
@@ -3812,6 +3811,16 @@ MonoBehaviour:
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  allResists:
+  - 0
+  - 0
+  - 0
+  - 0
+  allVulnerabilities:
+  - 0
+  - 0
+  - 0
+  - 0
   classSprite: {fileID: 0}
   switchedClass: 0
   classDead: 0
@@ -3830,15 +3839,30 @@ MonoBehaviour:
   equippedLogo2: {fileID: 0}
   equippedSkill2: 
   equippedSkillAcc2: 
+  allEquippedLogos:
+  - {fileID: 0}
+  - {fileID: 0}
+  allEquippedSkills:
+  - 
+  - 
+  allEquippedSkillAccs:
+  - 
+  - 
   primaryMeterNum: 0
   secondaryMeterNum: 0
   meleeMeterNum: 0
   extraMeterNum: 0
+  allMeterNums: 00000000000000000000000000000000
   showExtraSlot: 0
   primarySlot: {fileID: 0}
   secondarySlot: {fileID: 0}
   meleeSlot: {fileID: 0}
   extraSlot: {fileID: 0}
+  allWeaponSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spriteDatabase: {fileID: 11400000, guid: 47d531d7b903ad44aa10353335732008, type: 2}
   canHit: 0
 --- !u!114 &508319805
@@ -3863,10 +3887,12 @@ MonoBehaviour:
   explosiveResist: {fileID: 2111405410}
   fireResist: {fileID: 2070043355}
   meleeResist: {fileID: 1816363029}
+  allResists: []
   bulletVulnerability: {fileID: 371739013}
   explosiveVulnerability: {fileID: 990367385}
   fireVulnerability: {fileID: 839219518}
   meleeVulnerability: {fileID: 1525619871}
+  allVulnerabilities: []
   speedNum: {fileID: 1078646691}
   dodgeChance: {fileID: 230687804}
   ammoCount: {fileID: 1384219648}
@@ -6232,6 +6258,16 @@ MonoBehaviour:
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  allResists:
+  - 0
+  - 0
+  - 0
+  - 0
+  allVulnerabilities:
+  - 0
+  - 0
+  - 0
+  - 0
   classSprite: {fileID: 0}
   switchedClass: 0
   classDead: 0
@@ -6250,15 +6286,30 @@ MonoBehaviour:
   equippedLogo2: {fileID: 0}
   equippedSkill2: 
   equippedSkillAcc2: 
+  allEquippedLogos:
+  - {fileID: 0}
+  - {fileID: 0}
+  allEquippedSkills:
+  - 
+  - 
+  allEquippedSkillAccs:
+  - 
+  - 
   primaryMeterNum: 0
   secondaryMeterNum: 0
   meleeMeterNum: 0
   extraMeterNum: 0
+  allMeterNums: 00000000000000000000000000000000
   showExtraSlot: 0
   primarySlot: {fileID: 0}
   secondarySlot: {fileID: 0}
   meleeSlot: {fileID: 0}
   extraSlot: {fileID: 0}
+  allWeaponSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spriteDatabase: {fileID: 11400000, guid: 47d531d7b903ad44aa10353335732008, type: 2}
   canHit: 0
 --- !u!114 &756530506
@@ -6283,10 +6334,12 @@ MonoBehaviour:
   explosiveResist: {fileID: 2111405410}
   fireResist: {fileID: 2070043355}
   meleeResist: {fileID: 1816363029}
+  allResists: []
   bulletVulnerability: {fileID: 371739013}
   explosiveVulnerability: {fileID: 990367385}
   fireVulnerability: {fileID: 839219518}
   meleeVulnerability: {fileID: 1525619871}
+  allVulnerabilities: []
   speedNum: {fileID: 1078646691}
   dodgeChance: {fileID: 230687804}
   ammoCount: {fileID: 1384219648}
@@ -7172,6 +7225,16 @@ MonoBehaviour:
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  allResists:
+  - 0
+  - 0
+  - 0
+  - 0
+  allVulnerabilities:
+  - 0
+  - 0
+  - 0
+  - 0
   classSprite: {fileID: 0}
   switchedClass: 0
   classDead: 0
@@ -7190,15 +7253,30 @@ MonoBehaviour:
   equippedLogo2: {fileID: 0}
   equippedSkill2: 
   equippedSkillAcc2: 
+  allEquippedLogos:
+  - {fileID: 0}
+  - {fileID: 0}
+  allEquippedSkills:
+  - 
+  - 
+  allEquippedSkillAccs:
+  - 
+  - 
   primaryMeterNum: 0
   secondaryMeterNum: 0
   meleeMeterNum: 0
   extraMeterNum: 0
+  allMeterNums: 00000000000000000000000000000000
   showExtraSlot: 0
   primarySlot: {fileID: 0}
   secondarySlot: {fileID: 0}
   meleeSlot: {fileID: 0}
   extraSlot: {fileID: 0}
+  allWeaponSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spriteDatabase: {fileID: 11400000, guid: 47d531d7b903ad44aa10353335732008, type: 2}
   canHit: 0
 --- !u!114 &903963025
@@ -7223,10 +7301,12 @@ MonoBehaviour:
   explosiveResist: {fileID: 2111405410}
   fireResist: {fileID: 2070043355}
   meleeResist: {fileID: 1816363029}
+  allResists: []
   bulletVulnerability: {fileID: 371739013}
   explosiveVulnerability: {fileID: 990367385}
   fireVulnerability: {fileID: 839219518}
   meleeVulnerability: {fileID: 1525619871}
+  allVulnerabilities: []
   speedNum: {fileID: 1078646691}
   dodgeChance: {fileID: 230687804}
   ammoCount: {fileID: 1384219648}
@@ -7959,6 +8039,16 @@ MonoBehaviour:
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  allResists:
+  - 0
+  - 0
+  - 0
+  - 0
+  allVulnerabilities:
+  - 0
+  - 0
+  - 0
+  - 0
   classSprite: {fileID: 0}
   switchedClass: 0
   classDead: 0
@@ -7977,15 +8067,30 @@ MonoBehaviour:
   equippedLogo2: {fileID: 0}
   equippedSkill2: 
   equippedSkillAcc2: 
+  allEquippedLogos:
+  - {fileID: 0}
+  - {fileID: 0}
+  allEquippedSkills:
+  - 
+  - 
+  allEquippedSkillAccs:
+  - 
+  - 
   primaryMeterNum: 0
   secondaryMeterNum: 0
   meleeMeterNum: 0
   extraMeterNum: 0
+  allMeterNums: 00000000000000000000000000000000
   showExtraSlot: 0
   primarySlot: {fileID: 0}
   secondarySlot: {fileID: 0}
   meleeSlot: {fileID: 0}
   extraSlot: {fileID: 0}
+  allWeaponSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spriteDatabase: {fileID: 11400000, guid: 47d531d7b903ad44aa10353335732008, type: 2}
   canHit: 0
 --- !u!114 &970881211
@@ -8010,10 +8115,12 @@ MonoBehaviour:
   explosiveResist: {fileID: 2111405410}
   fireResist: {fileID: 2070043355}
   meleeResist: {fileID: 1816363029}
+  allResists: []
   bulletVulnerability: {fileID: 371739013}
   explosiveVulnerability: {fileID: 990367385}
   fireVulnerability: {fileID: 839219518}
   meleeVulnerability: {fileID: 1525619871}
+  allVulnerabilities: []
   speedNum: {fileID: 1078646691}
   dodgeChance: {fileID: 230687804}
   ammoCount: {fileID: 1384219648}
@@ -10409,7 +10516,6 @@ GameObject:
   - component: {fileID: 1198963395}
   - component: {fileID: 1198963397}
   - component: {fileID: 1198963396}
-  - component: {fileID: 1198963399}
   - component: {fileID: 1198963398}
   m_Layer: 5
   m_Name: Skill 2 Background
@@ -10523,34 +10629,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1198963399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198963394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 586784bba12a3074dad4039d136876b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillCard: {fileID: 1198963394}
-  infoInstance: {fileID: 131726139}
-  classSlots:
-  - {fileID: 970881210}
-  - {fileID: 2025763704}
-  - {fileID: 227667252}
-  - {fileID: 1459799160}
-  - {fileID: 508319804}
-  - {fileID: 903963024}
-  - {fileID: 2089755605}
-  - {fileID: 756530505}
-  targetSlot: 0
-  leftRight: Right
-  currentlyChoosingTarget: 0
-  foundTarget: 0
-  attackRange: 0
 --- !u!1 &1204524742
 GameObject:
   m_ObjectHideFlags: 0
@@ -12605,6 +12683,16 @@ MonoBehaviour:
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  allResists:
+  - 0
+  - 0
+  - 0
+  - 0
+  allVulnerabilities:
+  - 0
+  - 0
+  - 0
+  - 0
   classSprite: {fileID: 0}
   switchedClass: 0
   classDead: 0
@@ -12623,15 +12711,30 @@ MonoBehaviour:
   equippedLogo2: {fileID: 0}
   equippedSkill2: 
   equippedSkillAcc2: 
+  allEquippedLogos:
+  - {fileID: 0}
+  - {fileID: 0}
+  allEquippedSkills:
+  - 
+  - 
+  allEquippedSkillAccs:
+  - 
+  - 
   primaryMeterNum: 0
   secondaryMeterNum: 0
   meleeMeterNum: 0
   extraMeterNum: 0
+  allMeterNums: 00000000000000000000000000000000
   showExtraSlot: 0
   primarySlot: {fileID: 0}
   secondarySlot: {fileID: 0}
   meleeSlot: {fileID: 0}
   extraSlot: {fileID: 0}
+  allWeaponSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spriteDatabase: {fileID: 11400000, guid: 47d531d7b903ad44aa10353335732008, type: 2}
   canHit: 0
 --- !u!114 &1459799161
@@ -12656,10 +12759,12 @@ MonoBehaviour:
   explosiveResist: {fileID: 2111405410}
   fireResist: {fileID: 2070043355}
   meleeResist: {fileID: 1816363029}
+  allResists: []
   bulletVulnerability: {fileID: 371739013}
   explosiveVulnerability: {fileID: 990367385}
   fireVulnerability: {fileID: 839219518}
   meleeVulnerability: {fileID: 1525619871}
+  allVulnerabilities: []
   speedNum: {fileID: 1078646691}
   dodgeChance: {fileID: 230687804}
   ammoCount: {fileID: 1384219648}
@@ -16847,6 +16952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -17543,6 +17649,16 @@ MonoBehaviour:
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  allResists:
+  - 0
+  - 0
+  - 0
+  - 0
+  allVulnerabilities:
+  - 0
+  - 0
+  - 0
+  - 0
   classSprite: {fileID: 0}
   switchedClass: 0
   classDead: 0
@@ -17561,15 +17677,30 @@ MonoBehaviour:
   equippedLogo2: {fileID: 0}
   equippedSkill2: 
   equippedSkillAcc2: 
+  allEquippedLogos:
+  - {fileID: 0}
+  - {fileID: 0}
+  allEquippedSkills:
+  - 
+  - 
+  allEquippedSkillAccs:
+  - 
+  - 
   primaryMeterNum: 0
   secondaryMeterNum: 0
   meleeMeterNum: 0
   extraMeterNum: 0
+  allMeterNums: 00000000000000000000000000000000
   showExtraSlot: 0
   primarySlot: {fileID: 0}
   secondarySlot: {fileID: 0}
   meleeSlot: {fileID: 0}
   extraSlot: {fileID: 0}
+  allWeaponSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spriteDatabase: {fileID: 11400000, guid: 47d531d7b903ad44aa10353335732008, type: 2}
   canHit: 0
 --- !u!114 &2025763705
@@ -17594,10 +17725,12 @@ MonoBehaviour:
   explosiveResist: {fileID: 2111405410}
   fireResist: {fileID: 2070043355}
   meleeResist: {fileID: 1816363029}
+  allResists: []
   bulletVulnerability: {fileID: 371739013}
   explosiveVulnerability: {fileID: 990367385}
   fireVulnerability: {fileID: 839219518}
   meleeVulnerability: {fileID: 1525619871}
+  allVulnerabilities: []
   speedNum: {fileID: 1078646691}
   dodgeChance: {fileID: 230687804}
   ammoCount: {fileID: 1384219648}
@@ -18712,6 +18845,16 @@ MonoBehaviour:
   explosiveVulnerability: 0
   fireVulnerability: 0
   meleeVulnerability: 0
+  allResists:
+  - 0
+  - 0
+  - 0
+  - 0
+  allVulnerabilities:
+  - 0
+  - 0
+  - 0
+  - 0
   classSprite: {fileID: 0}
   switchedClass: 0
   classDead: 0
@@ -18730,15 +18873,30 @@ MonoBehaviour:
   equippedLogo2: {fileID: 0}
   equippedSkill2: 
   equippedSkillAcc2: 
+  allEquippedLogos:
+  - {fileID: 0}
+  - {fileID: 0}
+  allEquippedSkills:
+  - 
+  - 
+  allEquippedSkillAccs:
+  - 
+  - 
   primaryMeterNum: 0
   secondaryMeterNum: 0
   meleeMeterNum: 0
   extraMeterNum: 0
+  allMeterNums: 00000000000000000000000000000000
   showExtraSlot: 0
   primarySlot: {fileID: 0}
   secondarySlot: {fileID: 0}
   meleeSlot: {fileID: 0}
   extraSlot: {fileID: 0}
+  allWeaponSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spriteDatabase: {fileID: 11400000, guid: 47d531d7b903ad44aa10353335732008, type: 2}
   canHit: 0
 --- !u!114 &2089755606
@@ -18763,10 +18921,12 @@ MonoBehaviour:
   explosiveResist: {fileID: 2111405410}
   fireResist: {fileID: 2070043355}
   meleeResist: {fileID: 1816363029}
+  allResists: []
   bulletVulnerability: {fileID: 371739013}
   explosiveVulnerability: {fileID: 990367385}
   fireVulnerability: {fileID: 839219518}
   meleeVulnerability: {fileID: 1525619871}
+  allVulnerabilities: []
   speedNum: {fileID: 1078646691}
   dodgeChance: {fileID: 230687804}
   ammoCount: {fileID: 1384219648}

@@ -140,19 +140,19 @@ public class WeaponMaker : ScriptableObject
 
     // -------------------------------------------------------
     [Space(10)]
-    public string[] allSkillNames;
-    public string[] allSkillDescs;
-    public Sprite[] allSkillLogos;
-    public int[] allAmmoCosts;
-    public int[] allAccuracies;
-    public string[] allActionTypes;
-    public int[] allSkillRanges;
-    public bool[] allDistanceChoices;
-    public bool[] allHasSecondarySkills;
-    public int[] allSelfDamageMins;
-    public int[] allEnemyDamageMins;
-    public int[] allSelfDamageMaxs;
-    public int[] allEnemyDamageMaxs;
+    public string[] allSkillNames = new string[4];
+    public string[] allSkillDescs = new string[4];
+    public Sprite[] allSkillLogos = new Sprite[4];
+    public int[] allAmmoCosts = new int[4];
+    public int[] allAccuracies = new int[4];
+    public string[] allActionTypes = new string[4];
+    public int[] allSkillRanges = new int[4];
+    public bool[] allDistanceChoices = new bool[4];
+    public bool[] allHasSecondarySkills = new bool[4];
+    public int[] allSelfDamageMins = new int[4];
+    public int[] allEnemyDamageMins = new int[4];
+    public int[] allSelfDamageMaxs = new int[4];
+    public int[] allEnemyDamageMaxs = new int[4];
 
     void Start()
     {
