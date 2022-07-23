@@ -1605,12 +1605,20 @@ MonoBehaviour:
   explosiveResist: {fileID: 2111405410}
   fireResist: {fileID: 2070043355}
   meleeResist: {fileID: 1816363029}
-  allResists: []
+  allResists:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   bulletVulnerability: {fileID: 371739013}
   explosiveVulnerability: {fileID: 990367385}
   fireVulnerability: {fileID: 839219518}
   meleeVulnerability: {fileID: 1525619871}
-  allVulnerabilities: []
+  allVulnerabilities:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   speedNum: {fileID: 1078646691}
   dodgeChance: {fileID: 230687804}
   ammoCount: {fileID: 1384219648}
@@ -2304,7 +2312,11 @@ MonoBehaviour:
   secondarySlotArea: {fileID: 1245905894}
   meleeSlotArea: {fileID: 1498566761}
   extraSlotArea: {fileID: 1311865823}
-  allSlotAreas: []
+  allSlotAreas:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &272461994
 GameObject:
   m_ObjectHideFlags: 0
@@ -3887,12 +3899,20 @@ MonoBehaviour:
   explosiveResist: {fileID: 2111405410}
   fireResist: {fileID: 2070043355}
   meleeResist: {fileID: 1816363029}
-  allResists: []
+  allResists:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   bulletVulnerability: {fileID: 371739013}
   explosiveVulnerability: {fileID: 990367385}
   fireVulnerability: {fileID: 839219518}
   meleeVulnerability: {fileID: 1525619871}
-  allVulnerabilities: []
+  allVulnerabilities:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   speedNum: {fileID: 1078646691}
   dodgeChance: {fileID: 230687804}
   ammoCount: {fileID: 1384219648}
@@ -6334,12 +6354,20 @@ MonoBehaviour:
   explosiveResist: {fileID: 2111405410}
   fireResist: {fileID: 2070043355}
   meleeResist: {fileID: 1816363029}
-  allResists: []
+  allResists:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   bulletVulnerability: {fileID: 371739013}
   explosiveVulnerability: {fileID: 990367385}
   fireVulnerability: {fileID: 839219518}
   meleeVulnerability: {fileID: 1525619871}
-  allVulnerabilities: []
+  allVulnerabilities:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   speedNum: {fileID: 1078646691}
   dodgeChance: {fileID: 230687804}
   ammoCount: {fileID: 1384219648}
@@ -7301,12 +7329,20 @@ MonoBehaviour:
   explosiveResist: {fileID: 2111405410}
   fireResist: {fileID: 2070043355}
   meleeResist: {fileID: 1816363029}
-  allResists: []
+  allResists:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   bulletVulnerability: {fileID: 371739013}
   explosiveVulnerability: {fileID: 990367385}
   fireVulnerability: {fileID: 839219518}
   meleeVulnerability: {fileID: 1525619871}
-  allVulnerabilities: []
+  allVulnerabilities:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   speedNum: {fileID: 1078646691}
   dodgeChance: {fileID: 230687804}
   ammoCount: {fileID: 1384219648}
@@ -8115,12 +8151,20 @@ MonoBehaviour:
   explosiveResist: {fileID: 2111405410}
   fireResist: {fileID: 2070043355}
   meleeResist: {fileID: 1816363029}
-  allResists: []
+  allResists:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   bulletVulnerability: {fileID: 371739013}
   explosiveVulnerability: {fileID: 990367385}
   fireVulnerability: {fileID: 839219518}
   meleeVulnerability: {fileID: 1525619871}
-  allVulnerabilities: []
+  allVulnerabilities:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   speedNum: {fileID: 1078646691}
   dodgeChance: {fileID: 230687804}
   ammoCount: {fileID: 1384219648}
@@ -12759,12 +12803,20 @@ MonoBehaviour:
   explosiveResist: {fileID: 2111405410}
   fireResist: {fileID: 2070043355}
   meleeResist: {fileID: 1816363029}
-  allResists: []
+  allResists:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   bulletVulnerability: {fileID: 371739013}
   explosiveVulnerability: {fileID: 990367385}
   fireVulnerability: {fileID: 839219518}
   meleeVulnerability: {fileID: 1525619871}
-  allVulnerabilities: []
+  allVulnerabilities:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   speedNum: {fileID: 1078646691}
   dodgeChance: {fileID: 230687804}
   ammoCount: {fileID: 1384219648}
@@ -17725,12 +17777,20 @@ MonoBehaviour:
   explosiveResist: {fileID: 2111405410}
   fireResist: {fileID: 2070043355}
   meleeResist: {fileID: 1816363029}
-  allResists: []
+  allResists:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   bulletVulnerability: {fileID: 371739013}
   explosiveVulnerability: {fileID: 990367385}
   fireVulnerability: {fileID: 839219518}
   meleeVulnerability: {fileID: 1525619871}
-  allVulnerabilities: []
+  allVulnerabilities:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   speedNum: {fileID: 1078646691}
   dodgeChance: {fileID: 230687804}
   ammoCount: {fileID: 1384219648}
@@ -18921,12 +18981,20 @@ MonoBehaviour:
   explosiveResist: {fileID: 2111405410}
   fireResist: {fileID: 2070043355}
   meleeResist: {fileID: 1816363029}
-  allResists: []
+  allResists:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   bulletVulnerability: {fileID: 371739013}
   explosiveVulnerability: {fileID: 990367385}
   fireVulnerability: {fileID: 839219518}
   meleeVulnerability: {fileID: 1525619871}
-  allVulnerabilities: []
+  allVulnerabilities:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   speedNum: {fileID: 1078646691}
   dodgeChance: {fileID: 230687804}
   ammoCount: {fileID: 1384219648}

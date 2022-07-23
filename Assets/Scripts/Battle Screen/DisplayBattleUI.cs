@@ -72,15 +72,8 @@ public class DisplayBattleUI : MonoBehaviour
     {
         originalHealth = dataInstance.currentHealth;
 
-        allResists[0] = bulletResist;
-        allResists[1] = explosiveResist;
-        allResists[2] = fireResist;
-        allResists[3] = meleeResist;
-
-        allVulnerabilities[0] = bulletVulnerability;
-        allVulnerabilities[1] = explosiveVulnerability;
-        allVulnerabilities[2] = fireVulnerability;
-        allVulnerabilities[3] = meleeVulnerability;
+        allResists.Initialize();
+        allVulnerabilities.Initialize();
     }
 
     // Update is called once per frame
@@ -165,7 +158,6 @@ public class DisplayBattleUI : MonoBehaviour
             }
             // ----------------------------------------------------------------
             weaponTabs[0].transform.localPosition = new Vector3(-360, (weaponTabs[0].transform.localPosition).y, (weaponTabs[0].transform.localPosition).z);
-
             weaponTabs[1].transform.localPosition = new Vector3(-300, (weaponTabs[1].transform.localPosition).y, (weaponTabs[1].transform.localPosition).z);
             weaponTabs[2].transform.localPosition = new Vector3(-300, (weaponTabs[2].transform.localPosition).y, (weaponTabs[2].transform.localPosition).z);
 
@@ -201,6 +193,16 @@ public class DisplayBattleUI : MonoBehaviour
                 }
             }
         }
+
+        allResists[0] = bulletResist;
+        allResists[1] = explosiveResist;
+        allResists[2] = fireResist;
+        allResists[3] = meleeResist;
+
+        allVulnerabilities[0] = bulletVulnerability;
+        allVulnerabilities[1] = explosiveVulnerability;
+        allVulnerabilities[2] = fireVulnerability;
+        allVulnerabilities[3] = meleeVulnerability;
     }
 
     public void ResistDisplay()

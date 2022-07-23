@@ -22,6 +22,7 @@ public class ClassData : MonoBehaviour
     public float explosiveResist;
     public float fireResist;
     public float meleeResist;
+
     public float bulletVulnerability;
     public float explosiveVulnerability;
     public float fireVulnerability;
@@ -137,13 +138,22 @@ public class ClassData : MonoBehaviour
 
         switchedClass = false;
 
-        FillArrays();
+        allSkillChoices.Initialize();
+        allMeterNums.Initialize();
+        allWeaponSlots.Initialize();
+        allResists.Initialize();
+        allVulnerabilities.Initialize();
+        allEquippedLogos.Initialize();
+        allEquippedSkills.Initialize();
+        allEquippedSkillAccs.Initialize();
     }
 
     // Update is called once per frame
     void Update()
     {
         ClassCheck();
+
+        FillArrays();
 
         switch (equippedSlotNum)
         {

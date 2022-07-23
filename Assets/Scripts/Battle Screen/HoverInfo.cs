@@ -35,10 +35,7 @@ public class HoverInfo : MonoBehaviour
         weaponName.color = new Vector4(0, 0, 0, 0);
         weaponDesc.color = new Vector4(0, 0, 0, 0);
 
-        allSlotAreas[0] = primarySlotArea;
-        allSlotAreas[0] = secondarySlotArea;
-        allSlotAreas[0] = meleeSlotArea;
-        allSlotAreas[0] = extraSlotArea;
+        allSlotAreas.Initialize();
     }
 
     // Update is called once per frame
@@ -86,6 +83,11 @@ public class HoverInfo : MonoBehaviour
                 weaponDesc.color = new Vector4(0, 0, 0, 0);
                 break;
         }
+
+        allSlotAreas[0] = primarySlotArea;
+        allSlotAreas[0] = secondarySlotArea;
+        allSlotAreas[0] = meleeSlotArea;
+        allSlotAreas[0] = extraSlotArea;
     }
 
     public void MouseCheck()
