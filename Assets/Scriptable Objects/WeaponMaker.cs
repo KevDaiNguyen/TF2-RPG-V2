@@ -56,7 +56,11 @@ public class WeaponMaker : ScriptableObject
     [Space(3)]
     public int ammoCost1;
     public int accuracy1;
+
+    [Space(4)]
+    public string actionType1;
     public int skillRange1;
+    public bool distanceChoice1;
     public bool secondarySkill1;
 
     [Space(4)]
@@ -75,7 +79,11 @@ public class WeaponMaker : ScriptableObject
     [Space(3)]
     public int ammoCost2;
     public int accuracy2;
+
+    [Space(4)]
+    public string actionType2;
     public int skillRange2;
+    public bool distanceChoice2;
     public bool secondarySkill2;
 
     [Space(4)]
@@ -94,7 +102,11 @@ public class WeaponMaker : ScriptableObject
     [Space(3)]
     public int ammoCost3;
     public int accuracy3;
+
+    [Space(4)]
+    public string actionType3;
     public int skillRange3;
+    public bool distanceChoice3;
     public bool secondarySkill3;
 
     [Space(4)]
@@ -113,7 +125,11 @@ public class WeaponMaker : ScriptableObject
     [Space(3)]
     public int ammoCost4;
     public int accuracy4;
+
+    [Space(4)]
+    public string actionType4;
     public int skillRange4;
+    public bool distanceChoice4;
     public bool secondarySkill4;
 
     [Space(4)]

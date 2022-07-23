@@ -619,6 +619,8 @@ GameObject:
   - component: {fileID: 75345259}
   - component: {fileID: 75345261}
   - component: {fileID: 75345260}
+  - component: {fileID: 75345263}
+  - component: {fileID: 75345262}
   m_Layer: 5
   m_Name: Skill 1 Background
   m_TagString: Untagged
@@ -687,6 +689,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75345258}
   m_CullTransparentMesh: 1
+--- !u!114 &75345262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75345258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 75345260}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &75345263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75345258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586784bba12a3074dad4039d136876b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillCard: {fileID: 75345258}
+  infoInstance: {fileID: 131726139}
+  classSlots:
+  - {fileID: 970881210}
+  - {fileID: 2025763704}
+  - {fileID: 227667252}
+  - {fileID: 1459799160}
+  - {fileID: 508319804}
+  - {fileID: 903963024}
+  - {fileID: 2089755605}
+  - {fileID: 756530505}
+  targetSlot: 0
+  leftRight: Left
+  currentlyChoosingTarget: 0
+  foundTarget: 0
+  attackRange: 0
 --- !u!1 &103152128
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,7 +1036,7 @@ MonoBehaviour:
   - {fileID: 903963025}
   - {fileID: 2089755606}
   - {fileID: 756530506}
-  currentBattleUI: {fileID: 0}
+  currentBattleUI: {fileID: 1459799161}
 --- !u!1 &174143655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,6 +1586,7 @@ MonoBehaviour:
   meleeSlot: {fileID: 0}
   extraSlot: {fileID: 0}
   spriteDatabase: {fileID: 11400000, guid: 47d531d7b903ad44aa10353335732008, type: 2}
+  canHit: 0
 --- !u!114 &227667253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1525,6 +1600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataInstance: {fileID: 227667252}
+  cardInstance: {fileID: 0}
   classBody: {fileID: 1183884443}
   healthbarFill: {fileID: 1251632939}
   className: {fileID: 1141984801}
@@ -3764,6 +3840,7 @@ MonoBehaviour:
   meleeSlot: {fileID: 0}
   extraSlot: {fileID: 0}
   spriteDatabase: {fileID: 11400000, guid: 47d531d7b903ad44aa10353335732008, type: 2}
+  canHit: 0
 --- !u!114 &508319805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3777,6 +3854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataInstance: {fileID: 508319804}
+  cardInstance: {fileID: 0}
   classBody: {fileID: 575965032}
   healthbarFill: {fileID: 1728408212}
   className: {fileID: 1141984801}
@@ -6182,6 +6260,7 @@ MonoBehaviour:
   meleeSlot: {fileID: 0}
   extraSlot: {fileID: 0}
   spriteDatabase: {fileID: 11400000, guid: 47d531d7b903ad44aa10353335732008, type: 2}
+  canHit: 0
 --- !u!114 &756530506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6195,6 +6274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataInstance: {fileID: 756530505}
+  cardInstance: {fileID: 0}
   classBody: {fileID: 1127615970}
   healthbarFill: {fileID: 576420998}
   className: {fileID: 1141984801}
@@ -7120,6 +7200,7 @@ MonoBehaviour:
   meleeSlot: {fileID: 0}
   extraSlot: {fileID: 0}
   spriteDatabase: {fileID: 11400000, guid: 47d531d7b903ad44aa10353335732008, type: 2}
+  canHit: 0
 --- !u!114 &903963025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7133,6 +7214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataInstance: {fileID: 903963024}
+  cardInstance: {fileID: 0}
   classBody: {fileID: 392537459}
   healthbarFill: {fileID: 1838050061}
   className: {fileID: 1141984801}
@@ -7905,6 +7987,7 @@ MonoBehaviour:
   meleeSlot: {fileID: 0}
   extraSlot: {fileID: 0}
   spriteDatabase: {fileID: 11400000, guid: 47d531d7b903ad44aa10353335732008, type: 2}
+  canHit: 0
 --- !u!114 &970881211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7918,6 +8001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataInstance: {fileID: 970881210}
+  cardInstance: {fileID: 0}
   classBody: {fileID: 1367267267}
   healthbarFill: {fileID: 1909309224}
   className: {fileID: 1141984801}
@@ -10325,6 +10409,8 @@ GameObject:
   - component: {fileID: 1198963395}
   - component: {fileID: 1198963397}
   - component: {fileID: 1198963396}
+  - component: {fileID: 1198963399}
+  - component: {fileID: 1198963398}
   m_Layer: 5
   m_Name: Skill 2 Background
   m_TagString: Untagged
@@ -10393,6 +10479,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198963394}
   m_CullTransparentMesh: 1
+--- !u!114 &1198963398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198963394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1198963396}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1198963399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198963394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586784bba12a3074dad4039d136876b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillCard: {fileID: 1198963394}
+  infoInstance: {fileID: 131726139}
+  classSlots:
+  - {fileID: 970881210}
+  - {fileID: 2025763704}
+  - {fileID: 227667252}
+  - {fileID: 1459799160}
+  - {fileID: 508319804}
+  - {fileID: 903963024}
+  - {fileID: 2089755605}
+  - {fileID: 756530505}
+  targetSlot: 0
+  leftRight: Right
+  currentlyChoosingTarget: 0
+  foundTarget: 0
+  attackRange: 0
 --- !u!1 &1204524742
 GameObject:
   m_ObjectHideFlags: 0
@@ -12475,6 +12633,7 @@ MonoBehaviour:
   meleeSlot: {fileID: 0}
   extraSlot: {fileID: 0}
   spriteDatabase: {fileID: 11400000, guid: 47d531d7b903ad44aa10353335732008, type: 2}
+  canHit: 0
 --- !u!114 &1459799161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12488,6 +12647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataInstance: {fileID: 1459799160}
+  cardInstance: {fileID: 0}
   classBody: {fileID: 1081701532}
   healthbarFill: {fileID: 1488367335}
   className: {fileID: 1141984801}
@@ -17411,6 +17571,7 @@ MonoBehaviour:
   meleeSlot: {fileID: 0}
   extraSlot: {fileID: 0}
   spriteDatabase: {fileID: 11400000, guid: 47d531d7b903ad44aa10353335732008, type: 2}
+  canHit: 0
 --- !u!114 &2025763705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17424,6 +17585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataInstance: {fileID: 2025763704}
+  cardInstance: {fileID: 0}
   classBody: {fileID: 2086983755}
   healthbarFill: {fileID: 174143657}
   className: {fileID: 1141984801}
@@ -18578,6 +18740,7 @@ MonoBehaviour:
   meleeSlot: {fileID: 0}
   extraSlot: {fileID: 0}
   spriteDatabase: {fileID: 11400000, guid: 47d531d7b903ad44aa10353335732008, type: 2}
+  canHit: 0
 --- !u!114 &2089755606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18591,6 +18754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataInstance: {fileID: 2089755605}
+  cardInstance: {fileID: 0}
   classBody: {fileID: 359078423}
   healthbarFill: {fileID: 1364303072}
   className: {fileID: 1141984801}

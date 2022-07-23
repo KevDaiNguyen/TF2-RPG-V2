@@ -77,6 +77,15 @@ public class DisplayBattleUI : MonoBehaviour
         classBody.sprite = dataInstance.classSprite;
         healthbarFill.fillAmount = (dataInstance.currentHealth / originalHealth);
 
+        if (dataInstance.canHit)
+        {
+            classBody.color = Color.green;
+        }
+        else
+        {
+            classBody.color = Color.white;
+        }
+
         if (!equipedPassives)
         {
             PassiveEquip();

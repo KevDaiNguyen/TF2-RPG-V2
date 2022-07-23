@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillCard : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class SkillCard : MonoBehaviour
     public bool currentlyChoosingTarget;
     private bool usedASkill;
     public bool foundTarget;
+
+    public int attackRange;
 
     // Start is called before the first frame update
     void Start()
@@ -210,9 +213,22 @@ public class SkillCard : MonoBehaviour
 
             usedASkill = true;
         }
+        else if (canRightClick && Input.GetMouseButtonDown(1))
+        {
+            RightClick();
+        }
+
+        if (currentClass.isBlu && currentlyChoosingTarget && !foundTarget)
+        {
+            classSlots[attackerSlot - attackRange].InRange();
+        }
+        else
+        {
+            classSlots[attackerSlot + attackRange].InRange();
+        }
     }
 
-    private void CheckEquippedWeapon()
+    private void CheckEquippedWeapon() // To find which weapon to focus on in slots
     {
         switch (currentClass.equippedSlotNum)
         {
@@ -231,7 +247,7 @@ public class SkillCard : MonoBehaviour
         }
     }
 
-    private void CheckSkillChoice()
+    private void CheckSkillChoice() // To find which skill number directly connects to the skill card
     {
         if (leftRight == "Left")
         {
@@ -271,16 +287,177 @@ public class SkillCard : MonoBehaviour
         }
     }
 
-    public void LeftClick()
+    private void CheckRanges()
+    {
+        switch(currentWeaponSlot)
+        {
+            case "Primary":
+                if (leftRight == "Left")
+                {
+                    switch (skillChoiceLeft)
+                    {
+                        case 0:
+                            attackRange = currentClass.primarySlot.skillRange1;
+                            break;
+                        case 1:
+                            attackRange = currentClass.primarySlot.skillRange2;
+                            break;
+                        case 2:
+                            attackRange = currentClass.primarySlot.skillRange3;
+                            break;
+                        case 3:
+                            attackRange = currentClass.primarySlot.skillRange4;
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (skillChoiceRight)
+                    {
+                        case 0:
+                            attackRange = currentClass.primarySlot.skillRange1;
+                            break;
+                        case 1:
+                            attackRange = currentClass.primarySlot.skillRange2;
+                            break;
+                        case 2:
+                            attackRange = currentClass.primarySlot.skillRange3;
+                            break;
+                        case 3:
+                            attackRange = currentClass.primarySlot.skillRange4;
+                            break;
+                    }
+                }
+                break;
+            case "Secondary":
+                if (leftRight == "Left")
+                {
+                    switch (skillChoiceLeft)
+                    {
+                        case 0:
+                            attackRange = currentClass.secondarySlot.skillRange1;
+                            break;
+                        case 1:
+                            attackRange = currentClass.secondarySlot.skillRange2;
+                            break;
+                        case 2:
+                            attackRange = currentClass.secondarySlot.skillRange3;
+                            break;
+                        case 3:
+                            attackRange = currentClass.secondarySlot.skillRange4;
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (skillChoiceRight)
+                    {
+                        case 0:
+                            attackRange = currentClass.secondarySlot.skillRange1;
+                            break;
+                        case 1:
+                            attackRange = currentClass.secondarySlot.skillRange2;
+                            break;
+                        case 2:
+                            attackRange = currentClass.secondarySlot.skillRange3;
+                            break;
+                        case 3:
+                            attackRange = currentClass.secondarySlot.skillRange4;
+                            break;
+                    }
+                }
+                break;
+            case "Melee":
+                if (leftRight == "Left")
+                {
+                    switch (skillChoiceLeft)
+                    {
+                        case 0:
+                            attackRange = currentClass.meleeSlot.skillRange1;
+                            break;
+                        case 1:
+                            attackRange = currentClass.meleeSlot.skillRange2;
+                            break;
+                        case 2:
+                            attackRange = currentClass.meleeSlot.skillRange3;
+                            break;
+                        case 3:
+                            attackRange = currentClass.meleeSlot.skillRange4;
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (skillChoiceRight)
+                    {
+                        case 0:
+                            attackRange = currentClass.meleeSlot.skillRange1;
+                            break;
+                        case 1:
+                            attackRange = currentClass.meleeSlot.skillRange2;
+                            break;
+                        case 2:
+                            attackRange = currentClass.meleeSlot.skillRange3;
+                            break;
+                        case 3:
+                            attackRange = currentClass.meleeSlot.skillRange4;
+                            break;
+                    }
+                }
+                break;
+            case "Extra":
+                if (leftRight == "Left")
+                {
+                    switch (skillChoiceLeft)
+                    {
+                        case 0:
+                            attackRange = currentClass.extraSlot.skillRange1;
+                            break;
+                        case 1:
+                            attackRange = currentClass.extraSlot.skillRange2;
+                            break;
+                        case 2:
+                            attackRange = currentClass.extraSlot.skillRange3;
+                            break;
+                        case 3:
+                            attackRange = currentClass.extraSlot.skillRange4;
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (skillChoiceRight)
+                    {
+                        case 0:
+                            attackRange = currentClass.extraSlot.skillRange1;
+                            break;
+                        case 1:
+                            attackRange = currentClass.extraSlot.skillRange2;
+                            break;
+                        case 2:
+                            attackRange = currentClass.extraSlot.skillRange3;
+                            break;
+                        case 3:
+                            attackRange = currentClass.extraSlot.skillRange4;
+                            break;
+                    }
+                }
+                break;
+        }
+    }// Checks what the current range the skill select has 
+
+    public void LeftClick() // Activates on clicking button on skill card
     {
         currentlyChoosingTarget = true;
+        foundTarget = false;
     }
 
-    public void RightClick()
+    public void RightClick() // Activates on right clicking over skill card
     {
         if (canRightClick)
         {
             currentlyChoosingTarget = true;
+            foundTarget = false;
         }
     }
 

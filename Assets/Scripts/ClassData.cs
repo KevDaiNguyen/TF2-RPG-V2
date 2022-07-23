@@ -68,6 +68,8 @@ public class ClassData : MonoBehaviour
     [Header("---Class Sprites---")]
     public ClassSprites spriteDatabase;
 
+    public bool canHit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -112,6 +114,8 @@ public class ClassData : MonoBehaviour
         secondarySlot = WeaponDatabase.scoutSecondaries[0];
         meleeSlot = WeaponDatabase.scoutMelees[0];
         extraSlot = WeaponDatabase.spyWatches[0];
+
+        canHit = false;
 
         showExtraSlot = false;
 
@@ -865,5 +869,15 @@ public class ClassData : MonoBehaviour
         }
 
         return maxOverheal;
+    }
+
+    public void InRange()
+    {
+        canHit = true;
+    }
+
+    public void NotInRange()
+    {
+        canHit = false;
     }
 }
