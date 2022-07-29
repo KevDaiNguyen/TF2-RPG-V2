@@ -7,7 +7,7 @@ using TMPro;
 public class DisplayBattleUI : MonoBehaviour
 {
     public ClassData dataInstance;
-    public SkillCard cardInstance;
+    public SkillCard[] cardInstance;
 
     [Header("---The sprite above the healthbar---")]
     public Image classBody;
@@ -81,6 +81,16 @@ public class DisplayBattleUI : MonoBehaviour
     {
         classBody.sprite = dataInstance.classSprite;
         healthbarFill.fillAmount = (dataInstance.currentHealth / originalHealth);
+
+        allResists[0] = bulletResist;
+        allResists[1] = explosiveResist;
+        allResists[2] = fireResist;
+        allResists[3] = meleeResist;
+
+        allVulnerabilities[0] = bulletVulnerability;
+        allVulnerabilities[1] = explosiveVulnerability;
+        allVulnerabilities[2] = fireVulnerability;
+        allVulnerabilities[3] = meleeVulnerability;
 
         if (dataInstance.canHit)
         {
@@ -192,17 +202,12 @@ public class DisplayBattleUI : MonoBehaviour
                     activeSkillChoices[i].color = Color.black;
                 }
             }
+            // -------------------------------------------------------------
+            if (cardInstance[0].currentlyChoosingTarget && cardInstance[1].currentlyChoosingTarget)
+            {
+                cardInstance[1].currentlyChoosingTarget = false;
+            }
         }
-
-        allResists[0] = bulletResist;
-        allResists[1] = explosiveResist;
-        allResists[2] = fireResist;
-        allResists[3] = meleeResist;
-
-        allVulnerabilities[0] = bulletVulnerability;
-        allVulnerabilities[1] = explosiveVulnerability;
-        allVulnerabilities[2] = fireVulnerability;
-        allVulnerabilities[3] = meleeVulnerability;
     }
 
     public void ResistDisplay()
@@ -231,15 +236,21 @@ public class DisplayBattleUI : MonoBehaviour
 
     public void SelectClass()
     {
-        if (!cardInstance.currentlyChoosingTarget)
+        if (!cardInstance[0].currentlyChoosingTarget && !cardInstance[1].currentlyChoosingTarget)
         {
             currentlySelected = true;
         }
-        else
+        else if (cardInstance[0].currentlyChoosingTarget && !cardInstance[1].currentlyChoosingTarget)
         {
-            cardInstance.targetSlot = dataInstance.currentPosition;
-            cardInstance.currentlyChoosingTarget = false;
-            cardInstance.foundTarget = true;
+            cardInstance[0].targetSlot = dataInstance.currentPosition;
+            cardInstance[0].currentlyChoosingTarget = false;
+            cardInstance[0].foundTarget = true;
+        }
+        else if (!cardInstance[0].currentlyChoosingTarget && cardInstance[1].currentlyChoosingTarget)
+        {
+            cardInstance[1].targetSlot = dataInstance.currentPosition;
+            cardInstance[1].currentlyChoosingTarget = false;
+            cardInstance[1].foundTarget = true;
         }
     }
 

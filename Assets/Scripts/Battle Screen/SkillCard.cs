@@ -9,24 +9,24 @@ public class SkillCard : MonoBehaviour
     public InfoBookButtons infoInstance;
 
     public ClassData[] classSlots;
-    private ClassData currentClass;
+    public ClassData currentClass;
 
-    private int attackerSlot;
+    public int attackerSlot;
     public int targetSlot;
 
     public string leftRight;
 
-    private bool hasSecondarySkill;
+    public bool hasSecondarySkill;
 
-    private int skillChoiceLeft;
-    private int skillChoiceRight;
+    public int skillChoiceLeft;
+    public int skillChoiceRight;
 
-    private string currentWeaponSlot;
+    public string currentWeaponSlot;
 
-    private bool canRightClick;
+    public bool canRightClick;
 
     public bool currentlyChoosingTarget;
-    private bool usedASkill;
+    public bool usedASkill;
     public bool foundTarget;
 
     public int attackRange;
@@ -34,6 +34,7 @@ public class SkillCard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        hasSecondarySkill = false;
         canRightClick = false;
         currentlyChoosingTarget = false;
         usedASkill = false;
@@ -44,7 +45,7 @@ public class SkillCard : MonoBehaviour
     void Update()
     {
         attackerSlot = infoInstance.currentBattleUI.dataInstance.currentPosition;
-        currentClass = classSlots[attackerSlot];
+        currentClass = classSlots[attackerSlot - 1];
 
         CheckSkillChoice();
         CheckEquippedWeapon();
