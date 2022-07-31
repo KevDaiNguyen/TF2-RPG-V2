@@ -18,8 +18,7 @@ public class SkillCard : MonoBehaviour
 
     public bool hasSecondarySkill;
 
-    public int skillChoiceLeft;
-    public int skillChoiceRight;
+    public int skillChoice;
 
     public string currentWeaponSlot;
 
@@ -52,73 +51,73 @@ public class SkillCard : MonoBehaviour
 
         if (leftRight == "Left")
         {
-            switch (skillChoiceLeft)
+            switch (currentWeaponSlot)
             {
-                case 0:
-                    switch (currentWeaponSlot)
+                case "Primary":
+                    switch (skillChoice)
                     {
-                        case "Primary":
-                            hasSecondarySkill = currentClass.primarySlot.secondarySkill1;
+                        case 0:
+                            hasSecondarySkill = currentClass.primarySlot.allHasSecondarySkills[0];
                             break;
-                        case "Secondary":
-                            hasSecondarySkill = currentClass.primarySlot.secondarySkill2;
+                        case 1:
+                            hasSecondarySkill = currentClass.primarySlot.allHasSecondarySkills[1];
                             break;
-                        case "Melee":
-                            hasSecondarySkill = currentClass.primarySlot.secondarySkill3;
+                        case 2:
+                            hasSecondarySkill = currentClass.primarySlot.allHasSecondarySkills[2];
                             break;
-                        case "Extra":
-                            hasSecondarySkill = currentClass.primarySlot.secondarySkill4;
+                        case 3:
+                            hasSecondarySkill = currentClass.primarySlot.allHasSecondarySkills[3];
                             break;
                     }
                     break;
-                case 1:
-                    switch (currentWeaponSlot)
+                case "Secondary":
+                    switch (skillChoice)
                     {
-                        case "Primary":
-                            hasSecondarySkill = currentClass.secondarySlot.secondarySkill1;
+                        case 0:
+                            hasSecondarySkill = currentClass.secondarySlot.allHasSecondarySkills[0];
                             break;
-                        case "Secondary":
-                            hasSecondarySkill = currentClass.secondarySlot.secondarySkill2;
+                        case 1:
+                            hasSecondarySkill = currentClass.secondarySlot.allHasSecondarySkills[1];
                             break;
-                        case "Melee":
-                            hasSecondarySkill = currentClass.secondarySlot.secondarySkill3;
+                        case 2:
+                            hasSecondarySkill = currentClass.secondarySlot.allHasSecondarySkills[2];
                             break;
-                        case "Extra":
-                            hasSecondarySkill = currentClass.secondarySlot.secondarySkill4;
+                        case 3:
+                            hasSecondarySkill = currentClass.secondarySlot.allHasSecondarySkills[3];
                             break;
                     }
                     break;
-                case 2:
-                    switch (currentWeaponSlot)
+                case "Melee":
+                    switch (skillChoice)
                     {
-                        case "Primary":
-                            hasSecondarySkill = currentClass.meleeSlot.secondarySkill1;
+                        case 0:
+                            hasSecondarySkill = currentClass.meleeSlot.allHasSecondarySkills[0];
                             break;
-                        case "Secondary":
-                            hasSecondarySkill = currentClass.meleeSlot.secondarySkill2;
+                        case 1:
+                            hasSecondarySkill = currentClass.meleeSlot.allHasSecondarySkills[1];
                             break;
-                        case "Melee":
-                            hasSecondarySkill = currentClass.meleeSlot.secondarySkill3;
+                        case 2:
+                            hasSecondarySkill = currentClass.meleeSlot.allHasSecondarySkills[2];
                             break;
-                        case "Extra":
-                            hasSecondarySkill = currentClass.meleeSlot.secondarySkill4;
+                        case 3:
+                            hasSecondarySkill = currentClass.meleeSlot.allHasSecondarySkills[3];
                             break;
                     }
                     break;
-                case 3:
-                    switch (currentWeaponSlot)
+                case "Extra":
+                    switch (skillChoice)
                     {
-                        case "Primary":
-                            hasSecondarySkill = currentClass.extraSlot.secondarySkill1;
+                        case 0:
+                            hasSecondarySkill = currentClass.extraSlot.allHasSecondarySkills[0];
                             break;
-                        case "Secondary":
-                            hasSecondarySkill = currentClass.extraSlot.secondarySkill2;
+                        case 1:
+                            hasSecondarySkill = currentClass.extraSlot.allHasSecondarySkills[1];
                             break;
-                        case "Melee":
-                            hasSecondarySkill = currentClass.extraSlot.secondarySkill3;
+                        case 2:
+                            hasSecondarySkill = currentClass.extraSlot.allHasSecondarySkills[2];
                             break;
-                        case "Extra":
-                            hasSecondarySkill = currentClass.extraSlot.secondarySkill4;
+                        case 3:
+                            hasSecondarySkill = currentClass.extraSlot.allHasSecondarySkills[3];
                             break;
                     }
                     break;
@@ -126,73 +125,73 @@ public class SkillCard : MonoBehaviour
         }
         else
         {
-            switch (skillChoiceRight)
+            switch (currentWeaponSlot)
             {
-                case 0:
-                    switch (currentWeaponSlot)
+                case "Primary":
+                    switch (skillChoice)
                     {
-                        case "Primary":
-                            hasSecondarySkill = currentClass.primarySlot.secondarySkill1;
+                        case 0:
+                            hasSecondarySkill = currentClass.primarySlot.allHasSecondarySkills[0];
                             break;
-                        case "Secondary":
-                            hasSecondarySkill = currentClass.primarySlot.secondarySkill2;
+                        case 1:
+                            hasSecondarySkill = currentClass.primarySlot.allHasSecondarySkills[1];
                             break;
-                        case "Melee":
-                            hasSecondarySkill = currentClass.primarySlot.secondarySkill3;
+                        case 2:
+                            hasSecondarySkill = currentClass.primarySlot.allHasSecondarySkills[2];
                             break;
-                        case "Extra":
-                            hasSecondarySkill = currentClass.primarySlot.secondarySkill4;
+                        case 3:
+                            hasSecondarySkill = currentClass.primarySlot.allHasSecondarySkills[3];
                             break;
                     }
                     break;
-                case 1:
-                    switch (currentWeaponSlot)
+                case "Secondary":
+                    switch (skillChoice)
                     {
-                        case "Primary":
-                            hasSecondarySkill = currentClass.secondarySlot.secondarySkill1;
+                        case 0:
+                            hasSecondarySkill = currentClass.secondarySlot.allHasSecondarySkills[0];
                             break;
-                        case "Secondary":
-                            hasSecondarySkill = currentClass.secondarySlot.secondarySkill2;
+                        case 1:
+                            hasSecondarySkill = currentClass.secondarySlot.allHasSecondarySkills[1];
                             break;
-                        case "Melee":
-                            hasSecondarySkill = currentClass.secondarySlot.secondarySkill3;
+                        case 2:
+                            hasSecondarySkill = currentClass.secondarySlot.allHasSecondarySkills[2];
                             break;
-                        case "Extra":
-                            hasSecondarySkill = currentClass.secondarySlot.secondarySkill4;
+                        case 3:
+                            hasSecondarySkill = currentClass.secondarySlot.allHasSecondarySkills[3];
                             break;
                     }
                     break;
-                case 2:
-                    switch (currentWeaponSlot)
+                case "Melee":
+                    switch (skillChoice)
                     {
-                        case "Primary":
-                            hasSecondarySkill = currentClass.meleeSlot.secondarySkill1;
+                        case 0:
+                            hasSecondarySkill = currentClass.meleeSlot.allHasSecondarySkills[0];
                             break;
-                        case "Secondary":
-                            hasSecondarySkill = currentClass.meleeSlot.secondarySkill2;
+                        case 1:
+                            hasSecondarySkill = currentClass.meleeSlot.allHasSecondarySkills[1];
                             break;
-                        case "Melee":
-                            hasSecondarySkill = currentClass.meleeSlot.secondarySkill3;
+                        case 2:
+                            hasSecondarySkill = currentClass.meleeSlot.allHasSecondarySkills[2];
                             break;
-                        case "Extra":
-                            hasSecondarySkill = currentClass.meleeSlot.secondarySkill4;
+                        case 3:
+                            hasSecondarySkill = currentClass.meleeSlot.allHasSecondarySkills[3];
                             break;
                     }
                     break;
-                case 3:
-                    switch (currentWeaponSlot)
+                case "Extra":
+                    switch (skillChoice)
                     {
-                        case "Primary":
-                            hasSecondarySkill = currentClass.extraSlot.secondarySkill1;
+                        case 0:
+                            hasSecondarySkill = currentClass.extraSlot.allHasSecondarySkills[0];
                             break;
-                        case "Secondary":
-                            hasSecondarySkill = currentClass.extraSlot.secondarySkill2;
+                        case 1:
+                            hasSecondarySkill = currentClass.extraSlot.allHasSecondarySkills[1];
                             break;
-                        case "Melee":
-                            hasSecondarySkill = currentClass.extraSlot.secondarySkill3;
+                        case 2:
+                            hasSecondarySkill = currentClass.extraSlot.allHasSecondarySkills[2];
                             break;
-                        case "Extra":
-                            hasSecondarySkill = currentClass.extraSlot.secondarySkill4;
+                        case 3:
+                            hasSecondarySkill = currentClass.extraSlot.allHasSecondarySkills[3];
                             break;
                     }
                     break;
@@ -255,16 +254,16 @@ public class SkillCard : MonoBehaviour
             switch (currentClass.equippedSlotNum)
             {
                 case 1:
-                    skillChoiceLeft = currentClass.skillChoice1P;
+                    skillChoice = currentClass.skillChoice1P;
                     break;
                 case 2:
-                    skillChoiceLeft = currentClass.skillChoice1S;
+                    skillChoice = currentClass.skillChoice1S;
                     break;
                 case 3:
-                    skillChoiceLeft = currentClass.skillChoice1M;
+                    skillChoice = currentClass.skillChoice1M;
                     break;
                 case 4:
-                    skillChoiceLeft = currentClass.skillChoice1E;
+                    skillChoice = currentClass.skillChoice1E;
                     break;
             }
         }
@@ -273,16 +272,16 @@ public class SkillCard : MonoBehaviour
             switch (currentClass.equippedSlotNum)
             {
                 case 1:
-                    skillChoiceRight = currentClass.skillChoice2P;
+                    skillChoice = currentClass.skillChoice2P;
                     break;
                 case 2:
-                    skillChoiceRight = currentClass.skillChoice2S;
+                    skillChoice = currentClass.skillChoice2S;
                     break;
                 case 3:
-                    skillChoiceRight = currentClass.skillChoice2M;
+                    skillChoice = currentClass.skillChoice2M;
                     break;
                 case 4:
-                    skillChoiceRight = currentClass.skillChoice2E;
+                    skillChoice = currentClass.skillChoice2E;
                     break;
             }
         }
@@ -295,7 +294,7 @@ public class SkillCard : MonoBehaviour
             case "Primary":
                 if (leftRight == "Left")
                 {
-                    switch (skillChoiceLeft)
+                    switch (skillChoice)
                     {
                         case 0:
                             attackRange = currentClass.primarySlot.skillRange1;
@@ -313,7 +312,7 @@ public class SkillCard : MonoBehaviour
                 }
                 else
                 {
-                    switch (skillChoiceRight)
+                    switch (skillChoice)
                     {
                         case 0:
                             attackRange = currentClass.primarySlot.skillRange1;
@@ -333,7 +332,7 @@ public class SkillCard : MonoBehaviour
             case "Secondary":
                 if (leftRight == "Left")
                 {
-                    switch (skillChoiceLeft)
+                    switch (skillChoice)
                     {
                         case 0:
                             attackRange = currentClass.secondarySlot.skillRange1;
@@ -351,7 +350,7 @@ public class SkillCard : MonoBehaviour
                 }
                 else
                 {
-                    switch (skillChoiceRight)
+                    switch (skillChoice)
                     {
                         case 0:
                             attackRange = currentClass.secondarySlot.skillRange1;
@@ -371,7 +370,7 @@ public class SkillCard : MonoBehaviour
             case "Melee":
                 if (leftRight == "Left")
                 {
-                    switch (skillChoiceLeft)
+                    switch (skillChoice)
                     {
                         case 0:
                             attackRange = currentClass.meleeSlot.skillRange1;
@@ -389,7 +388,7 @@ public class SkillCard : MonoBehaviour
                 }
                 else
                 {
-                    switch (skillChoiceRight)
+                    switch (skillChoice)
                     {
                         case 0:
                             attackRange = currentClass.meleeSlot.skillRange1;
@@ -409,7 +408,7 @@ public class SkillCard : MonoBehaviour
             case "Extra":
                 if (leftRight == "Left")
                 {
-                    switch (skillChoiceLeft)
+                    switch (skillChoice)
                     {
                         case 0:
                             attackRange = currentClass.extraSlot.skillRange1;
@@ -427,7 +426,7 @@ public class SkillCard : MonoBehaviour
                 }
                 else
                 {
-                    switch (skillChoiceRight)
+                    switch (skillChoice)
                     {
                         case 0:
                             attackRange = currentClass.extraSlot.skillRange1;
