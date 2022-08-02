@@ -43,7 +43,10 @@ MonoBehaviour:
   skillLogo1: {fileID: 0}
   ammoCost1: 0
   accuracy1: 0
+  actionType1: 
   skillRange1: 0
+  distanceChoice1: 0
+  secondarySkill1: 0
   selfDamageMin1: 0
   enemyDamageMin1: 0
   selfDamageMax1: 0
@@ -53,7 +56,10 @@ MonoBehaviour:
   skillLogo2: {fileID: 0}
   ammoCost2: 0
   accuracy2: 0
+  actionType2: 
   skillRange2: 0
+  distanceChoice2: 0
+  secondarySkill2: 0
   selfDamageMin2: 0
   enemyDamageMin2: 0
   selfDamageMax2: 0
@@ -63,7 +69,10 @@ MonoBehaviour:
   skillLogo3: {fileID: 0}
   ammoCost3: 0
   accuracy3: 0
+  actionType3: 
   skillRange3: 0
+  distanceChoice3: 0
+  secondarySkill3: 0
   selfDamageMin3: 0
   enemyDamageMin3: 0
   selfDamageMax3: 0
@@ -73,8 +82,40 @@ MonoBehaviour:
   skillLogo4: {fileID: 0}
   ammoCost4: 0
   accuracy4: 0
+  actionType4: 
   skillRange4: 0
+  distanceChoice4: 0
+  secondarySkill4: 0
   selfDamageMin4: 0
   enemyDamageMin4: 0
   selfDamageMax4: 0
   enemyDamageMax4: 0
+  allSkillNames:
+  - 
+  - 
+  - 
+  - 
+  allSkillDescs:
+  - 
+  - 
+  - 
+  - 
+  allSkillLogos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  allAmmoCosts: 00000000000000000000000000000000
+  allAccuracies: 00000000000000000000000000000000
+  allActionTypes:
+  - 
+  - 
+  - 
+  - 
+  allSkillRanges: 00000000000000000000000000000000
+  allDistanceChoices: 00000000
+  allHasSecondarySkills: 00000000
+  allSelfDamageMins: 00000000000000000000000000000000
+  allEnemyDamageMins: 00000000000000000000000000000000
+  allSelfDamageMaxs: 00000000000000000000000000000000
+  allEnemyDamageMaxs: 00000000000000000000000000000000

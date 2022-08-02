@@ -57,16 +57,16 @@ public class SkillCard : MonoBehaviour
                     switch (skillChoice)
                     {
                         case 0:
-                            hasSecondarySkill = currentClass.primarySlot.allHasSecondarySkills[0];
+                            hasSecondarySkill = currentClass.allWeaponSlots[0].allHasSecondarySkills[0];
                             break;
                         case 1:
-                            hasSecondarySkill = currentClass.primarySlot.allHasSecondarySkills[1];
+                            hasSecondarySkill = currentClass.allWeaponSlots[0].allHasSecondarySkills[1];
                             break;
                         case 2:
-                            hasSecondarySkill = currentClass.primarySlot.allHasSecondarySkills[2];
+                            hasSecondarySkill = currentClass.allWeaponSlots[0].allHasSecondarySkills[2];
                             break;
                         case 3:
-                            hasSecondarySkill = currentClass.primarySlot.allHasSecondarySkills[3];
+                            hasSecondarySkill = currentClass.allWeaponSlots[0].allHasSecondarySkills[3];
                             break;
                     }
                     break;
@@ -131,16 +131,16 @@ public class SkillCard : MonoBehaviour
                     switch (skillChoice)
                     {
                         case 0:
-                            hasSecondarySkill = currentClass.primarySlot.allHasSecondarySkills[0];
+                            hasSecondarySkill = currentClass.allWeaponSlots[0].allHasSecondarySkills[0];
                             break;
                         case 1:
-                            hasSecondarySkill = currentClass.primarySlot.allHasSecondarySkills[1];
+                            hasSecondarySkill = currentClass.allWeaponSlots[0].allHasSecondarySkills[1];
                             break;
                         case 2:
-                            hasSecondarySkill = currentClass.primarySlot.allHasSecondarySkills[2];
+                            hasSecondarySkill = currentClass.allWeaponSlots[0].allHasSecondarySkills[2];
                             break;
                         case 3:
-                            hasSecondarySkill = currentClass.primarySlot.allHasSecondarySkills[3];
+                            hasSecondarySkill = currentClass.allWeaponSlots[0].allHasSecondarySkills[3];
                             break;
                     }
                     break;
