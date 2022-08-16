@@ -46,6 +46,7 @@ public class SkillCard : MonoBehaviour
         attackerSlot = infoInstance.currentBattleUI.dataInstance.currentPosition;
         currentClass = classSlots[attackerSlot - 1];
 
+        TransferArrays();
         CheckSkillChoice();
         CheckEquippedWeapon();
 
@@ -225,6 +226,18 @@ public class SkillCard : MonoBehaviour
         else
         {
             classSlots[attackerSlot + attackRange].InRange();
+        }
+    }
+
+    private void TransferArrays()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            currentClass.allWeaponSlots[i] = classSlots[attackerSlot - 1].allWeaponSlots[i];
+            for (int j = 0; i < 4; i++)
+            {
+                currentClass.allWeaponSlots[i].allHasSecondarySkills[j] = classSlots[attackerSlot - 1].allWeaponSlots[i].allHasSecondarySkills[j];
+            }
         }
     }
 
