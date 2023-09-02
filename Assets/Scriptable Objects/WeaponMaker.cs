@@ -154,9 +154,14 @@ public class WeaponMaker : ScriptableObject
     public int[] allSelfDamageMaxs = new int[4];
     public int[] allEnemyDamageMaxs = new int[4];
 
-    void Start()
+    public void Awake()
     {
         FillStuff();
+    }
+
+    void Start()
+    {
+
     }
 
     public void FillStuff()

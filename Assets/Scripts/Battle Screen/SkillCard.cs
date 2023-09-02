@@ -236,6 +236,7 @@ public class SkillCard : MonoBehaviour
             currentClass.allWeaponSlots[i] = classSlots[attackerSlot - 1].allWeaponSlots[i];
             for (int j = 0; i < 4; i++)
             {
+                print(currentClass.allWeaponSlots[j].allHasSecondarySkills.Length);
                 currentClass.allWeaponSlots[i].allHasSecondarySkills[j] = classSlots[attackerSlot - 1].allWeaponSlots[i].allHasSecondarySkills[j];
             }
         }
